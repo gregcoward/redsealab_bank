@@ -344,14 +344,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const payloadHash = await computeSha256Hex(payload);
 
+        // Filter out proxy routing headers (X-S3-Target-Host, X-S3-Proto) from SigV4 signed headers
         const reqHeaders = {
             'host': hostHeader,
             'x-amz-content-sha256': payloadHash,
-            'x-amz-date': amzDate,
-            ...headers
+            'x-amz-date': amzDate
         };
 
-        const sortedHeaderKeys = Object.keys(reqHeaders).map(k => k.toLowerCase()).sort();
+        for (const [k, v] of Object.entries(headers)) {
+            const lowerK = k.toLowerCase();
+            if (lowerK !== 'x-s3-target-host' && lowerK !== 'x-s3-proto') {
+                reqHeaders[lowerK] = String(v);
+            }
+        }
+
+        const sortedHeaderKeys = Object.keys(reqHeaders).sort();
         const canonicalHeaders = sortedHeaderKeys.map(k => `${k}:${reqHeaders[k].trim()}\n`).join('');
         const signedHeaders = sortedHeaderKeys.join(';');
 
@@ -383,7 +390,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const authHeader = `AWS4-HMAC-SHA256 Credential=${accessKey}/${credentialScope}, SignedHeaders=${signedHeaders}, Signature=${signatureHex}`;
 
+        // Return combined headers including proxy headers & Authorization
         return {
+            ...headers,
             ...reqHeaders,
             'Authorization': authHeader
         };
