@@ -342,21 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const amzDate = now.toISOString().replace(/[:-]/g, '').split('.')[0] + 'Z';
         const dateStamp = amzDate.substring(0, 8);
 
-        const payloadHash = await computeSha256Hex(payload);
+        // For PUT file uploads, use UNSIGNED-PAYLOAD (standard S3 browser upload practice)
+        let payloadHash = 'UNSIGNED-PAYLOAD';
+        if (typeof payload === 'string') {
+            payloadHash = await computeSha256Hex(payload);
+        } else if (method.toUpperCase() === 'GET' || method.toUpperCase() === 'DELETE') {
+            payloadHash = await computeSha256Hex('');
+        }
 
-        // Filter out proxy routing headers (X-S3-Target-Host, X-S3-Proto) from SigV4 signed headers
+        // Standard SigV4 headers to sign for S3 requests
         const reqHeaders = {
-            'host': hostHeader,
+            'host': hostHeader.toLowerCase(),
             'x-amz-content-sha256': payloadHash,
             'x-amz-date': amzDate
         };
-
-        for (const [k, v] of Object.entries(headers)) {
-            const lowerK = k.toLowerCase();
-            if (lowerK !== 'x-s3-target-host' && lowerK !== 'x-s3-proto') {
-                reqHeaders[lowerK] = String(v);
-            }
-        }
 
         const sortedHeaderKeys = Object.keys(reqHeaders).sort();
         const canonicalHeaders = sortedHeaderKeys.map(k => `${k}:${reqHeaders[k].trim()}\n`).join('');
