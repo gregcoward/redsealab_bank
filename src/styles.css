@@ -66,6 +66,20 @@ body {
     align-items: center;
 }
 
+.brand-logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
+.modal-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+}
+
 .brand-name {
     font-size: 1.25rem;
     font-weight: 700;
