@@ -301,9 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
 
     let s3LocalCache = [
-        { key: 'compliance/compliance_framework_2026.pdf', contentType: 'application/pdf', size: 1048576, lastModified: new Date().toISOString() },
-        { key: 'rag_docs/bank_faq_kb.txt', contentType: 'text/plain', size: 24576, lastModified: new Date().toISOString() },
-        { key: 'statements/january_2026_ledger.csv', contentType: 'text/csv', size: 512000, lastModified: new Date().toISOString() }
+        { key: '01_account_products_and_rates.txt', contentType: 'text/plain', size: 3269, lastModified: new Date().toISOString() },
+        { key: '02_transfers_and_digital_banking.txt', contentType: 'text/plain', size: 3020, lastModified: new Date().toISOString() },
+        { key: '03_referral_program_and_promotions.txt', contentType: 'text/plain', size: 2389, lastModified: new Date().toISOString() },
+        { key: '04_technical_architecture_and_faqs.txt', contentType: 'text/plain', size: 3368, lastModified: new Date().toISOString() },
+        { key: 'arcadia-team-with-sensitve-data-v3_1-nric.txt', contentType: 'text/plain', size: 1888, lastModified: new Date().toISOString() },
+        { key: 'redsea_lab_bank_knowledge_base_full.txt', contentType: 'text/plain', size: 12046, lastModified: new Date().toISOString() }
     ];
 
     const s3FileInput = document.getElementById('s3-file-input');
@@ -334,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!s3DocsBody) return;
 
         const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'bank-documents';
+        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
         const currentBucketLabel = document.getElementById('current-bucket-label');
         if (currentBucketLabel) currentBucketLabel.textContent = bucket;
 
@@ -443,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const objectKey = s3ObjectKey.value.trim();
             const contentType = document.getElementById('s3-content-type').value;
             const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-            const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'bank-documents';
+            const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
 
             if (!file || !objectKey) {
                 showS3Alert('Please select a file and provide an object key.', 'error');
@@ -493,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Download Document (GET)
     function s3DownloadDocument(key) {
         const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'bank-documents';
+        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
         const downloadUrl = `${endpoint.replace(/\/$/, '')}/${bucket}/${encodeURIComponent(key)}`;
 
         window.open(downloadUrl, '_blank');
@@ -507,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'bank-documents';
+        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
         const deleteUrl = `${endpoint.replace(/\/$/, '')}/${bucket}/${encodeURIComponent(key)}`;
 
         try {
