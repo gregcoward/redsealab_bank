@@ -674,3 +674,76 @@ body {
     margin-top: 0.25rem;
     color: var(--accent-blue);
 }
+
+/* Admin Portal & S3 Management Utilities */
+.chip-admin {
+    border-color: rgba(56, 189, 248, 0.4);
+    background-color: rgba(56, 189, 248, 0.08);
+}
+
+.chip-admin:hover {
+    border-color: var(--accent-blue);
+    background-color: rgba(56, 189, 248, 0.2);
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.flex-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.btn-danger {
+    background-color: rgba(248, 113, 113, 0.15);
+    color: var(--accent-red);
+    border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.btn-danger:hover {
+    background-color: var(--accent-red);
+    color: #ffffff;
+}
+
+.badge-danger {
+    background-color: rgba(248, 113, 113, 0.15);
+    color: var(--accent-red);
+    border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.badge-warning {
+    background-color: rgba(251, 191, 36, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-sm {
+    font-size: 0.8125rem;
+}
+
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+

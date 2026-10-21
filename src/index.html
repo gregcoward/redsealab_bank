@@ -37,6 +37,10 @@
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
                     Microservices Status
                 </button>
+                <button class="nav-btn admin-only hidden" data-tab="admin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Admin Portal
+                </button>
             </nav>
 
             <div class="user-profile">
@@ -304,6 +308,128 @@
                 </div>
             </div>
         </section>
+
+        <!-- Admin Portal Tab (Administrator Only) -->
+        <section id="admin" class="tab-content admin-only hidden">
+            <div class="page-header">
+                <h2>Administrator Document Portal</h2>
+                <span class="endpoint-tag">S3 Endpoint: <code>aistor-primary-hl.aistor.svc.cluster.local:9000</code></span>
+            </div>
+
+            <!-- S3 Config & Connection Settings Card -->
+            <div class="section-card mb-4">
+                <div class="card-header-flex">
+                    <div>
+                        <h3>MinIO AIStore S3 Cluster Configuration</h3>
+                        <p class="text-muted">Connected to S3 service <code>aistor-primary-hl</code> in namespace <code>aistor</code> on port 9000</p>
+                    </div>
+                    <span id="s3-status-badge" class="badge badge-success">S3 Endpoint Active</span>
+                </div>
+                <div class="form-grid-3 mt-3">
+                    <div class="form-group">
+                        <label for="s3-endpoint">S3 Proxy Endpoint</label>
+                        <input type="text" id="s3-endpoint" class="form-input" value="/s3" placeholder="/s3 or http://aistor-primary-hl.aistor.svc.cluster.local:9000">
+                    </div>
+                    <div class="form-group">
+                        <label for="s3-bucket">Target Bucket Name</label>
+                        <input type="text" id="s3-bucket" class="form-input" value="bank-documents" placeholder="bank-documents">
+                    </div>
+                    <div class="form-group flex-end">
+                        <button type="button" id="s3-refresh-btn" class="btn btn-outline btn-block">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                            Refresh Bucket Files
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Document Upload (POST/PUT) & Bucket Info -->
+            <div class="form-grid">
+                <!-- Upload Form -->
+                <div class="section-card form-card">
+                    <h3>Upload New Document (POST/PUT)</h3>
+                    <p class="text-muted">Upload compliance files, statement records, or RAG documents to MinIO AIStore.</p>
+
+                    <form id="s3-upload-form">
+                        <div class="form-group">
+                            <label for="s3-file-input">Select File</label>
+                            <input type="file" id="s3-file-input" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="s3-object-key">S3 Object Key / File Path</label>
+                            <input type="text" id="s3-object-key" class="form-input" placeholder="e.g. compliance/annual_report_2026.pdf" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="s3-content-type">Content-Type Header</label>
+                            <select id="s3-content-type" class="form-input">
+                                <option value="application/pdf">application/pdf (PDF Document)</option>
+                                <option value="text/plain" selected>text/plain (Plain Text / RAG)</option>
+                                <option value="application/json">application/json (JSON Data)</option>
+                                <option value="text/csv">text/csv (CSV Spreadsheet)</option>
+                                <option value="image/png">image/png (PNG Image)</option>
+                                <option value="application/octet-stream">application/octet-stream (Binary Data)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            Upload to MinIO AIStore
+                        </button>
+                    </form>
+                    <div id="s3-upload-alert" class="alert hidden"></div>
+                </div>
+
+                <!-- S3 Cluster Overview Stats -->
+                <div class="section-card">
+                    <h3>MinIO AIStore Cluster Specs</h3>
+                    <div class="stats-list">
+                        <div class="stat-item">
+                            <span class="stat-label">Storage Cluster</span>
+                            <span class="stat-value">MinIO AIStore</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Cluster Service</span>
+                            <span class="stat-value">aistor-primary-hl</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Namespace : Port</span>
+                            <span class="stat-value">aistor : 9000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Stored Documents</span>
+                            <span id="s3-doc-count" class="stat-value text-success">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documents Table (GET & DELETE) -->
+            <div class="section-card mt-4">
+                <div class="card-header-flex mb-3">
+                    <h3>S3 Bucket Documents (<code id="current-bucket-label">bank-documents</code>)</h3>
+                    <span class="text-muted text-sm">Supported Operations: HTTP PUT, GET, DELETE</span>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Object Key / Name</th>
+                                <th>Content-Type</th>
+                                <th>File Size</th>
+                                <th>Last Modified</th>
+                                <th class="text-right">Actions (GET / DELETE)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="s3-documents-body">
+                            <!-- Populated dynamically by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -349,6 +475,9 @@
                     </button>
                     <button type="button" class="chip" data-email="alex.smith@redsealabbank.com" data-pass="admin123">
                         <strong>Alex Smith</strong> (Standard)
+                    </button>
+                    <button type="button" class="chip chip-admin" data-email="adminuser@redsealabbank.com" data-pass="F5testnet!">
+                        <strong>adminuser</strong> (Administrator)
                     </button>
                 </div>
             </div>
