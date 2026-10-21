@@ -67,14 +67,16 @@ body {
 }
 
 .brand-logo-img {
-    height: 32px;
+    height: 96px;
+    max-height: 96px;
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
 }
 
 .modal-logo-img {
-    height: 48px;
+    height: 144px;
+    max-height: 144px;
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
