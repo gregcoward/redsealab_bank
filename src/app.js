@@ -650,31 +650,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (res.ok || res.status === 200 || res.status === 201 || res.status === 204) {
-                    showS3Alert(`Successfully uploaded "${objectKey}" to MinIO AIStore bucket "${cfg.bucket}" using Access Key "${cfg.accessKey}"!`, 'success');
+                    showS3Alert(`Successfully uploaded "${objectKey}" to MinIO AIStore bucket "${cfg.bucket}"!`, 'success');
+                    s3UploadForm.reset();
+                    await s3ListDocuments();
                 } else {
-                    throw new Error(`Server returned HTTP ${res.status}`);
+                    const errText = await res.text().catch(() => '');
+                    throw new Error(`MinIO S3 returned HTTP ${res.status}${errText ? ': ' + errText.substring(0, 150) : ''}`);
                 }
             } catch (err) {
-                console.warn('Live S3 upload failed, updating local state cache:', err);
-                showS3Alert(`Uploaded "${objectKey}" (${formatBytes(file.size)}) to bucket "${cfg.bucket}" on host ${cfg.targetHost}`, 'success');
+                console.error('S3 upload error:', err);
+                showS3Alert(`Upload failed: ${err.message}`, 'error');
             }
-
-            // Update local cache
-            const existingIdx = s3LocalCache.findIndex(d => d.key === objectKey);
-            const newDoc = {
-                key: objectKey,
-                contentType: contentType,
-                size: file.size,
-                lastModified: new Date().toISOString()
-            };
-            if (existingIdx >= 0) {
-                s3LocalCache[existingIdx] = newDoc;
-            } else {
-                s3LocalCache.unshift(newDoc);
-            }
-
-            renderS3DocumentsTable(s3LocalCache);
-            s3UploadForm.reset();
         });
     }
 
@@ -715,16 +701,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch(proxyUrl, { method: 'DELETE', headers: reqHeaders });
             if (res.ok || res.status === 204 || res.status === 200) {
                 showS3Alert(`HTTP DELETE successful for object "${key}" on ${cfg.targetHost}`, 'success');
+                await s3ListDocuments();
             } else {
-                throw new Error(`HTTP ${res.status}`);
+                const errText = await res.text().catch(() => '');
+                throw new Error(`MinIO S3 returned HTTP ${res.status}${errText ? ': ' + errText.substring(0, 150) : ''}`);
             }
         } catch (err) {
-            console.warn('Live S3 delete failed, updating local state cache:', err);
-            showS3Alert(`Deleted object "${key}" from bucket "${cfg.bucket}"`, 'success');
+            console.error('S3 delete error:', err);
+            showS3Alert(`Delete failed: ${err.message}`, 'error');
         }
-
-        s3LocalCache = s3LocalCache.filter(d => d.key !== key);
-        renderS3DocumentsTable(s3LocalCache);
     }
 
     function showS3Alert(msg, type) {
