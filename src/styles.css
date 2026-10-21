@@ -67,8 +67,8 @@ body {
 }
 
 .brand-logo-img {
-    height: 96px;
-    max-height: 96px;
+    height: 64px;
+    max-height: 64px;
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
