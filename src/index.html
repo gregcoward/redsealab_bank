@@ -320,27 +320,75 @@
             <div class="section-card mb-4">
                 <div class="card-header-flex">
                     <div>
-                        <h3>MinIO AIStore S3 Cluster Configuration</h3>
-                        <p class="text-muted">Connected to S3 service <code>aistor-primary-hl</code> in namespace <code>aistor</code> on port 9000</p>
+                        <h3>MinIO AIStore S3 Cluster & Authentication Configuration</h3>
+                        <p class="text-muted">Configure Kubernetes service, namespace, port, target bucket, and MinIO Access Key / Secret Key credentials.</p>
                     </div>
                     <span id="s3-status-badge" class="badge badge-success">S3 Endpoint Active</span>
                 </div>
-                <div class="form-grid-3 mt-3">
-                    <div class="form-group">
-                        <label for="s3-endpoint">S3 Proxy Endpoint</label>
-                        <input type="text" id="s3-endpoint" class="form-input" value="/s3" placeholder="/s3 or http://aistor-primary-hl.aistor.svc.cluster.local:9000">
+
+                <form id="s3-config-form" class="mt-3">
+                    <div class="form-grid-3">
+                        <div class="form-group">
+                            <label for="s3-service-name">Service Name</label>
+                            <input type="text" id="s3-service-name" class="form-input" value="aistor-primary-hl" placeholder="aistor-primary-hl" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="s3-namespace">Namespace</label>
+                            <input type="text" id="s3-namespace" class="form-input" value="aistor-primary" placeholder="aistor-primary" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="s3-port">Service Port</label>
+                            <input type="text" id="s3-port" class="form-input" value="9000" placeholder="9000" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="s3-bucket">Target Bucket Name</label>
-                        <input type="text" id="s3-bucket" class="form-input" value="redsealab-bank-kb" placeholder="redsealab-bank-kb">
+
+                    <div class="form-grid-3 mt-2">
+                        <div class="form-group">
+                            <label for="s3-protocol">Protocol</label>
+                            <select id="s3-protocol" class="form-input">
+                                <option value="https" selected>HTTPS (SSL/TLS Enabled)</option>
+                                <option value="http">HTTP (Unencrypted)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="s3-bucket">Target Bucket Name</label>
+                            <input type="text" id="s3-bucket" class="form-input" value="redsealab-bank-kb" placeholder="redsealab-bank-kb" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="s3-proxy-endpoint">Proxy Route Path</label>
+                            <input type="text" id="s3-proxy-endpoint" class="form-input" value="/s3" placeholder="/s3" required>
+                        </div>
                     </div>
-                    <div class="form-group flex-end">
-                        <button type="button" id="s3-refresh-btn" class="btn btn-outline btn-block">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
-                            Refresh Bucket Files
-                        </button>
+
+                    <div class="form-grid-3 mt-2">
+                        <div class="form-group">
+                            <label for="s3-access-key">MinIO Access Key (Required)</label>
+                            <input type="text" id="s3-access-key" class="form-input" value="aistor-admin" placeholder="Access Key from MinIO Console" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="s3-secret-key">MinIO Secret Key (Required)</label>
+                            <input type="password" id="s3-secret-key" class="form-input" value="F5testnet!" placeholder="Secret Key from MinIO Console" required>
+                        </div>
+                        <div class="form-group flex-end">
+                            <div class="btn-group-flex">
+                                <button type="submit" id="s3-save-config-btn" class="btn btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                                    Save & Test Connection
+                                </button>
+                                <button type="button" id="s3-refresh-btn" class="btn btn-outline">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                                    Refresh
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
+
+                <div id="s3-config-alert" class="alert hidden"></div>
+                <p class="text-muted text-sm mt-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <strong>MinIO Console Credentials Notice:</strong> Access Keys must be created in MinIO Console under <em>Identity &rarr; Access Keys &rarr; Create Access Key</em>. Frontend requests are authenticated with AWS SigV4 headers using your saved credentials.
+                </p>
             </div>
 
             <!-- Document Upload (POST/PUT) & Bucket Info -->

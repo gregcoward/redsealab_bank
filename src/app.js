@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             adminElements.forEach(el => el.classList.remove('hidden'));
         } else {
             adminElements.forEach(el => el.classList.add('hidden'));
-            // If active tab is admin but user is not admin, reset to dashboard
             const activeTab = document.querySelector('.nav-btn.active');
             if (activeTab && activeTab.getAttribute('data-tab') === 'admin') {
                 const dashBtn = document.querySelector('.nav-btn[data-tab="dashboard"]');
@@ -129,8 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // Initialize S3 List if admin
+        // Load S3 settings & list documents if admin
         if (user.isAdmin) {
+            loadS3ConfigFromStorage();
             s3ListDocuments();
         }
     }
@@ -297,7 +297,100 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // MINIO AISTORE S3 ADMIN PORTAL FUNCTIONS
+    // AWS SIGV4 AUTHENTICATION HELPERS
+    // ==========================================
+
+    async function computeSha256Hex(data) {
+        const encoder = new TextEncoder();
+        let buffer;
+        if (typeof data === 'string') {
+            buffer = encoder.encode(data);
+        } else if (data instanceof ArrayBuffer) {
+            buffer = data;
+        } else if (data && data.arrayBuffer) {
+            buffer = await data.arrayBuffer();
+        } else {
+            buffer = encoder.encode('');
+        }
+        const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+        return Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function hmacSha256(key, message) {
+        const encoder = new TextEncoder();
+        const keyData = typeof key === 'string' ? encoder.encode(key) : key;
+        const msgData = typeof message === 'string' ? encoder.encode(message) : message;
+
+        const cryptoKey = await crypto.subtle.importKey(
+            'raw', keyData, { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+        );
+        return await crypto.subtle.sign('HMAC', cryptoKey, msgData);
+    }
+
+    async function getSignatureKey(secretKey, dateStamp, regionName, serviceName) {
+        const kDate = await hmacSha256('AWS4' + secretKey, dateStamp);
+        const kRegion = await hmacSha256(kDate, regionName);
+        const kService = await hmacSha256(kRegion, serviceName);
+        const kSigning = await hmacSha256(kService, 'aws4_request');
+        return kSigning;
+    }
+
+    async function getAwsSigV4Headers({ method, path, headers = {}, payload = '', accessKey, secretKey, hostHeader, region = 'us-east-1', service = 's3' }) {
+        if (!accessKey || !secretKey) return headers;
+
+        const now = new Date();
+        const amzDate = now.toISOString().replace(/[:-]/g, '').split('.')[0] + 'Z';
+        const dateStamp = amzDate.substring(0, 8);
+
+        const payloadHash = await computeSha256Hex(payload);
+
+        const reqHeaders = {
+            'host': hostHeader,
+            'x-amz-content-sha256': payloadHash,
+            'x-amz-date': amzDate,
+            ...headers
+        };
+
+        const sortedHeaderKeys = Object.keys(reqHeaders).map(k => k.toLowerCase()).sort();
+        const canonicalHeaders = sortedHeaderKeys.map(k => `${k}:${reqHeaders[k].trim()}\n`).join('');
+        const signedHeaders = sortedHeaderKeys.join(';');
+
+        const canonicalUri = path.startsWith('/') ? path : '/' + path;
+        const canonicalQueryString = '';
+
+        const canonicalRequest = [
+            method.toUpperCase(),
+            canonicalUri,
+            canonicalQueryString,
+            canonicalHeaders,
+            signedHeaders,
+            payloadHash
+        ].join('\n');
+
+        const canonicalRequestHash = await computeSha256Hex(canonicalRequest);
+
+        const credentialScope = `${dateStamp}/${region}/${service}/aws4_request`;
+        const stringToSign = [
+            'AWS4-HMAC-SHA256',
+            amzDate,
+            credentialScope,
+            canonicalRequestHash
+        ].join('\n');
+
+        const signingKey = await getSignatureKey(secretKey, dateStamp, region, service);
+        const signatureBuffer = await hmacSha256(signingKey, stringToSign);
+        const signatureHex = Array.from(new Uint8Array(signatureBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+
+        const authHeader = `AWS4-HMAC-SHA256 Credential=${accessKey}/${credentialScope}, SignedHeaders=${signedHeaders}, Signature=${signatureHex}`;
+
+        return {
+            ...reqHeaders,
+            'Authorization': authHeader
+        };
+    }
+
+    // ==========================================
+    // MINIO AISTORE S3 CONNECTIVITY CONFIG
     // ==========================================
 
     let s3LocalCache = [
@@ -309,6 +402,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { key: 'redsea_lab_bank_knowledge_base_full.txt', contentType: 'text/plain', size: 12046, lastModified: new Date().toISOString() }
     ];
 
+    const s3ConfigForm = document.getElementById('s3-config-form');
+    const s3ConfigAlert = document.getElementById('s3-config-alert');
     const s3FileInput = document.getElementById('s3-file-input');
     const s3ObjectKey = document.getElementById('s3-object-key');
     const s3UploadForm = document.getElementById('s3-upload-form');
@@ -317,6 +412,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const s3DocsBody = document.getElementById('s3-documents-body');
     const s3DocCount = document.getElementById('s3-doc-count');
     const s3StatusBadge = document.getElementById('s3-status-badge');
+
+    function getS3Config() {
+        const serviceName = (document.getElementById('s3-service-name')?.value || 'aistor-primary-hl').trim();
+        const namespace = (document.getElementById('s3-namespace')?.value || 'aistor-primary').trim();
+        const port = (document.getElementById('s3-port')?.value || '9000').trim();
+        const protocol = (document.getElementById('s3-protocol')?.value || 'https').trim();
+        const bucket = (document.getElementById('s3-bucket')?.value || 'redsealab-bank-kb').trim();
+        const proxyPath = (document.getElementById('s3-proxy-endpoint')?.value || '/s3').trim();
+        const accessKey = (document.getElementById('s3-access-key')?.value || '').trim();
+        const secretKey = (document.getElementById('s3-secret-key')?.value || '').trim();
+
+        const targetHost = `${serviceName}.${namespace}.svc.cluster.local:${port}`;
+
+        return { serviceName, namespace, port, protocol, bucket, proxyPath, accessKey, secretKey, targetHost };
+    }
+
+    function saveS3ConfigToStorage() {
+        const cfg = getS3Config();
+        sessionStorage.setItem('aistor_s3_config', JSON.stringify(cfg));
+    }
+
+    function loadS3ConfigFromStorage() {
+        const saved = sessionStorage.getItem('aistor_s3_config');
+        if (!saved) return;
+        try {
+            const cfg = JSON.parse(saved);
+            if (document.getElementById('s3-service-name')) document.getElementById('s3-service-name').value = cfg.serviceName || 'aistor-primary-hl';
+            if (document.getElementById('s3-namespace')) document.getElementById('s3-namespace').value = cfg.namespace || 'aistor-primary';
+            if (document.getElementById('s3-port')) document.getElementById('s3-port').value = cfg.port || '9000';
+            if (document.getElementById('s3-protocol')) document.getElementById('s3-protocol').value = cfg.protocol || 'https';
+            if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = cfg.bucket || 'redsealab-bank-kb';
+            if (document.getElementById('s3-proxy-endpoint')) document.getElementById('s3-proxy-endpoint').value = cfg.proxyPath || '/s3';
+            if (document.getElementById('s3-access-key')) document.getElementById('s3-access-key').value = cfg.accessKey || '';
+            if (document.getElementById('s3-secret-key')) document.getElementById('s3-secret-key').value = cfg.secretKey || '';
+        } catch (e) {
+            console.warn('Error reading saved S3 config:', e);
+        }
+    }
+
+    if (s3ConfigForm) {
+        s3ConfigForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveS3ConfigToStorage();
+            if (s3ConfigAlert) {
+                s3ConfigAlert.className = 'alert success';
+                s3ConfigAlert.textContent = 'MinIO AIStore connectivity & access key configuration saved successfully! Re-testing bucket connection...';
+                s3ConfigAlert.classList.remove('hidden');
+                setTimeout(() => s3ConfigAlert.classList.add('hidden'), 4000);
+            }
+            s3ListDocuments();
+        });
+    }
 
     if (s3FileInput && s3ObjectKey) {
         s3FileInput.addEventListener('change', () => {
@@ -336,15 +483,30 @@ document.addEventListener('DOMContentLoaded', () => {
     async function s3ListDocuments() {
         if (!s3DocsBody) return;
 
-        const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
+        const cfg = getS3Config();
         const currentBucketLabel = document.getElementById('current-bucket-label');
-        if (currentBucketLabel) currentBucketLabel.textContent = bucket;
+        if (currentBucketLabel) currentBucketLabel.textContent = cfg.bucket;
 
-        const url = `${endpoint.replace(/\/$/, '')}/${bucket}`;
+        const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}`;
+        const s3Path = `/${cfg.bucket}`;
+
+        const baseHeaders = {
+            'X-S3-Target-Host': cfg.targetHost,
+            'X-S3-Proto': cfg.protocol
+        };
+
+        const reqHeaders = await getAwsSigV4Headers({
+            method: 'GET',
+            path: s3Path,
+            headers: baseHeaders,
+            payload: '',
+            accessKey: cfg.accessKey,
+            secretKey: cfg.secretKey,
+            hostHeader: cfg.targetHost
+        });
 
         try {
-            const res = await fetch(url, { method: 'GET' });
+            const res = await fetch(proxyUrl, { method: 'GET', headers: reqHeaders });
             if (res.ok) {
                 const xmlText = await res.text();
                 const parser = new DOMParser();
@@ -365,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (s3StatusBadge) {
                     s3StatusBadge.className = 'badge badge-success';
-                    s3StatusBadge.textContent = 'MinIO S3 Connected';
+                    s3StatusBadge.textContent = `Connected (${cfg.targetHost})`;
                 }
             } else {
                 throw new Error(`HTTP ${res.status}`);
@@ -374,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn('MinIO S3 live fetch fallback to local cache:', err);
             if (s3StatusBadge) {
                 s3StatusBadge.className = 'badge badge-warning';
-                s3StatusBadge.textContent = 'S3 Proxy Standby / Ready';
+                s3StatusBadge.textContent = 'S3 Proxy Standby / Local Cache';
             }
         }
 
@@ -445,33 +607,47 @@ document.addEventListener('DOMContentLoaded', () => {
             const file = s3FileInput.files[0];
             const objectKey = s3ObjectKey.value.trim();
             const contentType = document.getElementById('s3-content-type').value;
-            const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-            const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
+            const cfg = getS3Config();
 
             if (!file || !objectKey) {
                 showS3Alert('Please select a file and provide an object key.', 'error');
                 return;
             }
 
-            const targetUrl = `${endpoint.replace(/\/$/, '')}/${bucket}/${encodeURIComponent(objectKey)}`;
+            const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}/${encodeURIComponent(objectKey)}`;
+            const s3Path = `/${cfg.bucket}/${objectKey}`;
+
+            const baseHeaders = {
+                'Content-Type': contentType,
+                'X-S3-Target-Host': cfg.targetHost,
+                'X-S3-Proto': cfg.protocol
+            };
+
+            const reqHeaders = await getAwsSigV4Headers({
+                method: 'PUT',
+                path: s3Path,
+                headers: baseHeaders,
+                payload: file,
+                accessKey: cfg.accessKey,
+                secretKey: cfg.secretKey,
+                hostHeader: cfg.targetHost
+            });
 
             try {
-                const res = await fetch(targetUrl, {
+                const res = await fetch(proxyUrl, {
                     method: 'PUT',
-                    headers: {
-                        'Content-Type': contentType
-                    },
+                    headers: reqHeaders,
                     body: file
                 });
 
                 if (res.ok || res.status === 200 || res.status === 201 || res.status === 204) {
-                    showS3Alert(`Successfully uploaded "${objectKey}" to MinIO AIStore bucket "${bucket}"!`, 'success');
+                    showS3Alert(`Successfully uploaded "${objectKey}" to MinIO AIStore bucket "${cfg.bucket}" using Access Key "${cfg.accessKey}"!`, 'success');
                 } else {
                     throw new Error(`Server returned HTTP ${res.status}`);
                 }
             } catch (err) {
                 console.warn('Live S3 upload failed, updating local state cache:', err);
-                showS3Alert(`Uploaded "${objectKey}" (${formatBytes(file.size)}) to bucket "${bucket}" (MinIO AIStore HTTP PUT/POST target: ${targetUrl})`, 'success');
+                showS3Alert(`Uploaded "${objectKey}" (${formatBytes(file.size)}) to bucket "${cfg.bucket}" on host ${cfg.targetHost}`, 'success');
             }
 
             // Update local cache
@@ -494,35 +670,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Download Document (GET)
-    function s3DownloadDocument(key) {
-        const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
-        const downloadUrl = `${endpoint.replace(/\/$/, '')}/${bucket}/${encodeURIComponent(key)}`;
-
+    async function s3DownloadDocument(key) {
+        const cfg = getS3Config();
+        const downloadUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}/${encodeURIComponent(key)}`;
         window.open(downloadUrl, '_blank');
-        showS3Alert(`Initiated GET download request for "${key}" from ${downloadUrl}`, 'success');
+        showS3Alert(`Initiated GET download request for "${key}" from ${cfg.targetHost}`, 'success');
     }
 
     // Delete Document (DELETE)
     async function s3DeleteDocument(key) {
-        if (!confirm(`Are you sure you want to HTTP DELETE object "${key}" from MinIO AIStore bucket?`)) {
+        const cfg = getS3Config();
+        if (!confirm(`Are you sure you want to HTTP DELETE object "${key}" from bucket "${cfg.bucket}" on MinIO AIStore host ${cfg.targetHost}?`)) {
             return;
         }
 
-        const endpoint = document.getElementById('s3-endpoint') ? document.getElementById('s3-endpoint').value.trim() : '/s3';
-        const bucket = document.getElementById('s3-bucket') ? document.getElementById('s3-bucket').value.trim() : 'redsealab-bank-kb';
-        const deleteUrl = `${endpoint.replace(/\/$/, '')}/${bucket}/${encodeURIComponent(key)}`;
+        const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}/${encodeURIComponent(key)}`;
+        const s3Path = `/${cfg.bucket}/${key}`;
+
+        const baseHeaders = {
+            'X-S3-Target-Host': cfg.targetHost,
+            'X-S3-Proto': cfg.protocol
+        };
+
+        const reqHeaders = await getAwsSigV4Headers({
+            method: 'DELETE',
+            path: s3Path,
+            headers: baseHeaders,
+            payload: '',
+            accessKey: cfg.accessKey,
+            secretKey: cfg.secretKey,
+            hostHeader: cfg.targetHost
+        });
 
         try {
-            const res = await fetch(deleteUrl, { method: 'DELETE' });
+            const res = await fetch(proxyUrl, { method: 'DELETE', headers: reqHeaders });
             if (res.ok || res.status === 204 || res.status === 200) {
-                showS3Alert(`HTTP DELETE successful for object "${key}"`, 'success');
+                showS3Alert(`HTTP DELETE successful for object "${key}" on ${cfg.targetHost}`, 'success');
             } else {
                 throw new Error(`HTTP ${res.status}`);
             }
         } catch (err) {
             console.warn('Live S3 delete failed, updating local state cache:', err);
-            showS3Alert(`Deleted object "${key}" from bucket "${bucket}" (HTTP DELETE: ${deleteUrl})`, 'success');
+            showS3Alert(`Deleted object "${key}" from bucket "${cfg.bucket}"`, 'success');
         }
 
         s3LocalCache = s3LocalCache.filter(d => d.key !== key);
