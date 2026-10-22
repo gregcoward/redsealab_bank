@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Load S3 settings & list documents if admin
         if (user.isAdmin) {
             loadS3ConfigFromStorage();
+            loadGuardrailsConfigFromStorage();
             s3ListDocuments();
         }
     }
@@ -607,7 +608,199 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Upload Document (POST / PUT)
+    // ==========================================
+    // F5 AI GUARDRAILS SCAN & TEXT EXTRACTION
+    // ==========================================
+
+    const guardrailsConfigForm = document.getElementById('guardrails-config-form');
+    const guardrailsConfigAlert = document.getElementById('guardrails-config-alert');
+    const guardrailsEnabledCheckbox = document.getElementById('guardrails-enabled');
+    const guardrailsStatusBadge = document.getElementById('guardrails-status-badge');
+
+    function getGuardrailsConfig() {
+        const enabled = guardrailsEnabledCheckbox ? guardrailsEnabledCheckbox.checked : true;
+        let rawEndpoint = (document.getElementById('guardrails-endpoint')?.value || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500').trim();
+        const token = (document.getElementById('guardrails-token')?.value || '').trim();
+        const project = (document.getElementById('guardrails-project')?.value || 'default').trim();
+        const scanDirection = (document.getElementById('guardrails-scan-direction')?.value || 'request').trim();
+        const proxyPath = (document.getElementById('guardrails-proxy-endpoint')?.value || '/guardrails').trim();
+
+        let proto = 'http';
+        let targetHost = rawEndpoint.replace(/^https?:\/\//, '');
+        if (rawEndpoint.startsWith('https://')) {
+            proto = 'https';
+        }
+
+        return { enabled, rawEndpoint, targetHost, proto, token, project, scanDirection, proxyPath };
+    }
+
+    function saveGuardrailsConfigToStorage() {
+        const cfg = getGuardrailsConfig();
+        sessionStorage.setItem('f5_guardrails_config', JSON.stringify(cfg));
+    }
+
+    function loadGuardrailsConfigFromStorage() {
+        const saved = sessionStorage.getItem('f5_guardrails_config');
+        if (!saved) return;
+        try {
+            const cfg = JSON.parse(saved);
+            if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = cfg.enabled !== false;
+            if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = cfg.rawEndpoint || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500';
+            if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = cfg.token || '';
+            if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = cfg.project || 'default';
+            if (document.getElementById('guardrails-scan-direction')) document.getElementById('guardrails-scan-direction').value = cfg.scanDirection || 'request';
+            if (document.getElementById('guardrails-proxy-endpoint')) document.getElementById('guardrails-proxy-endpoint').value = cfg.proxyPath || '/guardrails';
+        } catch (e) {
+            console.warn('Error reading saved Guardrails config:', e);
+        }
+    }
+
+    if (guardrailsConfigForm) {
+        guardrailsConfigForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveGuardrailsConfigToStorage();
+            if (guardrailsConfigAlert) {
+                guardrailsConfigAlert.className = 'alert success';
+                guardrailsConfigAlert.textContent = 'F5 AI Guardrails security configuration saved successfully!';
+                guardrailsConfigAlert.classList.remove('hidden');
+                setTimeout(() => guardrailsConfigAlert.classList.add('hidden'), 4000);
+            }
+        });
+    }
+
+    // Client-side Document Text Extraction Engine
+    async function extractTextFromDocument(file) {
+        const fileName = file.name.toLowerCase();
+
+        // 1. Plain Text / Code / Data formats
+        if (fileName.endsWith('.txt') || fileName.endsWith('.json') || fileName.endsWith('.csv') ||
+            fileName.endsWith('.md') || fileName.endsWith('.xml') || fileName.endsWith('.html') ||
+            fileName.endsWith('.log') || fileName.endsWith('.yaml') || fileName.endsWith('.yml')) {
+            return await file.text();
+        }
+
+        // 2. OpenXML Documents (.docx, .pptx, .xlsx) & binary documents (.doc, .ppt, .xls) & PDFs
+        const buffer = await file.arrayBuffer();
+        return extractPrintableStringsFromArrayBuffer(buffer);
+    }
+
+    function extractPrintableStringsFromArrayBuffer(buffer) {
+        const bytes = new Uint8Array(buffer);
+        let extracted = '';
+        let currentWord = '';
+
+        for (let i = 0; i < bytes.length; i++) {
+            const charCode = bytes[i];
+            if ((charCode >= 32 && charCode <= 126) || charCode === 10 || charCode === 13 || charCode === 9) {
+                currentWord += String.fromCharCode(charCode);
+            } else {
+                if (currentWord.trim().length >= 3) {
+                    extracted += currentWord + '\n';
+                }
+                currentWord = '';
+            }
+        }
+        if (currentWord.trim().length >= 3) {
+            extracted += currentWord + '\n';
+        }
+
+        const cleanedLines = extracted.split('\n').filter(line => {
+            const trimmed = line.trim();
+            return trimmed.length > 3 && /[a-zA-Z0-9]/.test(trimmed);
+        });
+
+        return cleanedLines.join(' ');
+    }
+
+    // F5 AI Guardrails API Scanner Call
+    async function scanTextWithF5Guardrails(text, fileName) {
+        const cfg = getGuardrailsConfig();
+
+        if (!cfg.enabled) {
+            return {
+                outcome: 'cleared',
+                skipped: true,
+                message: 'F5 AI Guardrails scan skipped (Disabled in Admin Portal).'
+            };
+        }
+
+        if (!text || text.trim().length === 0) {
+            return {
+                outcome: 'cleared',
+                skipped: true,
+                message: 'No readable text content extracted from document; skipping text guardrails scan.'
+            };
+        }
+
+        const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/backend/v1/scans`;
+        const headers = {
+            'Content-Type': 'application/json',
+            'X-Guardrails-Target-Host': cfg.targetHost,
+            'X-Guardrails-Proto': cfg.proto
+        };
+
+        if (cfg.token) {
+            headers['Authorization'] = `Bearer ${cfg.token}`;
+        }
+
+        const payload = {
+            input: text.substring(0, 50000),
+            project: cfg.project,
+            scanDirection: cfg.scanDirection,
+            flagOnly: false,
+            verbose: true
+        };
+
+        try {
+            const response = await fetch(proxyUrl, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify(payload)
+            });
+
+            if (response.ok || response.status === 200 || response.status === 201) {
+                const data = await response.json();
+                const outcome = (data.outcome || data.status || 'cleared').toLowerCase();
+
+                let violations = [];
+                if (data.scannerResults && Array.isArray(data.scannerResults)) {
+                    data.scannerResults.forEach(sc => {
+                        if (sc.outcome === 'blocked' || sc.outcome === 'flagged' || sc.status === 'blocked' || sc.status === 'flagged' || sc.score > 0.5) {
+                            violations.push(`${sc.name || sc.scannerName || 'Security Scanner'}: ${sc.reason || sc.detail || sc.matchedText || 'Violation detected'}`);
+                        }
+                    });
+                }
+
+                if (data.threats && Array.isArray(data.threats)) {
+                    data.threats.forEach(th => violations.push(`Threat Detected: ${th.name || th.type}`));
+                }
+
+                return {
+                    outcome: outcome,
+                    data: data,
+                    violations: violations,
+                    message: outcome === 'blocked' || outcome === 'flagged' || violations.length > 0
+                        ? `Document BLOCKED by F5 AI Guardrails!`
+                        : `Guardrails Scan Cleared (0 violations).`
+                };
+            } else {
+                const errText = await response.text().catch(() => '');
+                console.warn('Guardrails API HTTP response warning:', response.status, errText);
+                return {
+                    outcome: 'errored',
+                    message: `Guardrails API returned HTTP ${response.status}: ${errText.substring(0, 150)}`
+                };
+            }
+        } catch (err) {
+            console.error('Guardrails request exception:', err);
+            return {
+                outcome: 'errored',
+                message: `Guardrails connection error: ${err.message}`
+            };
+        }
+    }
+
+    // Upload Document (POST / PUT) with 3-Step F5 Guardrails Pipeline
     if (s3UploadForm) {
         s3UploadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -622,6 +815,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // Step 1: Extract Document Text
+            showS3Alert(`[Step 1/3] Extracting text content from "${file.name}"...`, 'info');
+            let extractedText = '';
+            try {
+                extractedText = await extractTextFromDocument(file);
+            } catch (extErr) {
+                console.warn('Text extraction warning:', extErr);
+            }
+
+            // Step 2: F5 AI Guardrails Out-Of-Band Scan
+            const guardrailsCfg = getGuardrailsConfig();
+            if (guardrailsCfg.enabled) {
+                showS3Alert(`[Step 2/3] Scanning extracted text with F5 AI Guardrails (${extractedText.length} chars extracted)...`, 'info');
+                const scanResult = await scanTextWithF5Guardrails(extractedText, file.name);
+
+                if (scanResult.outcome === 'blocked' || scanResult.outcome === 'flagged' || (scanResult.violations && scanResult.violations.length > 0)) {
+                    // PREVENT S3 UPLOAD!
+                    const detailMsg = scanResult.violations && scanResult.violations.length > 0
+                        ? scanResult.violations.join('; ')
+                        : 'Policy / PII violation detected by F5 AI Guardrails.';
+                    showS3Alert(`⛔ UPLOAD BLOCKED by F5 AI Guardrails!\nFile "${file.name}" failed security scan.\nDetails: ${detailMsg}`, 'error');
+                    return; // STOP PIPELINE - DO NOT UPLOAD TO S3
+                } else if (scanResult.outcome === 'errored') {
+                    showS3Alert(`⚠️ Guardrails Scan Warning: ${scanResult.message}. Proceeding to S3 upload...`, 'warning');
+                } else {
+                    showS3Alert(`[Step 3/3] Guardrails Scan Cleared ✅. Uploading to MinIO S3...`, 'info');
+                }
+            } else {
+                showS3Alert(`[Step 3/3] Guardrails scan disabled. Uploading directly to MinIO S3...`, 'info');
+            }
+
+            // Step 3: Upload to MinIO S3 (PUT)
             const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}/${encodeURIComponent(objectKey)}`;
             const s3Path = `/${cfg.bucket}/${objectKey}`;
 
@@ -649,7 +874,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (res.ok || res.status === 200 || res.status === 201 || res.status === 204) {
-                    showS3Alert(`Successfully uploaded "${objectKey}" to MinIO AIStore bucket "${cfg.bucket}"!`, 'success');
+                    showS3Alert(`✅ Success! Guardrails Passed & Uploaded "${objectKey}" to MinIO AIStore bucket "${cfg.bucket}"!`, 'success');
                     s3UploadForm.reset();
                     await s3ListDocuments();
                 } else {

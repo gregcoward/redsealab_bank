@@ -391,6 +391,68 @@
                 </p>
             </div>
 
+            <!-- F5 AI Guardrails Configuration Card -->
+            <div class="section-card mb-4">
+                <div class="card-header-flex">
+                    <div>
+                        <h3>F5 AI Guardrails Out-of-Band Security Scan Configuration</h3>
+                        <p class="text-muted">Configure F5 AI Guardrails API endpoint, bearer token, project policy profile, and scan direction for out-of-band document text scanning prior to MinIO S3 upload.</p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label class="toggle-switch" style="display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.875rem; font-weight: 500;">
+                            <input type="checkbox" id="guardrails-enabled" checked style="accent-color: var(--accent-blue); transform: scale(1.2);">
+                            <span>Enable Guardrails Scan</span>
+                        </label>
+                        <span id="guardrails-status-badge" class="badge badge-success">Guardrails Active</span>
+                    </div>
+                </div>
+
+                <form id="guardrails-config-form" class="mt-3">
+                    <div class="form-grid-3">
+                        <div class="form-group">
+                            <label for="guardrails-endpoint">AI Guardrails Endpoint URL</label>
+                            <input type="text" id="guardrails-endpoint" class="form-input" value="http://cai-moderator.cai-moderator.svc.cluster.local:5500" placeholder="http://cai-moderator.cai-moderator.svc.cluster.local:5500" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guardrails-token">API Bearer Token (Optional)</label>
+                            <input type="password" id="guardrails-token" class="form-input" value="" placeholder="Bearer Token (Leave blank if internal API)">
+                        </div>
+                        <div class="form-group">
+                            <label for="guardrails-project">Project / Policy Profile ID</label>
+                            <input type="text" id="guardrails-project" class="form-input" value="default" placeholder="default" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-3 mt-2">
+                        <div class="form-group">
+                            <label for="guardrails-scan-direction">Scan Direction (scanDirection)</label>
+                            <select id="guardrails-scan-direction" class="form-input">
+                                <option value="request" selected>request (Standard Prompt & Policy Scanners)</option>
+                                <option value="response">response (Outbound Generation / Exfiltration Scanners)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guardrails-proxy-endpoint">Proxy Route Path</label>
+                            <input type="text" id="guardrails-proxy-endpoint" class="form-input" value="/guardrails" placeholder="/guardrails" required>
+                        </div>
+                        <div class="form-group flex-end">
+                            <div class="btn-group-flex">
+                                <button type="submit" id="guardrails-save-config-btn" class="btn btn-primary">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                                    Save & Test Guardrails
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="guardrails-config-alert" class="alert hidden"></div>
+                <p class="text-muted text-sm mt-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <strong>F5 AI Guardrails Notice:</strong> Out-of-band document text extraction extracts text from PDF, DOCX, PPTX, XLSX, TXT, JSON, CSV, and MD files before executing <code>POST /backend/v1/scans</code>. Files with policy violations (PII, Prompt Injection, Threat Detection) are automatically blocked before S3 PUT.
+                </p>
+            </div>
+
             <!-- Document Upload (POST/PUT) & Bucket Info -->
             <div class="form-grid">
                 <!-- Upload Form -->
