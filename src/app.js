@@ -1,3 +1,75 @@
+// Global S3 Toggle Config function accessible anywhere with debounce guard
+let lastS3ToggleTime = 0;
+window.toggleS3Config = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+
+    const now = Date.now();
+    if (now - lastS3ToggleTime < 250) return; // Prevent double trigger from inline onclick + addEventListener
+    lastS3ToggleTime = now;
+
+    const container = document.getElementById('s3-config-fields-container');
+    const btn = document.getElementById('s3-toggle-config-btn');
+    if (!container) return;
+
+    const isHidden = container.classList.contains('hidden') || window.getComputedStyle(container).display === 'none';
+    if (isHidden) {
+        container.classList.remove('hidden');
+        container.style.display = 'block';
+        if (btn) {
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="pointer-events: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                Close Configuration
+            `;
+        }
+    } else {
+        container.classList.add('hidden');
+        container.style.display = 'none';
+        if (btn) {
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="pointer-events: none;"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                Configure
+            `;
+        }
+    }
+};
+
+// Global Guardrails Toggle Config function
+let lastGuardrailsToggleTime = 0;
+window.toggleGuardrailsConfig = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+
+    const now = Date.now();
+    if (now - lastGuardrailsToggleTime < 250) return;
+    lastGuardrailsToggleTime = now;
+
+    const container = document.getElementById('guardrails-config-fields-container');
+    const btn = document.getElementById('guardrails-toggle-config-btn');
+    if (!container) return;
+
+    const isHidden = container.classList.contains('hidden') || window.getComputedStyle(container).display === 'none';
+    if (isHidden) {
+        container.classList.remove('hidden');
+        container.style.display = 'block';
+        if (btn) {
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="pointer-events: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                Close Configuration
+            `;
+        }
+    } else {
+        container.classList.add('hidden');
+        container.style.display = 'none';
+        if (btn) {
+            btn.innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="pointer-events: none;"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                Configure
+            `;
+        }
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     // Demo User Database
     const USERS_DB = {
@@ -421,20 +493,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const s3DocsBody = document.getElementById('s3-documents-body');
     const s3DocCount = document.getElementById('s3-doc-count');
     const s3StatusBadge = document.getElementById('s3-status-badge');
+    const s3ToggleConfigBtn = document.getElementById('s3-toggle-config-btn');
+    const s3ConfigFieldsContainer = document.getElementById('s3-config-fields-container');
 
     function getS3Config() {
-        const serviceName = (document.getElementById('s3-service-name')?.value || 'aistor-primary-hl').trim();
-        const namespace = (document.getElementById('s3-namespace')?.value || 'aistor-primary').trim();
+        let endpointUrl = (document.getElementById('s3-endpoint-url')?.value || 'https://aistor-primary-hl.aistor-primary.svc.cluster.local:9000').trim();
         const port = (document.getElementById('s3-port')?.value || '9000').trim();
-        const protocol = (document.getElementById('s3-protocol')?.value || 'https').trim();
+        let protocol = (document.getElementById('s3-protocol')?.value || 'https').trim();
         const bucket = (document.getElementById('s3-bucket')?.value || 'redsealab-bank-kb').trim();
         const proxyPath = (document.getElementById('s3-proxy-endpoint')?.value || '/s3').trim();
         const accessKey = (document.getElementById('s3-access-key')?.value || '').trim();
         const secretKey = (document.getElementById('s3-secret-key')?.value || '').trim();
 
-        const targetHost = `${serviceName}.${namespace}.svc.cluster.local:${port}`;
+        let rawHost = endpointUrl;
+        if (rawHost.startsWith('https://')) {
+            protocol = 'https';
+            rawHost = rawHost.substring(8);
+        } else if (rawHost.startsWith('http://')) {
+            protocol = 'http';
+            rawHost = rawHost.substring(7);
+        }
 
-        return { serviceName, namespace, port, protocol, bucket, proxyPath, accessKey, secretKey, targetHost };
+        // Strip trailing path/slashes
+        rawHost = rawHost.replace(/\/.*$/, '');
+
+        let targetHost = rawHost;
+        if (!targetHost.includes(':') && port) {
+            targetHost = `${targetHost}:${port}`;
+        }
+
+        return { endpointUrl, targetHost, protocol, port, bucket, proxyPath, accessKey, secretKey };
     }
 
     function saveS3ConfigToStorage() {
@@ -447,8 +535,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!saved) return;
         try {
             const cfg = JSON.parse(saved);
-            if (document.getElementById('s3-service-name')) document.getElementById('s3-service-name').value = cfg.serviceName || 'aistor-primary-hl';
-            if (document.getElementById('s3-namespace')) document.getElementById('s3-namespace').value = cfg.namespace || 'aistor-primary';
+            if (document.getElementById('s3-endpoint-url')) {
+                document.getElementById('s3-endpoint-url').value = cfg.endpointUrl || (cfg.targetHost ? `${cfg.protocol || 'https'}://${cfg.targetHost}` : 'https://aistor-primary-hl.aistor-primary.svc.cluster.local:9000');
+            }
             if (document.getElementById('s3-port')) document.getElementById('s3-port').value = cfg.port || '9000';
             if (document.getElementById('s3-protocol')) document.getElementById('s3-protocol').value = cfg.protocol || 'https';
             if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = cfg.bucket || 'redsealab-bank-kb';
@@ -458,6 +547,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (e) {
             console.warn('Error reading saved S3 config:', e);
         }
+    }
+
+    if (s3ToggleConfigBtn) {
+        s3ToggleConfigBtn.addEventListener('click', (e) => {
+            window.toggleS3Config(e);
+        });
     }
 
     if (s3ConfigForm) {
@@ -474,10 +569,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const s3ContentTypeSelect = document.getElementById('s3-content-type');
+
     if (s3FileInput && s3ObjectKey) {
         s3FileInput.addEventListener('change', () => {
             if (s3FileInput.files && s3FileInput.files[0]) {
-                s3ObjectKey.value = s3FileInput.files[0].name;
+                const file = s3FileInput.files[0];
+                s3ObjectKey.value = file.name;
+                if (s3ContentTypeSelect) {
+                    s3ContentTypeSelect.value = getContentTypeFromKey(file.name, file.type);
+                }
             }
         });
     }
@@ -616,12 +717,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const guardrailsConfigAlert = document.getElementById('guardrails-config-alert');
     const guardrailsEnabledCheckbox = document.getElementById('guardrails-enabled');
     const guardrailsStatusBadge = document.getElementById('guardrails-status-badge');
+    const guardrailsToggleConfigBtn = document.getElementById('guardrails-toggle-config-btn');
+
+    if (guardrailsToggleConfigBtn) {
+        guardrailsToggleConfigBtn.addEventListener('click', (e) => {
+            window.toggleGuardrailsConfig(e);
+        });
+    }
 
     function getGuardrailsConfig() {
         const enabled = guardrailsEnabledCheckbox ? guardrailsEnabledCheckbox.checked : true;
         let rawEndpoint = (document.getElementById('guardrails-endpoint')?.value || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500').trim();
-        const token = (document.getElementById('guardrails-token')?.value || '').trim();
-        const project = (document.getElementById('guardrails-project')?.value || 'default').trim();
+        const token = (document.getElementById('guardrails-token')?.value || 'MDFhMTYwZWUtNjM4MS03MDM0LWFkNzMtZDMxNmY3NDcyN2Jj/redsealab_bank_api_token_secret_123456789').trim();
+        const project = (document.getElementById('guardrails-project')?.value || '01a160ee-5a3d-7010-9d6c-2bba263f77df').trim();
         const scanDirection = (document.getElementById('guardrails-scan-direction')?.value || 'request').trim();
         const proxyPath = (document.getElementById('guardrails-proxy-endpoint')?.value || '/guardrails').trim();
 
@@ -646,8 +754,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const cfg = JSON.parse(saved);
             if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = cfg.enabled !== false;
             if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = cfg.rawEndpoint || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500';
-            if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = cfg.token || '';
-            if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = cfg.project || 'default';
+            if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = cfg.token || 'MDFhMTYwZWUtNjM4MS03MDM0LWFkNzMtZDMxNmY3NDcyN2Jj/redsealab_bank_api_token_secret_123456789';
+            if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = cfg.project || '01a160ee-5a3d-7010-9d6c-2bba263f77df';
             if (document.getElementById('guardrails-scan-direction')) document.getElementById('guardrails-scan-direction').value = cfg.scanDirection || 'request';
             if (document.getElementById('guardrails-proxy-endpoint')) document.getElementById('guardrails-proxy-endpoint').value = cfg.proxyPath || '/guardrails';
         } catch (e) {
@@ -679,9 +787,503 @@ document.addEventListener('DOMContentLoaded', () => {
             return await file.text();
         }
 
-        // 2. OpenXML Documents (.docx, .pptx, .xlsx) & binary documents (.doc, .ppt, .xls) & PDFs
         const buffer = await file.arrayBuffer();
+
+        // 2. OpenXML Word Documents (.docx, .docm, .dotx)
+        if (fileName.endsWith('.docx') || fileName.endsWith('.docm') || fileName.endsWith('.dotx')) {
+            const extracted = await extractTextFromDocx(buffer);
+            if (extracted && extracted.trim().length > 0) {
+                return extracted;
+            }
+        }
+
+        // 3. PDF Documents (.pdf)
+        if (fileName.endsWith('.pdf')) {
+            const extracted = await extractTextFromPdf(buffer);
+            if (extracted && extracted.trim().length > 0) {
+                return extracted;
+            }
+        }
+
+        // 4. OpenXML PowerPoint Documents (.pptx, .pptm, .potx)
+        if (fileName.endsWith('.pptx') || fileName.endsWith('.pptm') || fileName.endsWith('.potx')) {
+            const extracted = await extractTextFromPptx(buffer);
+            if (extracted && extracted.trim().length > 0) {
+                return extracted;
+            }
+        }
+
+        // 5. Binary or spreadsheet documents (.doc, .ppt, .xls, .xlsx)
         return extractPrintableStringsFromArrayBuffer(buffer);
+    }
+
+    // Specialized PDF Parser (PDF.js -> Native FlateDecode Stream Unpacker -> Fallback)
+    async function extractTextFromPdf(buffer) {
+        // 1. Try PDF.js (Mozilla PDF engine) if available
+        if (typeof pdfjsLib !== 'undefined') {
+            try {
+                pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+                const loadingTask = pdfjsLib.getDocument({ data: new Uint8Array(buffer) });
+                const pdf = await loadingTask.promise;
+                let pageTexts = [];
+
+                for (let i = 1; i <= pdf.numPages; i++) {
+                    const page = await pdf.getPage(i);
+                    const textContent = await page.getTextContent();
+                    const textItems = textContent.items.map(item => item.str);
+                    const pageText = textItems.join(' ').replace(/\s+/g, ' ').trim();
+                    if (pageText) {
+                        pageTexts.push(pageText);
+                    }
+                }
+
+                if (pageTexts.length > 0) {
+                    console.log(`Successfully extracted PDF text using PDF.js (${pdf.numPages} pages)`);
+                    return pageTexts.join('\n\n');
+                }
+            } catch (err) {
+                console.warn('PDF.js extraction warning, trying native stream parser:', err);
+            }
+        }
+
+        // 2. Try Native PDF FlateDecode Stream Unpacker
+        try {
+            const nativeText = await extractPdfWithNativeDecompression(buffer);
+            if (nativeText && nativeText.trim().length > 0) {
+                console.log('Successfully extracted PDF text using native FlateDecode stream unpacker');
+                return nativeText.trim();
+            }
+        } catch (err) {
+            console.warn('Native PDF stream extraction warning:', err);
+        }
+
+        // 3. Fallback
+        return extractPrintableStringsFromArrayBuffer(buffer);
+    }
+
+    async function extractPdfWithNativeDecompression(buffer) {
+        const bytes = new Uint8Array(buffer);
+        const latinStr = new TextDecoder('latin1').decode(bytes);
+        let extractedTexts = [];
+
+        // Match stream ... endstream blocks
+        const streamRegex = /stream\r?\n([\s\S]*?)\r?\nendstream/g;
+        let match;
+
+        while ((match = streamRegex.exec(latinStr)) !== null) {
+            const streamStartIndex = match.index + match[0].indexOf('\n') + 1;
+            const streamEndIndex = match.index + match[0].lastIndexOf('endstream') - 1;
+
+            if (streamEndIndex > streamStartIndex) {
+                const rawStreamBytes = bytes.subarray(streamStartIndex, streamEndIndex);
+                let decompressedText = '';
+
+                if (rawStreamBytes.length > 2 && rawStreamBytes[0] === 0x78 && typeof DecompressionStream !== 'undefined') {
+                    try {
+                        const ds = new DecompressionStream('deflate');
+                        const response = new Response(new Blob([rawStreamBytes]).stream().pipeThrough(ds));
+                        decompressedText = await response.text();
+                    } catch (e) {
+                        try {
+                            const dsRaw = new DecompressionStream('deflate-raw');
+                            const responseRaw = new Response(new Blob([rawStreamBytes.subarray(2)]).stream().pipeThrough(dsRaw));
+                            decompressedText = await responseRaw.text();
+                        } catch (e2) {
+                            decompressedText = new TextDecoder('latin1').decode(rawStreamBytes);
+                        }
+                    }
+                } else {
+                    decompressedText = new TextDecoder('latin1').decode(rawStreamBytes);
+                }
+
+                if (decompressedText && (decompressedText.includes('BT') || decompressedText.includes('Tj') || decompressedText.includes('TJ'))) {
+                    const parsed = parsePdfBtBlocks(decompressedText);
+                    if (parsed && parsed.trim().length > 0) {
+                        extractedTexts.push(parsed.trim());
+                    }
+                }
+            }
+        }
+
+        return extractedTexts.join('\n\n');
+    }
+
+    function parsePdfBtBlocks(streamText) {
+        let lines = [];
+        const btBlocks = streamText.match(/BT[\s\S]*?ET/g) || [streamText];
+
+        for (let block of btBlocks) {
+            let blockText = '';
+
+            const stringMatches = block.match(/\(([^)]+)\)\s*(?:Tj|'|")/g) || [];
+            for (let m of stringMatches) {
+                const str = m.replace(/\)\s*(?:Tj|'|")/, '').replace(/^\(/, '');
+                if (str.trim()) {
+                    blockText += str + ' ';
+                }
+            }
+
+            const arrayMatches = block.match(/\[([\s\S]*?)\]\s*TJ/g) || [];
+            for (let arr of arrayMatches) {
+                const innerStrings = arr.match(/\(([^)]+)\)/g) || [];
+                let combined = innerStrings.map(s => s.slice(1, -1)).join('');
+                if (combined.trim()) {
+                    blockText += combined + ' ';
+                }
+            }
+
+            if (blockText.trim()) {
+                lines.push(blockText.trim());
+            }
+        }
+
+        return lines.join('\n');
+    }
+
+    // Specialized Docx Parser (Mammoth -> JSZip -> Native Browser Decompress -> Fallback)
+    async function extractTextFromDocx(buffer) {
+        // 1. Try Mammoth.js if available (highest quality raw text extraction)
+        if (typeof mammoth !== 'undefined' && mammoth.extractRawText) {
+            try {
+                const res = await mammoth.extractRawText({ arrayBuffer: buffer });
+                if (res && res.value && res.value.trim().length > 0) {
+                    console.log('Successfully extracted Word document text using Mammoth.js');
+                    return res.value.trim();
+                }
+            } catch (err) {
+                console.warn('Mammoth.js extraction warning, trying JSZip/XML fallback:', err);
+            }
+        }
+
+        // 2. Try JSZip if available (extract word/document.xml and parse <w:p> / <w:t> tags)
+        if (typeof JSZip !== 'undefined') {
+            try {
+                const zip = await JSZip.loadAsync(buffer);
+                const docFile = zip.file('word/document.xml');
+                if (docFile) {
+                    const xmlText = await docFile.async('text');
+                    const parsedText = parseWordDocumentXml(xmlText);
+                    if (parsedText && parsedText.trim().length > 0) {
+                        console.log('Successfully extracted Word document text using JSZip + XML parser');
+                        return parsedText.trim();
+                    }
+                }
+            } catch (err) {
+                console.warn('JSZip extraction warning, trying native browser unpacker:', err);
+            }
+        }
+
+        // 3. Try Native Browser DecompressionStream + Zip Entry Parser
+        try {
+            const nativeText = await extractDocxWithNativeDecompression(buffer);
+            if (nativeText && nativeText.trim().length > 0) {
+                console.log('Successfully extracted Word document text using native browser DecompressionStream');
+                return nativeText.trim();
+            }
+        } catch (err) {
+            console.warn('Native browser decompression warning:', err);
+        }
+
+        // 4. Fallback
+        return extractPrintableStringsFromArrayBuffer(buffer);
+    }
+
+    function parseWordDocumentXml(xmlText) {
+        if (typeof DOMParser !== 'undefined') {
+            try {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const paragraphs = xmlDoc.getElementsByTagName('w:p');
+                let lines = [];
+                for (let i = 0; i < paragraphs.length; i++) {
+                    const p = paragraphs[i];
+                    const textNodes = p.getElementsByTagName('w:t');
+                    let lineText = '';
+                    for (let j = 0; j < textNodes.length; j++) {
+                        lineText += textNodes[j].textContent;
+                    }
+                    if (lineText.trim()) {
+                        lines.push(lineText.trim());
+                    }
+                }
+                if (lines.length > 0) return lines.join('\n');
+            } catch (e) {
+                console.warn('DOMParser failed on word/document.xml:', e);
+            }
+        }
+
+        // Fallback regex for <w:p> and <w:t> tags
+        const paragraphs = xmlText.match(/<w:p\b[\s\S]*?<\/w:p>/gi) || [xmlText];
+        let lines = [];
+        for (let pXml of paragraphs) {
+            const tMatches = pXml.match(/<w:t\b[^>]*>([\s\S]*?)<\/w:t>/gi) || [];
+            let line = tMatches.map(t => t.replace(/<[^>]+>/g, '')).join('');
+            if (line.trim()) {
+                lines.push(line.trim());
+            }
+        }
+        return lines.join('\n');
+    }
+
+    async function extractDocxWithNativeDecompression(buffer) {
+        const bytes = new Uint8Array(buffer);
+        let offset = 0;
+
+        while (offset < bytes.length - 30) {
+            // Local file header signature 0x04034b50 ("PK\x03\x04")
+            if (bytes[offset] === 0x50 && bytes[offset + 1] === 0x4b && bytes[offset + 2] === 0x03 && bytes[offset + 3] === 0x04) {
+                const compMethod = bytes[offset + 8] | (bytes[offset + 9] << 8);
+                const compSize = bytes[offset + 18] | (bytes[offset + 19] << 8) | (bytes[offset + 20] << 16) | (bytes[offset + 21] << 24);
+                const fileNameLen = bytes[offset + 26] | (bytes[offset + 27] << 8);
+                const extraLen = bytes[offset + 28] | (bytes[offset + 29] << 8);
+
+                let fileName = '';
+                for (let i = 0; i < fileNameLen; i++) {
+                    fileName += String.fromCharCode(bytes[offset + 30 + i]);
+                }
+
+                const dataOffset = offset + 30 + fileNameLen + extraLen;
+
+                if (fileName === 'word/document.xml') {
+                    const fileData = bytes.subarray(dataOffset, dataOffset + compSize);
+                    let xmlText = '';
+
+                    if (compMethod === 8 && typeof DecompressionStream !== 'undefined') {
+                        // DEFLATE compressed stream
+                        const ds = new DecompressionStream('deflate-raw');
+                        const response = new Response(new Blob([fileData]).stream().pipeThrough(ds));
+                        xmlText = await response.text();
+                    } else if (compMethod === 0) {
+                        // Uncompressed
+                        xmlText = new TextDecoder().decode(fileData);
+                    }
+
+                    if (xmlText) {
+                        return parseWordDocumentXml(xmlText);
+                    }
+                }
+
+                offset = dataOffset + compSize;
+            } else {
+                offset++;
+            }
+        }
+        return '';
+    }
+
+    // Specialized PPTX Parser (JSZip -> Native Browser Decompress -> Fallback)
+    async function extractTextFromPptx(buffer) {
+        // 1. Try JSZip if available (extract ppt/slides/slide*.xml and ppt/notesSlides/notesSlide*.xml)
+        if (typeof JSZip !== 'undefined') {
+            try {
+                const zip = await JSZip.loadAsync(buffer);
+                const slideKeys = Object.keys(zip.files)
+                    .filter(name => /^ppt\/slides\/slide\d+\.xml$/i.test(name))
+                    .sort((a, b) => {
+                        const numA = parseInt(a.match(/\d+/)?.[0] || '0', 10);
+                        const numB = parseInt(b.match(/\d+/)?.[0] || '0', 10);
+                        return numA - numB;
+                    });
+
+                let extractedSlides = [];
+                for (const key of slideKeys) {
+                    const slideFile = zip.file(key);
+                    if (slideFile) {
+                        const xmlText = await slideFile.async('text');
+                        const slideText = parsePptxSlideXml(xmlText);
+                        if (slideText && slideText.trim()) {
+                            extractedSlides.push(slideText.trim());
+                        }
+                    }
+                }
+
+                // Also extract speaker notes if available
+                const notesKeys = Object.keys(zip.files)
+                    .filter(name => /^ppt\/notesSlides\/notesSlide\d+\.xml$/i.test(name))
+                    .sort((a, b) => {
+                        const numA = parseInt(a.match(/\d+/)?.[0] || '0', 10);
+                        const numB = parseInt(b.match(/\d+/)?.[0] || '0', 10);
+                        return numA - numB;
+                    });
+
+                for (const key of notesKeys) {
+                    const notesFile = zip.file(key);
+                    if (notesFile) {
+                        const xmlText = await notesFile.async('text');
+                        const notesText = parsePptxSlideXml(xmlText);
+                        if (notesText && notesText.trim()) {
+                            extractedSlides.push(notesText.trim());
+                        }
+                    }
+                }
+
+                if (extractedSlides.length > 0) {
+                    console.log(`Successfully extracted PowerPoint document text using JSZip (${slideKeys.length} slides)`);
+                    return extractedSlides.join('\n\n');
+                }
+            } catch (err) {
+                console.warn('JSZip PPTX extraction warning, trying native browser unpacker:', err);
+            }
+        }
+
+        // 2. Try Native Browser DecompressionStream + Zip Entry Parser
+        try {
+            const nativeText = await extractPptxWithNativeDecompression(buffer);
+            if (nativeText && nativeText.trim().length > 0) {
+                console.log('Successfully extracted PowerPoint document text using native browser DecompressionStream');
+                return nativeText.trim();
+            }
+        } catch (err) {
+            console.warn('Native browser PPTX decompression warning:', err);
+        }
+
+        // 3. Fallback
+        return extractPrintableStringsFromArrayBuffer(buffer);
+    }
+
+    function decodeXmlEntities(str) {
+        if (!str) return '';
+        return str
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&apos;/g, "'")
+            .replace(/&#39;/g, "'")
+            .replace(/&amp;/g, '&');
+    }
+
+    function parsePptxSlideXml(xmlText) {
+        if (typeof DOMParser !== 'undefined') {
+            try {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                
+                // Use namespace-wildcard element lookups for paragraphs
+                let paragraphs = xmlDoc.getElementsByTagNameNS('*', 'p');
+                if (!paragraphs || paragraphs.length === 0) {
+                    paragraphs = xmlDoc.getElementsByTagName('a:p');
+                }
+                if (!paragraphs || paragraphs.length === 0) {
+                    paragraphs = xmlDoc.getElementsByTagName('p');
+                }
+
+                let lines = [];
+                if (paragraphs && paragraphs.length > 0) {
+                    for (let i = 0; i < paragraphs.length; i++) {
+                        const p = paragraphs[i];
+                        let textNodes = p.getElementsByTagNameNS('*', 't');
+                        if (!textNodes || textNodes.length === 0) {
+                            textNodes = p.getElementsByTagName('a:t');
+                        }
+                        if (!textNodes || textNodes.length === 0) {
+                            textNodes = p.getElementsByTagName('t');
+                        }
+                        let lineText = '';
+                        for (let j = 0; j < textNodes.length; j++) {
+                            lineText += textNodes[j].textContent;
+                        }
+                        if (lineText.trim()) {
+                            lines.push(decodeXmlEntities(lineText.trim()));
+                        }
+                    }
+                }
+
+                // Fallback: extract all text nodes directly if paragraph breakdown was empty
+                if (lines.length === 0) {
+                    let allTextNodes = xmlDoc.getElementsByTagNameNS('*', 't');
+                    if (!allTextNodes || allTextNodes.length === 0) {
+                        allTextNodes = xmlDoc.getElementsByTagName('a:t');
+                    }
+                    if (!allTextNodes || allTextNodes.length === 0) {
+                        allTextNodes = xmlDoc.getElementsByTagName('t');
+                    }
+                    for (let j = 0; j < allTextNodes.length; j++) {
+                        const txt = allTextNodes[j].textContent;
+                        if (txt && txt.trim()) {
+                            lines.push(decodeXmlEntities(txt.trim()));
+                        }
+                    }
+                }
+
+                if (lines.length > 0) return lines.join('\n');
+            } catch (e) {
+                console.warn('DOMParser failed on pptx slide xml:', e);
+            }
+        }
+
+        // Fallback regex matching <a:p>, <p:p>, or <p> tags and inner <a:t>, <p:t>, or <t> tags
+        const paragraphs = xmlText.match(/<(?:a:|p:|w:)?p\b[\s\S]*?<\/(?:a:|p:|w:)?p>/gi) || [xmlText];
+        let lines = [];
+        for (let pXml of paragraphs) {
+            const tMatches = pXml.match(/<(?:a:|p:|w:)?t\b[^>]*>([\s\S]*?)<\/(?:a:|p:|w:)?t>/gi) || [];
+            let line = tMatches.map(t => t.replace(/<[^>]+>/g, '')).join('');
+            if (line.trim()) {
+                lines.push(decodeXmlEntities(line.trim()));
+            }
+        }
+        return lines.join('\n');
+    }
+
+    async function extractPptxWithNativeDecompression(buffer) {
+        const bytes = new Uint8Array(buffer);
+        let offset = 0;
+        let slideEntries = [];
+
+        while (offset < bytes.length - 30) {
+            // Local file header signature 0x04034b50 ("PK\x03\x04")
+            if (bytes[offset] === 0x50 && bytes[offset + 1] === 0x4b && bytes[offset + 2] === 0x03 && bytes[offset + 3] === 0x04) {
+                const compMethod = bytes[offset + 8] | (bytes[offset + 9] << 8);
+                const compSize = bytes[offset + 18] | (bytes[offset + 19] << 8) | (bytes[offset + 20] << 16) | (bytes[offset + 21] << 24);
+                const fileNameLen = bytes[offset + 26] | (bytes[offset + 27] << 8);
+                const extraLen = bytes[offset + 28] | (bytes[offset + 29] << 8);
+
+                let fileName = '';
+                for (let i = 0; i < fileNameLen; i++) {
+                    fileName += String.fromCharCode(bytes[offset + 30 + i]);
+                }
+
+                const dataOffset = offset + 30 + fileNameLen + extraLen;
+
+                if (/^ppt\/(slides|notesSlides)\/(slide|notesSlide)\d+\.xml$/i.test(fileName)) {
+                    const fileData = bytes.subarray(dataOffset, dataOffset + compSize);
+                    let xmlText = '';
+
+                    if (compMethod === 8 && typeof DecompressionStream !== 'undefined') {
+                        try {
+                            const ds = new DecompressionStream('deflate-raw');
+                            const response = new Response(new Blob([fileData]).stream().pipeThrough(ds));
+                            xmlText = await response.text();
+                        } catch (e) {
+                            console.warn('DecompressionStream error for ' + fileName, e);
+                        }
+                    } else if (compMethod === 0) {
+                        xmlText = new TextDecoder().decode(fileData);
+                    }
+
+                    if (xmlText) {
+                        const parsed = parsePptxSlideXml(xmlText);
+                        if (parsed && parsed.trim()) {
+                            const slideNum = parseInt(fileName.match(/\d+/)?.[0] || '0', 10);
+                            const isNotes = fileName.includes('notes');
+                            slideEntries.push({ fileName, slideNum, isNotes, text: parsed.trim() });
+                        }
+                    }
+                }
+
+                offset = dataOffset + compSize;
+            } else {
+                offset++;
+            }
+        }
+
+        if (slideEntries.length === 0) return '';
+
+        slideEntries.sort((a, b) => {
+            if (a.isNotes !== b.isNotes) return a.isNotes ? 1 : -1;
+            return a.slideNum - b.slideNum;
+        });
+
+        return slideEntries.map(e => e.text).join('\n\n');
     }
 
     function extractPrintableStringsFromArrayBuffer(buffer) {
@@ -706,7 +1308,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cleanedLines = extracted.split('\n').filter(line => {
             const trimmed = line.trim();
-            return trimmed.length > 3 && /[a-zA-Z0-9]/.test(trimmed);
+            // Filter out XML markup, openxml schema URLs, zip paths, PDF syntax, and formatting noise
+            return trimmed.length > 3 &&
+                   /[a-zA-Z0-9]/.test(trimmed) &&
+                   !trimmed.includes('openxmlformats.org') &&
+                   !trimmed.includes('schemas.microsoft.com') &&
+                   !trimmed.startsWith('PK') &&
+                   !trimmed.startsWith('<?xml') &&
+                   !trimmed.startsWith('%PDF-') &&
+                   !trimmed.includes('endobj') &&
+                   !trimmed.includes('endstream') &&
+                   !trimmed.includes('startxref') &&
+                   !trimmed.includes('trailer') &&
+                   !trimmed.includes('[Content_Types]') &&
+                   !trimmed.includes('word/_rels/') &&
+                   !trimmed.includes('ppt/_rels/') &&
+                   !trimmed.includes('ppt/slides/');
         });
 
         return cleanedLines.join(' ');
@@ -760,13 +1377,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok || response.status === 200 || response.status === 201) {
                 const data = await response.json();
-                const outcome = (data.outcome || data.status || 'cleared').toLowerCase();
+                const resObj = data.result || data;
+                const outcome = (resObj.outcome || data.outcome || data.status || 'cleared').toLowerCase();
 
                 let violations = [];
-                if (data.scannerResults && Array.isArray(data.scannerResults)) {
-                    data.scannerResults.forEach(sc => {
+                const scannerResults = resObj.scannerResults || data.scannerResults;
+                if (scannerResults && Array.isArray(scannerResults)) {
+                    scannerResults.forEach(sc => {
                         if (sc.outcome === 'blocked' || sc.outcome === 'flagged' || sc.status === 'blocked' || sc.status === 'flagged' || sc.score > 0.5) {
-                            violations.push(`${sc.name || sc.scannerName || 'Security Scanner'}: ${sc.reason || sc.detail || sc.matchedText || 'Violation detected'}`);
+                            const scName = sc.name || sc.scannerName || sc.scannerId || 'Security Scanner';
+                            const scReason = sc.reason || sc.detail || sc.matchedText || (sc.outcome ? `Outcome: ${sc.outcome}` : 'Violation detected');
+                            violations.push(`${scName}: ${scReason}`);
                         }
                     });
                 }
@@ -838,7 +1459,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     showS3Alert(`⛔ UPLOAD BLOCKED by F5 AI Guardrails!\nFile "${file.name}" failed security scan.\nDetails: ${detailMsg}`, 'error');
                     return; // STOP PIPELINE - DO NOT UPLOAD TO S3
                 } else if (scanResult.outcome === 'errored') {
-                    showS3Alert(`⚠️ Guardrails Scan Warning: ${scanResult.message}. Proceeding to S3 upload...`, 'warning');
+                    showS3Alert(`⛔ UPLOAD BLOCKED: F5 Guardrails Scan Error: ${scanResult.message}`, 'error');
+                    return; // STOP PIPELINE ON AUTH OR CONNECTION ERROR
                 } else {
                     showS3Alert(`[Step 3/3] Guardrails Scan Cleared ✅. Uploading to MinIO S3...`, 'info');
                 }
@@ -947,12 +1569,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000);
     }
 
-    function getContentTypeFromKey(key) {
-        if (key.endsWith('.pdf')) return 'application/pdf';
-        if (key.endsWith('.txt')) return 'text/plain';
-        if (key.endsWith('.json')) return 'application/json';
-        if (key.endsWith('.csv')) return 'text/csv';
-        if (key.endsWith('.png')) return 'image/png';
+    function getContentTypeFromKey(key, fileType) {
+        if (fileType && s3ContentTypeSelect && Array.from(s3ContentTypeSelect.options).some(opt => opt.value === fileType)) {
+            return fileType;
+        }
+        const lower = (key || '').toLowerCase();
+        if (lower.endsWith('.docx') || lower.endsWith('.docm') || lower.endsWith('.dotx')) {
+            return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+        }
+        if (lower.endsWith('.doc')) return 'application/msword';
+        if (lower.endsWith('.pptx')) return 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+        if (lower.endsWith('.ppt')) return 'application/vnd.ms-powerpoint';
+        if (lower.endsWith('.xlsx')) return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+        if (lower.endsWith('.xls')) return 'application/vnd.ms-excel';
+        if (lower.endsWith('.pdf')) return 'application/pdf';
+        if (lower.endsWith('.txt') || lower.endsWith('.log')) return 'text/plain';
+        if (lower.endsWith('.md') || lower.endsWith('.markdown')) return 'text/markdown';
+        if (lower.endsWith('.html') || lower.endsWith('.htm')) return 'text/html';
+        if (lower.endsWith('.json')) return 'application/json';
+        if (lower.endsWith('.csv')) return 'text/csv';
+        if (lower.endsWith('.xml')) return 'application/xml';
+        if (lower.endsWith('.rtf')) return 'application/rtf';
+        if (lower.endsWith('.png')) return 'image/png';
+        if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return 'image/jpeg';
+        if (lower.endsWith('.gif')) return 'image/gif';
+        if (lower.endsWith('.svg')) return 'image/svg+xml';
+        if (lower.endsWith('.webp')) return 'image/webp';
+        if (lower.endsWith('.zip')) return 'application/zip';
         return 'application/octet-stream';
     }
 

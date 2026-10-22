@@ -38,12 +38,13 @@ GitHub Repository: [https://github.com/gregcoward/myarcadia](https://github.com/
 
 ## User Credentials & Authentication Screen
 
-The application includes an authentication screen that prompts for user login upon opening. You can sign in using either of the demo accounts below (or click the quick-login chips on the sign-in modal):
+The application includes an authentication screen that prompts for user login upon opening. You can sign in using any of the demo accounts below (or click the quick-login chips on the sign-in modal):
 
 | Account Name | Role / Tier | Email Address | Password |
 | :--- | :--- | :--- | :--- |
 | **Jane Doe** | Premium Tier | `jane.doe@redsealabbank.com` | `password123` |
 | **Alex Smith** | Standard Tier | `alex.smith@redsealabbank.com` | `admin123` |
+| **adminuser** | Administrator | `adminuser@redsealabbank.com` | `F5testnet!` |
 
 ### Auth Session & Logout
 - **Session Persistence**: Logging in saves the active session state in `sessionStorage`. Reloading or navigating tabs preserves the logged-in session.
@@ -54,8 +55,8 @@ The application includes an authentication screen that prompts for user login up
 ## Using the Application
 
 ### 1. Login Screen
-- Enter valid credentials or click one of the quick-login chips (**Jane Doe** or **Alex Smith**).
-- Click **Sign In** to unlock the main banking dashboard.
+- Enter valid credentials or click one of the quick-login chips (**Jane Doe**, **Alex Smith**, or **adminuser**).
+- Click **Sign In** to unlock the banking dashboard. Logging in as an Administrator (`adminuser`) unlocks access to the **Administrator Document Portal** tab.
 
 ### 2. Dashboard Tab
 - **Portfolio Summary**: Displays user-specific total portfolio balance, percentage growth, and individual checking/savings accounts.
@@ -119,7 +120,9 @@ All design tokens are defined as CSS variables at the top of [`src/styles.css`](
 
 ### Adding, Editing, or Removing Users
 
-User accounts and credentials are defined in the `USERS_DB` object inside [`src/app.js`](src/app.js):
+User accounts and credentials are defined in the `USERS_DB` object inside [`src/app.js`](src/app.js).
+
+To create or update a user account, add or modify an entry in `USERS_DB`. To grant a user administrative access to the **Administrator Document Portal** tab (MinIO AIStor S3 Cluster Configuration, F5 AI Guardrails Security Scanning, and S3 Document Uploads), set `isAdmin: true` in their account configuration object:
 
 ```javascript
 const USERS_DB = {
@@ -129,15 +132,33 @@ const USERS_DB = {
         name: 'Jane Doe',
         avatar: 'JD',
         status: 'Premium Tier',
+        isAdmin: false,
         checkingNum: '•••• 4829',
         checkingBalance: 24150.25,
         savingsNum: '•••• 9102',
         savingsBalance: 104300.55,
         referralCode: 'JD-8902'
     },
-    // Add new user here
+    // Admin user configuration with Admin Portal access
+    'adminuser@redsealabbank.com': {
+        email: 'adminuser@redsealabbank.com',
+        password: 'F5testnet!',
+        name: 'adminuser',
+        avatar: 'AD',
+        status: 'Administrator',
+        isAdmin: true, // Grants access to Administrator Document Portal tab
+        checkingNum: '•••• 0001',
+        checkingBalance: 1250000.00,
+        savingsNum: '•••• 0002',
+        savingsBalance: 5000000.00,
+        referralCode: 'ADMIN-001'
+    }
 };
 ```
+
+#### Admin Role & Access Control
+- `isAdmin: true`: Displays the **Administrator Document Portal** tab in the navbar, exposing MinIO AIStor S3 cluster settings, bucket document management, and F5 AI Guardrails security scanning configuration.
+- `isAdmin: false`: Standard user account with access to personal banking accounts, transfers, referrals, and microservice status.
 
 ---
 
