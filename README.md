@@ -496,4 +496,4 @@ git add .
 git commit -m "Add mermaid workflow diagrams for AIStor, F5 Guardrails, and Flowise RAG"
 git push origin main
 ```
-Repository URL: [https://github.com/gregcoward/myarcadia](https://github.com/gregcoward/myarcadia)
+Repository URL: [https://github.com/gregcoward/redsealab_bank](https://github.com/gregcoward/redsealab_bank)
