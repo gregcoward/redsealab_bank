@@ -1,8 +1,8 @@
 # Red Sea Lab Bank Web Application
 
-A full-stack sample web application for **Red Sea Lab Bank** (inspired by the F5 Arcadia microservices architecture pattern). Embedded with a **Flowise AI Chatbot** widget and built for non-root execution on **Red Hat OpenShift** and **Kubernetes**.
+A full-stack sample web application for **Red Sea Lab Bank**. Embedded with a **Flowise AI Chatbot** widget and built for non-root execution on **Red Hat OpenShift** and **Kubernetes**.
 
-GitHub Repository: [https://github.com/gregcoward/myarcadia](https://github.com/gregcoward/myarcadia)
+GitHub Repository: [https://github.com/gregcoward/redsealab_bank](https://github.com/gregcoward/redsealab_bank)
 
 ---
 
@@ -421,17 +421,17 @@ const USERS_DB = {
 
 ```bash
 # Build container image tagged for Docker Hub (linux/amd64 architecture)
-docker build --platform linux/amd64 -t gregcoward/myarcadia:latest .
+docker build --platform linux/amd64 -t gregcoward/redsealab_bank:latest .
 
 # Test run locally on port 8080
-docker run -d -p 8080:8080 --name redsealab-bank-app gregcoward/myarcadia:latest
+docker run -d -p 8080:8080 --name redsealab-bank-app gregcoward/redsealab_bank:latest
 
 # Verify local health endpoint
 curl http://localhost:8080/healthz
 
 # Log in to Docker Hub and push the image
 docker login -u gregcoward
-docker push gregcoward/myarcadia:latest
+docker push gregcoward/redsealab_bank:latest
 ```
 
 ---
@@ -447,7 +447,7 @@ The deployment script [`deploy.sh`](deploy.sh) allows you to specify any target 
 ./deploy.sh -n redsealab-bank
 
 # Option 2: Using positional arguments [NAMESPACE] [METHOD] [REGISTRY]
-./deploy.sh redsealab-bank external docker.io/gregcoward/myarcadia:latest
+./deploy.sh redsealab-bank external docker.io/gregcoward/redsealab_bank:latest
 
 # Option 3: Setting the NAMESPACE environment variable
 NAMESPACE="prod-redsealab-bank" ./deploy.sh
