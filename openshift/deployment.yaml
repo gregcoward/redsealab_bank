@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: arcadia-web
-          image: docker.io/gregcoward/myarcadia:latest
+          image: docker.io/gregcoward/redsealab_bank:latest
           imagePullPolicy: Always
           ports:
             - name: http

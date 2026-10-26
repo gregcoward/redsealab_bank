@@ -23,4 +23,4 @@ spec:
   output:
     to:
       kind: DockerImage
-      name: 'docker.io/gregcoward/myarcadia:latest'
+      name: 'docker.io/gregcoward/redsealab_bank:latest'

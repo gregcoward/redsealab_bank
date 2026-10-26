@@ -11,7 +11,7 @@ NC='\033[0m'
 # Default Configuration
 NAMESPACE="${NAMESPACE:-"redsealab-bank"}"
 METHOD="external"
-REGISTRY="docker.io/gregcoward/myarcadia:latest"
+REGISTRY="docker.io/gregcoward/redsealab_bank:latest"
 
 # Print Usage Help
 function show_help() {
@@ -21,7 +21,7 @@ function show_help() {
     echo "Options:"
     echo "  -n, --namespace <NAME>   Specify OpenShift project / namespace (default: redsealab-bank)"
     echo "  -m, --method <METHOD>    Deployment method: 'external' (Docker Hub) or 'openshift-build' (in-cluster)"
-    echo "  -r, --registry <IMAGE>   Target container image tag (default: docker.io/gregcoward/myarcadia:latest)"
+    echo "  -r, --registry <IMAGE>   Target container image tag (default: docker.io/gregcoward/redsealab_bank:latest)"
     echo "  -h, --help               Show this help message"
     echo ""
     echo "Examples:"
