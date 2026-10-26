@@ -1,6 +1,6 @@
 # Red Sea Lab Bank Web Application
 
-A full-stack sample web application for **Red Sea Lab Bank**. Embedded with a **Flowise AI Chatbot** widget and built for non-root execution on **Red Hat OpenShift** and **Kubernetes**.
+A full-stack sample web application for **Red Sea Lab Bank** (inspired by the F5 Arcadia microservices architecture pattern). Embedded with a **Flowise AI Chatbot** widget and built for non-root execution on **Red Hat OpenShift** and **Kubernetes**.
 
 GitHub Repository: [https://github.com/gregcoward/redsealab_bank](https://github.com/gregcoward/redsealab_bank)
 
@@ -8,12 +8,12 @@ GitHub Repository: [https://github.com/gregcoward/redsealab_bank](https://github
 
 ## Table of Contents
 1. [Overview & Features](#overview--features)
-2. [System Architecture & Workflow Diagrams](#system-architecture--workflow-diagrams)
-   - [Overall System Architecture](#overall-system-architecture)
-   - [Document Upload & 3-Step Guardrails Scan Pipeline](#document-upload--3-step-guardrails-scan-pipeline)
-   - [Document Text Extraction Engine Flow](#document-text-extraction-engine-flow)
-   - [MinIO AIStor S3 SigV4 Authentication & Data Flow](#minio-aistor-s3-sigv4-authentication--data-flow)
-   - [Flowise Chatbot, F5 Guardrails & Qdrant RAG Flow](#flowise-chatbot-f5-guardrails--qdrant-rag-flow)
+2. [System Architecture & Narrative Walkthroughs](#system-architecture--narrative-walkthroughs)
+   - [1. Overall System Architecture](#1-overall-system-architecture)
+   - [2. Document Upload & 3-Step Guardrails Scan Pipeline](#2-document-upload--3-step-guardrails-scan-pipeline)
+   - [3. Document Text Extraction Engine Flow](#3-document-text-extraction-engine-flow)
+   - [4. MinIO AIStor S3 SigV4 Authentication & Data Flow](#4-minio-aistor-s3-sigv4-authentication--data-flow)
+   - [5. Flowise Chatbot, F5 Guardrails & Qdrant RAG Flow](#5-flowise-chatbot-f5-guardrails--qdrant-rag-flow)
 3. [User Credentials & Authentication Screen](#user-credentials--authentication-screen)
 4. [Using the Application](#using-the-application)
 5. [Flowise AI Chatbot Integration & Configuration](#flowise-ai-chatbot-integration--configuration)
@@ -46,9 +46,9 @@ GitHub Repository: [https://github.com/gregcoward/redsealab_bank](https://github
 
 ---
 
-## System Architecture & Workflow Diagrams
+## System Architecture & Narrative Walkthroughs
 
-### Overall System Architecture
+### 1. Overall System Architecture
 
 The diagram below highlights the components of the Red Sea Lab Bank platform and how the NGINX Edge Web Server, MinIO AIStor S3 Cluster, F5 AI Guardrails Moderation Engine, Flowise Chatbot, and Qdrant Vector DB interact:
 
@@ -91,9 +91,21 @@ flowchart TD
     FlowiseBackend -->|Prompt Context & RAG| LLM
 ```
 
+#### Narrative Walkthrough
+1. **Client Tier**: The user accesses the single-page application via a modern web browser. The web UI exposes standard financial services (Checking/Savings, Money Transfers, Referrals) and an **Administrator Document Portal** for managing knowledge base files. A floating **Flowise Chatbot widget** (`web.js`) is embedded at the page root.
+2. **NGINX Edge Proxy**: The containerized NGINX instance runs as an unprivileged process on TCP port `8080`. Besides serving static HTML, CSS, and JS assets, NGINX acts as an edge reverse proxy:
+   - `/s3/*`: Routes AWS SigV4 signed requests dynamically to the target MinIO AIStor S3 service.
+   - `/guardrails/*`: Routes REST API requests to the F5 AI Guardrails moderation endpoint (`cai-moderator:5500`).
+3. **Data & Storage Tier**: 
+   - **MinIO AIStor**: High-performance, S3-compatible object store hosting raw document knowledge bases in bucket `redsealab-bank-kb`.
+   - **Qdrant Vector DB**: Vector search database storing high-dimensional vector embeddings generated from chunked document text for RAG (Retrieval-Augmented Generation).
+4. **Security & AI Engine**:
+   - **F5 AI Guardrails**: Real-time moderation server that evaluates inbound prompts and document contents for PII, prompt injections, malware signatures, and data exfiltration threats.
+   - **Flowise AI Backend & LLM**: Coordinates workflow execution, querying Qdrant for context, validating requests with Guardrails, and assembling contextual prompts for the Large Language Model.
+
 ---
 
-### Document Upload & 3-Step Guardrails Scan Pipeline
+### 2. Document Upload & 3-Step Guardrails Scan Pipeline
 
 When an administrator uploads a document to MinIO AIStor, the application executes a mandatory 3-step security pipeline:
 
@@ -137,9 +149,21 @@ sequenceDiagram
     deactivate Portal
 ```
 
+#### Narrative Walkthrough
+1. **User Action**: An administrator selects a document file (e.g., PDF, Word `.docx`, PowerPoint `.pptx`, Markdown, or text file) and submits the form.
+2. **Step 1 - In-Browser Text Extraction**: The application reads the file's raw `ArrayBuffer` locally in JavaScript. Depending on the format, specialized parsers (PDF.js, Mammoth.js, JSZip OpenXML parser) extract plain text from the document.
+3. **Step 2 - F5 AI Guardrails Out-of-Band Security Inspection**:
+   - The client constructs a JSON payload containing up to 50,000 characters of extracted text, project ID, and scan direction (`request`).
+   - The request is posted to `/guardrails/backend/v1/scans` with Bearer token authentication.
+   - If Guardrails flags or blocks the content (e.g., detecting sensitive PII, credit card numbers, NRIC numbers, or prompt injection payloads), the process halts immediately. The user receives a detailed alert: `⛔ UPLOAD BLOCKED by F5 AI Guardrails!`, and no binary data touches the S3 storage bucket.
+4. **Step 3 - AWS SigV4 Signed Upload**:
+   - If Guardrails returns `cleared` (0 violations), the browser calculates AWS SigV4 signatures (`AWS4-HMAC-SHA256`) using WebCrypto.
+   - An HTTP `PUT` request containing the binary file and SigV4 authorization headers is dispatched to `/s3/redsealab-bank-kb/<object-key>`.
+   - MinIO AIStor validates the signature, stores the object, and returns HTTP 200/201. The document table automatically refreshes to reflect the newly uploaded file.
+
 ---
 
-### Document Text Extraction Engine Flow
+### 3. Document Text Extraction Engine Flow
 
 The client-side document extraction engine parses text natively in the browser without sending unencrypted document binaries to external third-party conversion APIs:
 
@@ -177,9 +201,23 @@ flowchart TD
     OutputText --> FeedScan["Pass Extracted Text to F5 AI Guardrails Scanner"]
 ```
 
+#### Narrative Walkthrough
+1. **File Type Router**: When a file is uploaded, `extractTextFromDocument(file)` checks the lowercased extension.
+2. **Text / Markup Formats**: `.txt`, `.csv`, `.json`, `.md`, `.xml`, `.html`, and `.yaml` are read directly using the standard web `file.text()` API.
+3. **PDF Documents**:
+   - *Primary*: Evaluated using **PDF.js** (Mozilla engine), iterating through every page stream to extract formatted text items.
+   - *Secondary Fallback*: If PDF.js is unavailable, a native `FlateDecode` stream unpacker uses the browser's native `DecompressionStream('deflate')` API to decompress stream blocks and extract text from `BT ... ET` operators.
+4. **Microsoft Word (.docx)**:
+   - *Primary*: Extracted using **Mammoth.js**, converting OpenXML elements to clean raw text.
+   - *Secondary Fallback*: If Mammoth fails, **JSZip** unzips the file, targets `word/document.xml`, and parses paragraph (`<w:p>`) and text (`<w:t>`) tags.
+5. **Microsoft PowerPoint (.pptx)**:
+   - Evaluated by unzipping `ppt/slides/slide*.xml` and speaker notes (`ppt/notesSlides/notesSlide*.xml`).
+   - Namespace-wildcard lookups (`getElementsByTagNameNS('*', 'p')` and `t`) extract all slide titles, bullet points, and speaker notes in order.
+6. **Binary / Spreadsheet Fallback**: If no specific parser matches, the engine scans the `ArrayBuffer` byte-by-byte to extract contiguous printable ASCII/UTF-8 string sequences, stripping out zip headers and binary noise.
+
 ---
 
-### MinIO AIStor S3 SigV4 Authentication & Data Flow
+### 4. MinIO AIStor S3 SigV4 Authentication & Data Flow
 
 MinIO AIStor S3 cluster operations (`GET`, `PUT`, `DELETE`, `LIST`) are authenticated directly from the browser using AWS Signature Version 4 (`AWS4-HMAC-SHA256`) and proxied through NGINX:
 
@@ -207,9 +245,22 @@ flowchart LR
     S3Endpoint -->|5. Read / Write Bucket Objects| Bucket
 ```
 
+#### Narrative Walkthrough
+1. **SigV4 Signing Computation**: Before making an HTTP request to S3, `getAwsSigV4Headers()` computes the AWS Signature Version 4 specification:
+   - Generates ISO 8601 timestamps (`x-amz-date`).
+   - Hashes payload using SHA-256 (`x-amz-content-sha256` or `UNSIGNED-PAYLOAD`).
+   - Constructs Canonical Request, Credential Scope (`date/region/s3/aws4_request`), and String-to-Sign.
+   - Computes HMAC-SHA256 signing keys recursively via WebCrypto (`crypto.subtle.sign`).
+2. **NGINX Reverse Proxy Injection**:
+   - The browser adds routing headers `X-S3-Target-Host` (e.g., `aistor-primary-hl.aistor-primary.svc.cluster.local:9000`) and `X-S3-Proto` (`https` or `http`).
+   - Sends the request to the local NGINX proxy endpoint `/s3/*`.
+3. **MinIO AIStor Processing**:
+   - NGINX rewrites `/s3/bucket/key` to `/bucket/key` and proxies the request to the destination MinIO AIStor endpoint specified in `X-S3-Target-Host`.
+   - MinIO AIStor validates the `Authorization: AWS4-HMAC-SHA256 ...` header and executes the operation on bucket `redsealab-bank-kb`.
+
 ---
 
-### Flowise Chatbot, F5 Guardrails & Qdrant RAG Flow
+### 5. Flowise Chatbot, F5 Guardrails & Qdrant RAG Flow
 
 When a user interacts with the Flowise Chatbot widget, inbound user prompts and outbound LLM responses pass through F5 AI Guardrails security scanning while vector context is retrieved from Qdrant:
 
@@ -267,6 +318,14 @@ sequenceDiagram
     ChatWidget-->>User: Render Response Message in Chat Window
     deactivate ChatWidget
 ```
+
+#### Narrative Walkthrough
+1. **User Prompt Dispatch**: A banking customer submits a question through the floating chat bubble. The widget issues a `POST /api/v1/prediction` request to Flowise.
+2. **Inbound Guardrail Moderation**: Flowise intercepts the prompt and sends it to F5 AI Guardrails (`scanDirection: request`). If Guardrails detects prompt injection attempts, system prompt overrides, or harmful intent, Flowise immediately halts processing and returns a friendly security warning.
+3. **Qdrant Vector Similarity RAG Retrieval**: Upon passing inbound inspection, Flowise converts the user query into a vector embedding and queries the **Qdrant Vector Database**. Qdrant performs top-K cosine similarity retrieval, returning matching context snippets from ingested bank knowledge base files.
+4. **LLM Context Generation**: Flowise combines the system persona, retrieved Qdrant context chunks, and user prompt, sending the enriched prompt to the LLM (Large Language Model). The LLM generates a grounded answer.
+5. **Outbound Guardrail Moderation**: Before returning the answer to the customer, Flowise sends the LLM's generated response to F5 AI Guardrails (`scanDirection: response`). Guardrails inspects the text for accidental PII leaks, secret credentials, or unauthorized data exfiltration.
+6. **Client Presentation**: Once outbound inspection clears, Flowise returns the final sanitized answer to the chat widget, which renders the message in the chat UI.
 
 ---
 
@@ -493,7 +552,7 @@ Uses OpenShift ImageStream & BuildConfig resources:
 To push updates to GitHub:
 ```bash
 git add .
-git commit -m "Add mermaid workflow diagrams for AIStor, F5 Guardrails, and Flowise RAG"
+git commit -m "Add narrative walkthroughs for architecture and workflow diagrams"
 git push origin main
 ```
 Repository URL: [https://github.com/gregcoward/redsealab_bank](https://github.com/gregcoward/redsealab_bank)
