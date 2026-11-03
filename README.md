@@ -25,11 +25,16 @@ GitHub Repository: [https://github.com/gregcoward/redsealab_bank](https://github
 8. [Building Container Images](#building-container-images)
    - [Building with Docker or Podman](#building-with-docker-or-podman)
    - [Building inside OpenShift (BuildConfig / ImageStream)](#building-inside-openshift-buildconfig--imagestream)
-9. [Deploying to OpenShift & Kubernetes (Namespace Options)](#deploying-to-openshift--kubernetes-namespace-options)
+9. [Deploying with Docker & Docker Compose](#deploying-with-docker--docker-compose)
+   - [Deploying with Docker CLI (docker run)](#deploying-with-docker-cli-docker-run)
+   - [Deploying with Docker Compose](#deploying-with-docker-compose)
+   - [Hot-Reload Development Mounting](#hot-reload-development-mounting)
+   - [Container Health Monitoring & Logs](#container-health-monitoring--logs)
+10. [Deploying to OpenShift & Kubernetes (Namespace Options)](#deploying-to-openshift--kubernetes-namespace-options)
    - [Specifying Target Namespace](#specifying-target-namespace)
    - [OpenShift Deployment Options](#openshift-deployment-options)
    - [Standard Kubernetes Deployment (kubectl)](#standard-kubernetes-deployment-kubectl)
-10. [Repository File Map](#repository-file-map)
+11. [Repository File Map](#repository-file-map)
 
 ---
 
@@ -495,6 +500,119 @@ docker push gregcoward/redsealab_bank:latest
 
 ---
 
+## Deploying with Docker & Docker Compose
+
+This application is packaged as an unprivileged, non-root NGINX container image built for high performance, portability, and security compliance. You can deploy it locally or on standard Linux servers using Docker or Docker Compose.
+
+### Deploying with Docker CLI (`docker run`)
+
+#### 1. Quick Start (Pull & Run Pre-built Image)
+To run the pre-built container image directly from Docker Hub:
+
+```bash
+docker run -d \
+  --name redsealab-bank \
+  -p 8080:8080 \
+  --restart unless-stopped \
+  gregcoward/redsealab_bank:latest
+```
+
+Access the application in your web browser at `http://localhost:8080`.
+
+#### 2. Build & Run Locally
+To build the container image locally from the project root and run it:
+
+```bash
+# Build the local Docker image
+docker build -t redsealab-bank:latest .
+
+# Run the container listening on port 8080
+docker run -d \
+  --name redsealab-bank \
+  -p 8080:8080 \
+  --restart unless-stopped \
+  redsealab-bank:latest
+```
+
+#### 3. Custom Port Binding
+If port `8080` is already in use on your host system, or if you want to expose the application on standard HTTP port `80`:
+
+```bash
+docker run -d \
+  --name redsealab-bank \
+  -p 80:8080 \
+  --restart unless-stopped \
+  gregcoward/redsealab_bank:latest
+```
+
+---
+
+### Deploying with Docker Compose
+
+A [`docker-compose.yml`](docker-compose.yml) file is included in the repository for simple single-command deployment and container orchestration.
+
+#### 1. Start the Application
+```bash
+# Start container in background (detached mode)
+docker compose up -d
+```
+
+#### 2. Check Service Status & Logs
+```bash
+# View active container status and health state
+docker compose ps
+
+# Follow application logs
+docker compose logs -f
+```
+
+#### 3. Stop & Clean Up
+```bash
+# Stop and remove container
+docker compose down
+```
+
+---
+
+### Hot-Reload Development Mounting
+
+For local frontend development, mount your host system's `src/` directory directly into the container's NGINX document root (`/usr/share/nginx/html`). Any changes made to HTML/CSS/JS files will take effect immediately upon refreshing your browser without needing to rebuild the image:
+
+```bash
+docker run -d \
+  --name redsealab-bank-dev \
+  -p 8080:8080 \
+  -v $(pwd)/src:/usr/share/nginx/html:ro \
+  redsealab-bank:latest
+```
+
+---
+
+### Container Health Monitoring & Logs
+
+- **Health Probe Endpoint**: The NGINX server includes a dedicated non-logging health check route at `/healthz`.
+  ```bash
+  curl http://localhost:8080/healthz
+  # Expected Output: OK
+  ```
+- **View Container Output Logs**:
+  ```bash
+  docker logs -f redsealab-bank
+  ```
+- **Container Lifecycle Commands**:
+  ```bash
+  # Stop the container
+  docker stop redsealab-bank
+
+  # Restart the container
+  docker start redsealab-bank
+
+  # Remove the container
+  docker rm -f redsealab-bank
+  ```
+
+---
+
 ## Deploying to OpenShift & Kubernetes (Namespace Options)
 
 The deployment script [`deploy.sh`](deploy.sh) allows you to specify any target OpenShift namespace/project using named flags or positional parameters.
@@ -535,6 +653,7 @@ Uses OpenShift ImageStream & BuildConfig resources:
 | Path | Purpose |
 | :--- | :--- |
 | [`Dockerfile`](Dockerfile) | Multi-stage unprivileged NGINX build file (port 8080). |
+| [`docker-compose.yml`](docker-compose.yml) | Docker Compose specification for single-command container orchestration & health monitoring. |
 | [`nginx.conf`](nginx.conf) | Unprivileged web server configuration with security headers, `/s3`, `/guardrails` reverse proxies & `/healthz` probe. |
 | [`deploy.sh`](deploy.sh) | Automated OpenShift deployment helper script supporting explicit namespace options. |
 | [`src/index.html`](src/index.html) | Main HTML document for Red Sea Lab Bank with Admin Portal & Flowise Chatbot embed code. |
