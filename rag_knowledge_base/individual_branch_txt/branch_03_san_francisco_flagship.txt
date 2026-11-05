@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-CA-301
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-CA-301
 Branch Name: San Francisco Financial District Flagship
 Region: Northern California
-Street Address: 555 California Street, Floor 12
-City, State, ZIP: San Francisco, CA 94104
-Primary Phone Number: (415) 555-0199
-Fax Line: (415) 555-0200
-Email Address: sf.flagship@redsealabbank.com
-Branch Manager: Jonathan Sterling
-Lobby Operating Hours: Mon-Fri: 8:00 AM - 5:00 PM
+Address: 555 California Street, Floor 12, San Francisco, CA 94104
+Phone: (415) 555-0199
+Fax: (415) 555-0200
+Email: sf.flagship@redsealabbank.com
+Manager: Jonathan Sterling
+Lobby Hours: Mon-Fri: 8:00 AM - 5:00 PM
 Drive-Thru Hours: N/A (Executive Vault & Concierge Service)
-Available Services: Executive Banking, Venture Capital Desk, Corporate Treasury, International Wire Transfer, Safe Deposit Vault, Private Client Lounge
-Regional Hub & Operations Notes: Northern California Regional Headquarters. Dedicated tech startup & venture banking advisory group.
-================================================================================
+Available Services: Executive Banking, Venture Capital Desk, Corporate Treasury, Wire Transfer, Safe Deposit Vault
+Regional Notes: Northern California Regional HQ. Dedicated tech startup & venture banking advisory group.

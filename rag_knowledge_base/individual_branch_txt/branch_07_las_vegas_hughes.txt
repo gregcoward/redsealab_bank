@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-NV-501
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-NV-501
 Branch Name: Las Vegas Hughes Center Branch
 Region: Desert Southwest
-Street Address: 3883 Howard Hughes Parkway, Suite 200
-City, State, ZIP: Las Vegas, NV 89169
-Primary Phone Number: (702) 555-0177
-Fax Line: (702) 555-0178
-Email Address: lasvegas.hughes@redsealabbank.com
-Branch Manager: Brandon Hayes
-Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM
+Address: 3883 Howard Hughes Parkway, Suite 200, Las Vegas, NV 89169
+Phone: (702) 555-0177
+Fax: (702) 555-0178
+Email: lasvegas.hughes@redsealabbank.com
+Manager: Brandon Hayes
+Lobby Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM
 Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM
-Available Services: Gaming & Hospitality Credit, High-Value Cash Handling, Commercial Vault, 24/7 Smart ATM, Instant Debit Cards
-Regional Hub & Operations Notes: Nevada Main Hub equipped with high-capacity cash processing and commercial vault services.
-================================================================================
+Available Services: Gaming & Hospitality Credit, High-Value Cash Handling, Commercial Vault, 24/7 Smart ATM
+Regional Notes: Nevada Main Hub equipped with high-capacity cash processing and commercial vault services.

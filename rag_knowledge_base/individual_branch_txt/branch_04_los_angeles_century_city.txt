@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-CA-302
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-CA-302
 Branch Name: Los Angeles Century City Regional Center
 Region: Southern California
-Street Address: 1900 Avenue of the Stars, Suite 800
-City, State, ZIP: Los Angeles, CA 90067
-Primary Phone Number: (310) 555-0112
-Fax Line: (310) 555-0113
-Email Address: la.centurycity@redsealabbank.com
-Branch Manager: Sarah Jenkins
-Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Address: 1900 Avenue of the Stars, Suite 800, Los Angeles, CA 90067
+Phone: (310) 555-0112
+Fax: (310) 555-0113
+Email: la.centurycity@redsealabbank.com
+Manager: Sarah Jenkins
+Lobby Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
 Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
-Available Services: Entertainment & Media Banking, Jumbo Mortgages, Private Wealth Management, 24/7 Drive-Thru ATM, Foreign Currency Exchange
-Regional Hub & Operations Notes: Southern California Main Commercial Hub. Premier entertainment industry financing desk.
-================================================================================
+Available Services: Entertainment & Media Banking, Jumbo Mortgages, Private Wealth, 24/7 Drive-Thru ATM
+Regional Notes: Southern California Commercial Hub. Premier entertainment industry financing desk.

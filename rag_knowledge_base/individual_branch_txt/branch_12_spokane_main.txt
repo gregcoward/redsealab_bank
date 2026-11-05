@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-WA-102
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-WA-102
 Branch Name: Spokane Downtown Commercial Branch
 Region: Pacific Northwest
-Street Address: 601 W Main Avenue, Suite 200
-City, State, ZIP: Spokane, WA 99201
-Primary Phone Number: (509) 555-0128
-Fax Line: (509) 555-0129
-Email Address: spokane.main@redsealabbank.com
-Branch Manager: Victoria Thorne
-Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Address: 601 W Main Avenue, Suite 200, Spokane, WA 99201
+Phone: (509) 555-0128
+Fax: (509) 555-0129
+Email: spokane.main@redsealabbank.com
+Manager: Victoria Thorne
+Lobby Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
 Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
-Available Services: Healthcare Facility Loans, Commercial Real Estate, 24/7 ATM, Safe Deposit Boxes, Notary Public
-Regional Hub & Operations Notes: Inland Northwest Regional Center supporting regional healthcare networks and educational institutions.
-================================================================================
+Available Services: Healthcare Facility Loans, Commercial Real Estate, 24/7 ATM, Safe Deposit Boxes, Notary
+Regional Notes: Inland Northwest Regional Center supporting regional healthcare networks and higher education.

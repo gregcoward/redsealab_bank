@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-AZ-401
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-AZ-401
 Branch Name: Phoenix Biltmore Financial Center
 Region: Desert Southwest
-Street Address: 2400 E Missouri Avenue, Suite 100
-City, State, ZIP: Phoenix, AZ 85016
-Primary Phone Number: (602) 555-0133
-Fax Line: (602) 555-0134
-Email Address: phoenix.biltmore@redsealabbank.com
-Branch Manager: Rachel Thornton
-Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Address: 2400 E Missouri Avenue, Suite 100, Phoenix, AZ 85016
+Phone: (602) 555-0133
+Fax: (602) 555-0134
+Email: phoenix.biltmore@redsealabbank.com
+Manager: Rachel Thornton
+Lobby Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
 Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 8:30 AM - 1:00 PM
-Available Services: Commercial Real Estate Credit, Retirement Wealth Planning, 24/7 Multi-Lane Drive-Thru ATM, Night Depository
-Regional Hub & Operations Notes: Arizona State Headquarters. Features multi-lane drive-thru and commercial night drop box.
-================================================================================
+Available Services: Commercial Real Estate Credit, Retirement Wealth Planning, 24/7 Multi-Lane Drive-Thru ATM
+Regional Notes: Arizona State Headquarters. Features multi-lane drive-thru and commercial night drop box.

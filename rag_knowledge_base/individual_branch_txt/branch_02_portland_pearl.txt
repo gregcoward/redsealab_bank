@@ -1,16 +1,13 @@
-RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
-================================================================================
-Branch ID / Transit Code: RSLB-OR-201
+RED SEA LAB BANK - BRANCH LOCATION RECORD
+Branch ID: RSLB-OR-201
 Branch Name: Portland Pearl District Branch
 Region: Pacific Northwest
-Street Address: 720 NW 11th Avenue
-City, State, ZIP: Portland, OR 97209
-Primary Phone Number: (503) 555-0182
-Fax Line: (503) 555-0183
-Email Address: portland.pearl@redsealabbank.com
-Branch Manager: Elena Rostova
-Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Address: 720 NW 11th Avenue, Portland, OR 97209
+Phone: (503) 555-0182
+Fax: (503) 555-0183
+Email: portland.pearl@redsealabbank.com
+Manager: Elena Rostova
+Lobby Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
 Drive-Thru Hours: N/A (Walk-in & Drive-up Smart ATM)
-Available Services: 24/7 Smart ATM, Wealth Management, Small Business Loans, Notary Public, Instant Debit Card Printing
-Regional Hub & Operations Notes: Located in the heart of Portland Pearl District. Specializes in commercial lending and green technology financing.
-================================================================================
+Available Services: 24/7 Smart ATM, Wealth Management, Small Business Loans, Notary Public, Instant Debit Cards
+Regional Notes: Located in Portland Pearl District. Specializes in commercial lending & green tech financing.
