@@ -667,25 +667,12 @@
 
             // Reinitialize Chatbot with the newly logged-in user's name (Agent Flow V2 startState support)
             Chatbot.init({
-                chatflowid: "21f0915e-2afc-4a6f-9572-4b426d306d85",
+                chatflowid: "agentAgentflow_0",
                 apiHost: "https://flowise.redsealab.net",
                 chatflowConfig: {
-                    vars: {
-                        username: userName
-                    },
-                    startState: [
-                        { key: "username", value: userName },
-                        { key: "userName", value: userName }
-                    ],
-                    overrideConfig: {
-                        vars: {
-                            username: userName
-                        },
-                        startState: [
-                            { key: "username", value: userName },
-                            { key: "userName", value: userName }
-                        ]
-                    }
+                    "startState": [
+                        { key: "username", value: userName }
+                    ]
                 }
             });
         };
