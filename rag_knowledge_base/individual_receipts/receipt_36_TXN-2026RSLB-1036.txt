@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #36
+================================================================================
+Transaction Reference : TXN-2026RSLB-1036
+Date & Timestamp      : 2026-09-02 10:59:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: MinIO AIStor Systems
+Category              : Enterprise Storage
+Amount                : $27,443.73 USD
+Status                : APPROVED
+Authorization Code    : AUTH-324130
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MinIO AIStor S3 High-Performance Object Storage License Renewal.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

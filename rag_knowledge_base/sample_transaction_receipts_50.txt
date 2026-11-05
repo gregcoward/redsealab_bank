@@ -1,0 +1,1148 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #01
+================================================================================
+Transaction Reference : TXN-2026RSLB-1001
+Date & Timestamp      : 2026-09-15 08:47:00 UTC
+Account Holder Name   : Alexander Wright
+Account Reference     : Checking •••• 5519 (Business Preferred)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Qdrant Vector Database
+Category              : AI Infrastructure
+Amount                : $2,383.02 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-207473
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Qdrant Enterprise Cloud Vector DB Cluster Provisioning & Node Scaling.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #02
+================================================================================
+Transaction Reference : TXN-2026RSLB-1002
+Date & Timestamp      : 2026-09-13 02:27:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Checking •••• 4829 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Amazon Web Services
+Category              : Cloud Infrastructure
+Amount                : $1,941.55 USD
+Status                : APPROVED
+Authorization Code    : AUTH-629903
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly AWS Cloud Compute & S3 Object Storage Cluster usage billing.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #03
+================================================================================
+Transaction Reference : TXN-2026RSLB-1003
+Date & Timestamp      : 2026-09-05 01:12:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $30,430.84 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-391704
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #04
+================================================================================
+Transaction Reference : TXN-2026RSLB-1004
+Date & Timestamp      : 2026-09-01 13:44:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Electric & Power Authority
+Category              : Utilities
+Amount                : $6,623.31 USD
+Status                : APPROVED
+Authorization Code    : AUTH-900581
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Data Center Utility Power & High-Voltage Grid Consumption.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #05
+================================================================================
+Transaction Reference : TXN-2026RSLB-1005
+Date & Timestamp      : 2026-10-14 11:05:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $12,936.02 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-733052
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #06
+================================================================================
+Transaction Reference : TXN-2026RSLB-1006
+Date & Timestamp      : 2026-10-04 09:46:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $968.31 USD
+Status                : APPROVED
+Authorization Code    : AUTH-182627
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Travel Flight Booking for International Cyber Security Summit.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #07
+================================================================================
+Transaction Reference : TXN-2026RSLB-1007
+Date & Timestamp      : 2026-10-09 04:39:00 UTC
+Account Holder Name   : Samantha Chen
+Account Reference     : Checking •••• 3381 (Standard Checking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Business Hotel
+Category              : Travel & Expense
+Amount                : $1,834.55 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-148050
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate Lodging & Conference Center Booking.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #08
+================================================================================
+Transaction Reference : TXN-2026RSLB-1008
+Date & Timestamp      : 2026-09-30 17:05:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Microsoft Azure Cloud
+Category              : Cloud Infrastructure
+Amount                : $3,032.22 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-575435
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Azure Open AI Service API Consumption & Container Registry.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #09
+================================================================================
+Transaction Reference : TXN-2026RSLB-1009
+Date & Timestamp      : 2026-10-17 13:23:00 UTC
+Account Holder Name   : Samantha Chen
+Account Reference     : Checking •••• 3381 (Standard Checking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Qdrant Vector Database
+Category              : AI Infrastructure
+Amount                : $4,751.93 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-816751
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Qdrant Enterprise Cloud Vector DB Cluster Provisioning & Node Scaling.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #10
+================================================================================
+Transaction Reference : TXN-2026RSLB-1010
+Date & Timestamp      : 2026-09-11 03:40:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $2,509.27 USD
+Status                : APPROVED
+Authorization Code    : AUTH-584714
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Travel Flight Booking for International Cyber Security Summit.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #11
+================================================================================
+Transaction Reference : TXN-2026RSLB-1011
+Date & Timestamp      : 2026-10-19 16:59:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Qdrant Vector Database
+Category              : AI Infrastructure
+Amount                : $4,828.46 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-340174
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Qdrant Enterprise Cloud Vector DB Cluster Provisioning & Node Scaling.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #12
+================================================================================
+Transaction Reference : TXN-2026RSLB-1012
+Date & Timestamp      : 2026-09-05 18:25:00 UTC
+Account Holder Name   : Alexander Wright
+Account Reference     : Checking •••• 5519 (Business Preferred)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $9,458.10 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-852787
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #13
+================================================================================
+Transaction Reference : TXN-2026RSLB-1013
+Date & Timestamp      : 2026-10-11 14:41:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $76,927.82 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-581141
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #14
+================================================================================
+Transaction Reference : TXN-2026RSLB-1014
+Date & Timestamp      : 2026-09-19 16:08:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Office Expenses
+Amount                : $143.24 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-883300
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Suite Catering & Refreshment Supplies.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #15
+================================================================================
+Transaction Reference : TXN-2026RSLB-1015
+Date & Timestamp      : 2026-10-26 02:25:00 UTC
+Account Holder Name   : Samantha Chen
+Account Reference     : Checking •••• 3381 (Standard Checking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Qdrant Vector Database
+Category              : AI Infrastructure
+Amount                : $6,485.83 USD
+Status                : APPROVED
+Authorization Code    : AUTH-634277
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Qdrant Enterprise Cloud Vector DB Cluster Provisioning & Node Scaling.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #16
+================================================================================
+Transaction Reference : TXN-2026RSLB-1016
+Date & Timestamp      : 2026-11-03 10:48:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Checking •••• 4829 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Microsoft Azure Cloud
+Category              : Cloud Infrastructure
+Amount                : $3,137.72 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-267753
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Azure Open AI Service API Consumption & Container Registry.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #17
+================================================================================
+Transaction Reference : TXN-2026RSLB-1017
+Date & Timestamp      : 2026-10-26 03:04:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $56,712.19 USD
+Status                : APPROVED
+Authorization Code    : AUTH-654816
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #18
+================================================================================
+Transaction Reference : TXN-2026RSLB-1018
+Date & Timestamp      : 2026-10-04 01:55:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Checking •••• 4829 (Premium Tier)
+Transaction Type      : ACH Payroll Deposit
+Merchant / Beneficiary: Payroll Direct Deposit Service
+Category              : Payroll
+Amount                : $140,315.49 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-663054
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-Weekly Executive & Engineering Staff Payroll Disbursement.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #19
+================================================================================
+Transaction Reference : TXN-2026RSLB-1019
+Date & Timestamp      : 2026-10-06 04:21:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Savings •••• 9102 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Flowise AI Platforms
+Category              : AI Orchestration
+Amount                : $4,891.21 USD
+Status                : APPROVED
+Authorization Code    : AUTH-103402
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Flowise AI Pro Enterprise Orchestration Engine Annual Subscription.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #20
+================================================================================
+Transaction Reference : TXN-2026RSLB-1020
+Date & Timestamp      : 2026-10-05 00:48:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $2,977.20 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-412942
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Travel Flight Booking for International Cyber Security Summit.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #21
+================================================================================
+Transaction Reference : TXN-2026RSLB-1021
+Date & Timestamp      : 2026-11-05 03:12:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Electric & Power Authority
+Category              : Utilities
+Amount                : $12,245.13 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-916449
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Data Center Utility Power & High-Voltage Grid Consumption.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #22
+================================================================================
+Transaction Reference : TXN-2026RSLB-1022
+Date & Timestamp      : 2026-09-02 03:20:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Amazon Web Services
+Category              : Cloud Infrastructure
+Amount                : $2,153.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-972064
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly AWS Cloud Compute & S3 Object Storage Cluster usage billing.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #23
+================================================================================
+Transaction Reference : TXN-2026RSLB-1023
+Date & Timestamp      : 2026-10-10 15:03:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Red Hat OpenShift Subscriptions
+Category              : Container Platform
+Amount                : $23,708.02 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-189814
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Red Hat OpenShift Container Platform Core Node Licenses.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #24
+================================================================================
+Transaction Reference : TXN-2026RSLB-1024
+Date & Timestamp      : 2026-11-02 10:48:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Apple Store Enterprise
+Category              : Hardware & Equipment
+Amount                : $6,140.10 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-598369
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+M3 Max MacBook Pro Mobile Workstations for Security Engineering Team.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #25
+================================================================================
+Transaction Reference : TXN-2026RSLB-1025
+Date & Timestamp      : 2026-09-22 16:33:00 UTC
+Account Holder Name   : Horizon Marine Solutions
+Account Reference     : Corporate •••• 4433 (Enterprise Banking)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $82,505.40 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-891952
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #26
+================================================================================
+Transaction Reference : TXN-2026RSLB-1026
+Date & Timestamp      : 2026-09-27 06:19:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : ACH Payroll Deposit
+Merchant / Beneficiary: Payroll Direct Deposit Service
+Category              : Payroll
+Amount                : $128,980.49 USD
+Status                : APPROVED
+Authorization Code    : AUTH-642717
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-Weekly Executive & Engineering Staff Payroll Disbursement.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #27
+================================================================================
+Transaction Reference : TXN-2026RSLB-1027
+Date & Timestamp      : 2026-10-28 11:15:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $12,445.01 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-680828
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #28
+================================================================================
+Transaction Reference : TXN-2026RSLB-1028
+Date & Timestamp      : 2026-10-01 02:14:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Checking •••• 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $21,134.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-340062
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #29
+================================================================================
+Transaction Reference : TXN-2026RSLB-1029
+Date & Timestamp      : 2026-09-09 09:55:00 UTC
+Account Holder Name   : Samantha Chen
+Account Reference     : Checking •••• 3381 (Standard Checking)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $16,582.67 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-801474
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #30
+================================================================================
+Transaction Reference : TXN-2026RSLB-1030
+Date & Timestamp      : 2026-11-02 14:34:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Office Expenses
+Amount                : $208.71 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-704201
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Suite Catering & Refreshment Supplies.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #31
+================================================================================
+Transaction Reference : TXN-2026RSLB-1031
+Date & Timestamp      : 2026-10-31 15:50:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Apple Store Enterprise
+Category              : Hardware & Equipment
+Amount                : $12,047.67 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-201639
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+M3 Max MacBook Pro Mobile Workstations for Security Engineering Team.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #32
+================================================================================
+Transaction Reference : TXN-2026RSLB-1032
+Date & Timestamp      : 2026-10-26 19:27:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : ACH Direct Deposit
+Merchant / Beneficiary: Stripe Payments Corp
+Category              : Merchant Processing
+Amount                : $39,553.47 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-806073
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Merchant Settlement Payout for E-Commerce Digital Banking Gateway.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #33
+================================================================================
+Transaction Reference : TXN-2026RSLB-1033
+Date & Timestamp      : 2026-09-13 09:25:00 UTC
+Account Holder Name   : Samantha Chen
+Account Reference     : Checking •••• 3381 (Standard Checking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Apple Store Enterprise
+Category              : Hardware & Equipment
+Amount                : $21,594.98 USD
+Status                : APPROVED
+Authorization Code    : AUTH-300896
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+M3 Max MacBook Pro Mobile Workstations for Security Engineering Team.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #34
+================================================================================
+Transaction Reference : TXN-2026RSLB-1034
+Date & Timestamp      : 2026-09-26 01:28:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $27,844.16 USD
+Status                : APPROVED
+Authorization Code    : AUTH-361941
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #35
+================================================================================
+Transaction Reference : TXN-2026RSLB-1035
+Date & Timestamp      : 2026-09-10 22:51:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $5,688.83 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-976638
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #36
+================================================================================
+Transaction Reference : TXN-2026RSLB-1036
+Date & Timestamp      : 2026-09-02 10:59:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: MinIO AIStor Systems
+Category              : Enterprise Storage
+Amount                : $27,443.73 USD
+Status                : APPROVED
+Authorization Code    : AUTH-324130
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MinIO AIStor S3 High-Performance Object Storage License Renewal.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #37
+================================================================================
+Transaction Reference : TXN-2026RSLB-1037
+Date & Timestamp      : 2026-10-22 09:10:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Amazon Web Services
+Category              : Cloud Infrastructure
+Amount                : $12,328.85 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-922157
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly AWS Cloud Compute & S3 Object Storage Cluster usage billing.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #38
+================================================================================
+Transaction Reference : TXN-2026RSLB-1038
+Date & Timestamp      : 2026-10-29 17:27:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : ACH Payroll Deposit
+Merchant / Beneficiary: Payroll Direct Deposit Service
+Category              : Payroll
+Amount                : $139,945.32 USD
+Status                : APPROVED
+Authorization Code    : AUTH-299122
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-Weekly Executive & Engineering Staff Payroll Disbursement.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #39
+================================================================================
+Transaction Reference : TXN-2026RSLB-1039
+Date & Timestamp      : 2026-10-08 14:03:00 UTC
+Account Holder Name   : Horizon Marine Solutions
+Account Reference     : Corporate •••• 4433 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Office Expenses
+Amount                : $139.88 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-428838
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Suite Catering & Refreshment Supplies.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #40
+================================================================================
+Transaction Reference : TXN-2026RSLB-1040
+Date & Timestamp      : 2026-09-08 09:37:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $2,994.44 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-265080
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Travel Flight Booking for International Cyber Security Summit.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #41
+================================================================================
+Transaction Reference : TXN-2026RSLB-1041
+Date & Timestamp      : 2026-09-09 00:05:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity & Web WAF
+Amount                : $18,483.33 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-346629
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Distributed AI Guardrails Enterprise License.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #42
+================================================================================
+Transaction Reference : TXN-2026RSLB-1042
+Date & Timestamp      : 2026-10-22 11:56:00 UTC
+Account Holder Name   : Horizon Marine Solutions
+Account Reference     : Corporate •••• 4433 (Enterprise Banking)
+Transaction Type      : Corporate Card
+Merchant / Beneficiary: Qdrant Vector Database
+Category              : AI Infrastructure
+Amount                : $4,268.27 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-749468
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Qdrant Enterprise Cloud Vector DB Cluster Provisioning & Node Scaling.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #43
+================================================================================
+Transaction Reference : TXN-2026RSLB-1043
+Date & Timestamp      : 2026-09-11 21:42:00 UTC
+Account Holder Name   : Horizon Marine Solutions
+Account Reference     : Corporate •••• 4433 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Business Hotel
+Category              : Travel & Expense
+Amount                : $2,925.18 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-314181
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate Lodging & Conference Center Booking.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #44
+================================================================================
+Transaction Reference : TXN-2026RSLB-1044
+Date & Timestamp      : 2026-10-11 15:16:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: MinIO AIStor Systems
+Category              : Enterprise Storage
+Amount                : $37,524.23 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-579434
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MinIO AIStor S3 High-Performance Object Storage License Renewal.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #45
+================================================================================
+Transaction Reference : TXN-2026RSLB-1045
+Date & Timestamp      : 2026-10-11 10:00:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Business Hotel
+Category              : Travel & Expense
+Amount                : $4,494.90 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-176819
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate Lodging & Conference Center Booking.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #46
+================================================================================
+Transaction Reference : TXN-2026RSLB-1046
+Date & Timestamp      : 2026-09-29 00:16:00 UTC
+Account Holder Name   : Greg Coward
+Account Reference     : Checking •••• 1042 (Executive Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Red Hat OpenShift Subscriptions
+Category              : Container Platform
+Amount                : $18,009.13 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-356150
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Red Hat OpenShift Container Platform Core Node Licenses.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #47
+================================================================================
+Transaction Reference : TXN-2026RSLB-1047
+Date & Timestamp      : 2026-10-18 17:10:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Microsoft Azure Cloud
+Category              : Cloud Infrastructure
+Amount                : $8,427.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-741390
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Azure Open AI Service API Consumption & Container Registry.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #48
+================================================================================
+Transaction Reference : TXN-2026RSLB-1048
+Date & Timestamp      : 2026-09-03 05:52:00 UTC
+Account Holder Name   : Apex Cyber Analytics Inc
+Account Reference     : Corporate •••• 8812 (Enterprise Banking)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Flowise AI Platforms
+Category              : AI Orchestration
+Amount                : $7,624.66 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-240814
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Flowise AI Pro Enterprise Orchestration Engine Annual Subscription.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #49
+================================================================================
+Transaction Reference : TXN-2026RSLB-1049
+Date & Timestamp      : 2026-10-04 11:56:00 UTC
+Account Holder Name   : Jane Doe
+Account Reference     : Savings •••• 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Office Expenses
+Amount                : $141.81 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-395442
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Suite Catering & Refreshment Supplies.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #50
+================================================================================
+Transaction Reference : TXN-2026RSLB-1050
+Date & Timestamp      : 2026-09-28 06:21:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : ACH Payroll Deposit
+Merchant / Beneficiary: Payroll Direct Deposit Service
+Category              : Payroll
+Amount                : $126,478.07 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-629959
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-Weekly Executive & Engineering Staff Payroll Disbursement.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

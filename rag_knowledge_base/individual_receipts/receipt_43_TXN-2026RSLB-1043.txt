@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #43
+================================================================================
+Transaction Reference : TXN-2026RSLB-1043
+Date & Timestamp      : 2026-09-11 21:42:00 UTC
+Account Holder Name   : Horizon Marine Solutions
+Account Reference     : Corporate •••• 4433 (Enterprise Banking)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Business Hotel
+Category              : Travel & Expense
+Amount                : $2,925.18 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-314181
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate Lodging & Conference Center Booking.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

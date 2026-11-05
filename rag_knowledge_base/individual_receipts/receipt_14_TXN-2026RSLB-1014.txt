@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #14
+================================================================================
+Transaction Reference : TXN-2026RSLB-1014
+Date & Timestamp      : 2026-09-19 16:08:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Office Expenses
+Amount                : $143.24 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-883300
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Executive Suite Catering & Refreshment Supplies.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

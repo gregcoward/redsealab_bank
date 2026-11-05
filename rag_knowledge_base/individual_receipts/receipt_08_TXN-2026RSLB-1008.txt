@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #08
+================================================================================
+Transaction Reference : TXN-2026RSLB-1008
+Date & Timestamp      : 2026-09-30 17:05:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Microsoft Azure Cloud
+Category              : Cloud Infrastructure
+Amount                : $3,032.22 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-575435
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Azure Open AI Service API Consumption & Container Registry.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

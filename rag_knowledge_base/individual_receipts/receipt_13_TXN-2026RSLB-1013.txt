@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #13
+================================================================================
+Transaction Reference : TXN-2026RSLB-1013
+Date & Timestamp      : 2026-10-11 14:41:00 UTC
+Account Holder Name   : Red Sea Shipping & Logistics LLC
+Account Reference     : Corporate •••• 9901 (Enterprise Banking)
+Transaction Type      : SWIFT International Wire
+Merchant / Beneficiary: Global Tech Hardware Vendor
+Category              : Hardware & Equipment
+Amount                : $76,927.82 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-581141
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Rackmount Server Blades & High-Speed Fiber Networking Switches.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

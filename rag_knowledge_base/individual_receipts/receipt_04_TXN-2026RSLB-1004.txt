@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #04
+================================================================================
+Transaction Reference : TXN-2026RSLB-1004
+Date & Timestamp      : 2026-09-01 13:44:00 UTC
+Account Holder Name   : David Miller
+Account Reference     : Savings •••• 7740 (Gold Banking)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Electric & Power Authority
+Category              : Utilities
+Amount                : $6,623.31 USD
+Status                : APPROVED
+Authorization Code    : AUTH-900581
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Data Center Utility Power & High-Voltage Grid Consumption.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================

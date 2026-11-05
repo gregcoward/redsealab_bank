@@ -1,0 +1,21 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #23
+================================================================================
+Transaction Reference : TXN-2026RSLB-1023
+Date & Timestamp      : 2026-10-10 15:03:00 UTC
+Account Holder Name   : adminuser
+Account Reference     : Corporate •••• 0001 (Administrator)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Red Hat OpenShift Subscriptions
+Category              : Container Platform
+Amount                : $23,708.02 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-189814
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Red Hat OpenShift Container Platform Core Node Licenses.
+Account balance updated. Official record stored in MinIO AIStor S3 storage
+(Bucket: redsealab-bank-kb). Retain this receipt for tax and audit compliance.
+================================================================================
