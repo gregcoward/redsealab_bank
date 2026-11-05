@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-AK-901
+Branch Name: Anchorage Regional Office
+Region: Alaska Region
+Street Address: 360 K Street, Suite 100
+City, State, ZIP: Anchorage, AK 99501
+Primary Phone Number: (907) 555-0115
+Fax Line: (907) 555-0116
+Email Address: anchorage.office@redsealabbank.com
+Branch Manager: Robert Lindgren
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 4:30 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:00 PM
+Available Services: Natural Resources Financing, Commercial Fisheries Credit, Heated Drive-Thru ATM, Night Vault
+Regional Hub & Operations Notes: Alaska Flagship Branch. Features climate-controlled drive-thru and specialized marine fisheries credit desk.
+================================================================================

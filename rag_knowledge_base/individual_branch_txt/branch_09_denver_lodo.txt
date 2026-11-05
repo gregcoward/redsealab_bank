@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-CO-701
+Branch Name: Denver LoDo Commercial Plaza
+Region: Rocky Mountain Region
+Street Address: 1700 Lincoln Street, Suite 1800
+City, State, ZIP: Denver, CO 80203
+Primary Phone Number: (303) 555-0158
+Fax Line: (303) 555-0159
+Email Address: denver.lodo@redsealabbank.com
+Branch Manager: David K. Miller
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM
+Available Services: Energy & Infrastructure Banking, Commercial Mortgages, Private Wealth, 24/7 Drive-Thru ATM, Notary Public
+Regional Hub & Operations Notes: Colorado Regional Headquarters. Serves renewable energy, aerospace, and commercial real estate clients.
+================================================================================

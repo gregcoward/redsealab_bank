@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-CA-303
+Branch Name: San Diego Gaslamp Quarter Branch
+Region: Southern California
+Street Address: 401 B Street, Suite 300
+City, State, ZIP: San Diego, CA 92101
+Primary Phone Number: (619) 555-0165
+Fax Line: (619) 555-0166
+Email Address: sandiego.downtown@redsealabbank.com
+Branch Manager: Carlos Mendez
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:30 PM
+Available Services: Cross-Border Commercial Trade, Maritime & Logistics Financing, 24/7 Smart ATM, Safe Deposit Vault, Notary Public
+Regional Hub & Operations Notes: Primary center for cross-border trade finance and marine commercial lending.
+================================================================================

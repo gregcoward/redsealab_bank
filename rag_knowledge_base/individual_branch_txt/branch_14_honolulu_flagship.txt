@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-HI-902
+Branch Name: Honolulu Financial Plaza Flagship
+Region: Hawaii Region
+Street Address: 130 Merchant Street, Suite 500
+City, State, ZIP: Honolulu, HI 96813
+Primary Phone Number: (808) 555-0162
+Fax Line: (808) 555-0163
+Email Address: honolulu.flagship@redsealabbank.com
+Branch Manager: Keanu Kalani
+Lobby Operating Hours: Mon-Fri: 8:00 AM - 4:00 PM, Sat: 8:30 AM - 12:00 PM
+Drive-Thru Hours: N/A (Downtown Financial Center Walk-In & Smart ATM)
+Available Services: Asia-Pacific Commercial Trade, Pacific Rim Wealth Desk, Japanese & Multi-Currency Services, Safe Deposit Vault
+Regional Hub & Operations Notes: Hawaii State Flagship. Bilingual staff offering Asia-Pacific trade settlement and multi-currency exchange.
+================================================================================

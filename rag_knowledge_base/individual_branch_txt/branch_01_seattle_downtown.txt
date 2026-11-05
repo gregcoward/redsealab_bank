@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-WA-101
+Branch Name: Seattle Downtown Financial Center
+Region: Pacific Northwest
+Street Address: 1201 3rd Avenue, Suite 1500
+City, State, ZIP: Seattle, WA 98101
+Primary Phone Number: (206) 555-0140
+Fax Line: (206) 555-0141
+Email Address: seattle.branch@redsealabbank.com
+Branch Manager: Marcus Vance
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM
+Available Services: 24/7 ATM, Safe Deposit Boxes, Commercial Lending, Private Wealth Desk, Foreign Currency Exchange, Notary Public
+Regional Hub & Operations Notes: Regional Hub for Washington State. Features drive-thru banking and high-capacity safe deposit vault.
+================================================================================

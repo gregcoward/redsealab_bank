@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-ID-801
+Branch Name: Boise Idaho Central Center
+Region: Intermountain West
+Street Address: 800 W Main Street, Suite 900
+City, State, ZIP: Boise, ID 83702
+Primary Phone Number: (208) 555-0191
+Fax Line: (208) 555-0192
+Email Address: boise.main@redsealabbank.com
+Branch Manager: Hannah Lindqvist
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM, Sat: 9:00 AM - 1:00 PM
+Available Services: Agricultural Lending, Commercial Credit, Personal Checking/Savings, Drive-Up Teller, Safe Deposit Vault
+Regional Hub & Operations Notes: Primary Idaho Hub. Dedicated agricultural finance and food processing credit specialists.
+================================================================================

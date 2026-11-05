@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-NV-502
+Branch Name: Reno Financial District Branch
+Region: Desert Southwest
+Street Address: 100 W Liberty Street, Suite 150
+City, State, ZIP: Reno, NV 89501
+Primary Phone Number: (775) 555-0144
+Fax Line: (775) 555-0145
+Email Address: reno.liberty@redsealabbank.com
+Branch Manager: Kevin O'Connor
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:30 PM
+Available Services: Logistics & Distribution Credit, Equipment Finance, 24/7 Smart ATM, Foreign Currency, Night Depository
+Regional Hub & Operations Notes: Northern Nevada Commerce Hub. Serves industrial logistics parks and regional warehousing facilities.
+================================================================================

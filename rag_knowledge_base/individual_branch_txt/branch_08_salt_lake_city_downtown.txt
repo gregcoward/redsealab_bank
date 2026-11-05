@@ -1,0 +1,16 @@
+RED SEA LAB BANK - BRANCH LOCATION DIRECTORY RECORD
+================================================================================
+Branch ID / Transit Code: RSLB-UT-601
+Branch Name: Salt Lake City Downtown Branch
+Region: Intermountain West
+Street Address: 222 S Main Street, Suite 400
+City, State, ZIP: Salt Lake City, UT 84101
+Primary Phone Number: (801) 555-0124
+Fax Line: (801) 555-0125
+Email Address: slc.downtown@redsealabbank.com
+Branch Manager: Abigail Pratt
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
+Available Services: Fintech Business Loans, Equipment Leasing, SBA Preferred Lending, 24/7 ATM, Safe Deposit Boxes
+Regional Hub & Operations Notes: Utah Regional Center specializing in Silicon Slopes tech sector and SBA small business loans.
+================================================================================
