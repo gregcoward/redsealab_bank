@@ -1,0 +1,216 @@
+RED SEA LAB BANK - WESTERN UNITED STATES BRANCH DIRECTORY
+
+Official Knowledge Base Directory for RAG System Ingestion & Customer Services
+
+================================================================================
+
+
+BRANCH ENTRY #01 - RSLB-WA-101
+Branch Name: Seattle Downtown Financial Center
+Branch ID / Transit Code: RSLB-WA-101
+Region: Pacific Northwest
+Address: 1201 3rd Avenue, Suite 1500, Seattle, WA 98101
+Phone Number: (206) 555-0140
+Fax Number: (206) 555-0141
+Email Address: seattle.branch@redsealabbank.com
+Branch Manager: Marcus Vance
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM
+Available Services: 24/7 ATM, Safe Deposit Boxes, Commercial Lending, Private Wealth Desk, Foreign Currency Exchange, Notary Public
+Regional Hub Notes: Regional Hub for Washington State. Features drive-thru banking and high-capacity safe deposit vault.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #02 - RSLB-OR-201
+Branch Name: Portland Pearl District Branch
+Branch ID / Transit Code: RSLB-OR-201
+Region: Pacific Northwest
+Address: 720 NW 11th Avenue, Portland, OR 97209
+Phone Number: (503) 555-0182
+Fax Number: (503) 555-0183
+Email Address: portland.pearl@redsealabbank.com
+Branch Manager: Elena Rostova
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Drive-Thru Hours: N/A (Walk-in & Drive-up Smart ATM)
+Available Services: 24/7 Smart ATM, Wealth Management, Small Business Loans, Notary Public, Instant Debit Card Printing
+Regional Hub Notes: Located in the heart of Portland Pearl District. Specializes in commercial lending and green technology financing.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #03 - RSLB-CA-301
+Branch Name: San Francisco Financial District Flagship
+Branch ID / Transit Code: RSLB-CA-301
+Region: Northern California
+Address: 555 California Street, Floor 12, San Francisco, CA 94104
+Phone Number: (415) 555-0199
+Fax Number: (415) 555-0200
+Email Address: sf.flagship@redsealabbank.com
+Branch Manager: Jonathan Sterling
+Lobby Operating Hours: Mon-Fri: 8:00 AM - 5:00 PM
+Drive-Thru Hours: N/A (Executive Vault & Concierge Service)
+Available Services: Executive Banking, Venture Capital Desk, Corporate Treasury, International Wire Transfer, Safe Deposit Vault, Private Client Lounge
+Regional Hub Notes: Northern California Regional Headquarters. Dedicated tech startup & venture banking advisory group.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #04 - RSLB-CA-302
+Branch Name: Los Angeles Century City Regional Center
+Branch ID / Transit Code: RSLB-CA-302
+Region: Southern California
+Address: 1900 Avenue of the Stars, Suite 800, Los Angeles, CA 90067
+Phone Number: (310) 555-0112
+Fax Number: (310) 555-0113
+Email Address: la.centurycity@redsealabbank.com
+Branch Manager: Sarah Jenkins
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
+Available Services: Entertainment & Media Banking, Jumbo Mortgages, Private Wealth Management, 24/7 Drive-Thru ATM, Foreign Currency Exchange
+Regional Hub Notes: Southern California Main Commercial Hub. Premier entertainment industry financing desk.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #05 - RSLB-CA-303
+Branch Name: San Diego Gaslamp Quarter Branch
+Branch ID / Transit Code: RSLB-CA-303
+Region: Southern California
+Address: 401 B Street, Suite 300, San Diego, CA 92101
+Phone Number: (619) 555-0165
+Fax Number: (619) 555-0166
+Email Address: sandiego.downtown@redsealabbank.com
+Branch Manager: Carlos Mendez
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:30 PM
+Available Services: Cross-Border Commercial Trade, Maritime & Logistics Financing, 24/7 Smart ATM, Safe Deposit Vault, Notary Public
+Regional Hub Notes: Primary center for cross-border trade finance and marine commercial lending.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #06 - RSLB-AZ-401
+Branch Name: Phoenix Biltmore Financial Center
+Branch ID / Transit Code: RSLB-AZ-401
+Region: Desert Southwest
+Address: 2400 E Missouri Avenue, Suite 100, Phoenix, AZ 85016
+Phone Number: (602) 555-0133
+Fax Number: (602) 555-0134
+Email Address: phoenix.biltmore@redsealabbank.com
+Branch Manager: Rachel Thornton
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 8:30 AM - 1:00 PM
+Available Services: Commercial Real Estate Credit, Retirement Wealth Planning, 24/7 Multi-Lane Drive-Thru ATM, Night Depository
+Regional Hub Notes: Arizona State Headquarters. Features multi-lane drive-thru and commercial night drop box.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #07 - RSLB-NV-501
+Branch Name: Las Vegas Hughes Center Branch
+Branch ID / Transit Code: RSLB-NV-501
+Region: Desert Southwest
+Address: 3883 Howard Hughes Parkway, Suite 200, Las Vegas, NV 89169
+Phone Number: (702) 555-0177
+Fax Number: (702) 555-0178
+Email Address: lasvegas.hughes@redsealabbank.com
+Branch Manager: Brandon Hayes
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 2:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM, Sat: 9:00 AM - 2:00 PM
+Available Services: Gaming & Hospitality Credit, High-Value Cash Handling, Commercial Vault, 24/7 Smart ATM, Instant Debit Cards
+Regional Hub Notes: Nevada Main Hub equipped with high-capacity cash processing and commercial vault services.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #08 - RSLB-UT-601
+Branch Name: Salt Lake City Downtown Branch
+Branch ID / Transit Code: RSLB-UT-601
+Region: Intermountain West
+Address: 222 S Main Street, Suite 400, Salt Lake City, UT 84101
+Phone Number: (801) 555-0124
+Fax Number: (801) 555-0125
+Email Address: slc.downtown@redsealabbank.com
+Branch Manager: Abigail Pratt
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
+Available Services: Fintech Business Loans, Equipment Leasing, SBA Preferred Lending, 24/7 ATM, Safe Deposit Boxes
+Regional Hub Notes: Utah Regional Center specializing in Silicon Slopes tech sector and SBA small business loans.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #09 - RSLB-CO-701
+Branch Name: Denver LoDo Commercial Plaza
+Branch ID / Transit Code: RSLB-CO-701
+Region: Rocky Mountain Region
+Address: 1700 Lincoln Street, Suite 1800, Denver, CO 80203
+Phone Number: (303) 555-0158
+Fax Number: (303) 555-0159
+Email Address: denver.lodo@redsealabbank.com
+Branch Manager: David K. Miller
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 1:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 6:00 PM
+Available Services: Energy & Infrastructure Banking, Commercial Mortgages, Private Wealth, 24/7 Drive-Thru ATM, Notary Public
+Regional Hub Notes: Colorado Regional Headquarters. Serves renewable energy, aerospace, and commercial real estate clients.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #10 - RSLB-ID-801
+Branch Name: Boise Idaho Central Center
+Branch ID / Transit Code: RSLB-ID-801
+Region: Intermountain West
+Address: 800 W Main Street, Suite 900, Boise, ID 83702
+Phone Number: (208) 555-0191
+Fax Number: (208) 555-0192
+Email Address: boise.main@redsealabbank.com
+Branch Manager: Hannah Lindqvist
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM, Sat: 9:00 AM - 1:00 PM
+Available Services: Agricultural Lending, Commercial Credit, Personal Checking/Savings, Drive-Up Teller, Safe Deposit Vault
+Regional Hub Notes: Primary Idaho Hub. Dedicated agricultural finance and food processing credit specialists.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #11 - RSLB-NV-502
+Branch Name: Reno Financial District Branch
+Branch ID / Transit Code: RSLB-NV-502
+Region: Desert Southwest
+Address: 100 W Liberty Street, Suite 150, Reno, NV 89501
+Phone Number: (775) 555-0144
+Fax Number: (775) 555-0145
+Email Address: reno.liberty@redsealabbank.com
+Branch Manager: Kevin O'Connor
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:30 PM
+Available Services: Logistics & Distribution Credit, Equipment Finance, 24/7 Smart ATM, Foreign Currency, Night Depository
+Regional Hub Notes: Northern Nevada Commerce Hub. Serves industrial logistics parks and regional warehousing facilities.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #12 - RSLB-WA-102
+Branch Name: Spokane Downtown Commercial Branch
+Branch ID / Transit Code: RSLB-WA-102
+Region: Pacific Northwest
+Address: 601 W Main Avenue, Suite 200, Spokane, WA 99201
+Phone Number: (509) 555-0128
+Fax Number: (509) 555-0129
+Email Address: spokane.main@redsealabbank.com
+Branch Manager: Victoria Thorne
+Lobby Operating Hours: Mon-Fri: 8:30 AM - 5:00 PM, Sat: 9:00 AM - 12:00 PM
+Drive-Thru Hours: Mon-Fri: 8:00 AM - 5:30 PM
+Available Services: Healthcare Facility Loans, Commercial Real Estate, 24/7 ATM, Safe Deposit Boxes, Notary Public
+Regional Hub Notes: Inland Northwest Regional Center supporting regional healthcare networks and educational institutions.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #13 - RSLB-AK-901
+Branch Name: Anchorage Regional Office
+Branch ID / Transit Code: RSLB-AK-901
+Region: Alaska Region
+Address: 360 K Street, Suite 100, Anchorage, AK 99501
+Phone Number: (907) 555-0115
+Fax Number: (907) 555-0116
+Email Address: anchorage.office@redsealabbank.com
+Branch Manager: Robert Lindgren
+Lobby Operating Hours: Mon-Fri: 9:00 AM - 4:30 PM
+Drive-Thru Hours: Mon-Fri: 8:30 AM - 5:00 PM
+Available Services: Natural Resources Financing, Commercial Fisheries Credit, Heated Drive-Thru ATM, Night Vault
+Regional Hub Notes: Alaska Flagship Branch. Features climate-controlled drive-thru and specialized marine fisheries credit desk.
+--------------------------------------------------------------------------------
+
+BRANCH ENTRY #14 - RSLB-HI-902
+Branch Name: Honolulu Financial Plaza Flagship
+Branch ID / Transit Code: RSLB-HI-902
+Region: Hawaii Region
+Address: 130 Merchant Street, Suite 500, Honolulu, HI 96813
+Phone Number: (808) 555-0162
+Fax Number: (808) 555-0163
+Email Address: honolulu.flagship@redsealabbank.com
+Branch Manager: Keanu Kalani
+Lobby Operating Hours: Mon-Fri: 8:00 AM - 4:00 PM, Sat: 8:30 AM - 12:00 PM
+Drive-Thru Hours: N/A (Downtown Financial Center Walk-In & Smart ATM)
+Available Services: Asia-Pacific Commercial Trade, Pacific Rim Wealth Desk, Japanese & Multi-Currency Services, Safe Deposit Vault
+Regional Hub Notes: Hawaii State Flagship. Bilingual staff offering Asia-Pacific trade settlement and multi-currency exchange.
+--------------------------------------------------------------------------------
