@@ -621,35 +621,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <!-- App JavaScript -->
-    <script src="app.js?v=10"></script>
+    <script src="app.js?v=11"></script>
 
     <!-- Flowise Chatbot Integration -->
     <script type="module">
         import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
 
-        // Retrieve logged-in user from session storage
-        const sessionUserEmail = sessionStorage.getItem('redsealab_auth_user');
         const userMap = {
             'jane.doe@redsealabbank.com': 'Jane Doe',
             'alex.smith@redsealabbank.com': 'Alex Smith',
-            'adminuser@redsealabbank.com': 'adminuser'
+            'adminuser@redsealabbank.com': 'adminuser',
+            'adminuser': 'adminuser'
         };
-        const currentUserName = userMap[sessionUserEmail] || 'Guest';
 
-        Chatbot.init({
-            chatflowid: "21f0915e-2afc-4a6f-9572-4b426d306d85",
-            apiHost: "https://flowise.redsealab.net",
-            chatflowConfig: {
-                vars: {
-                    username: currentUserName
-                },
-                overrideConfig: {
-                    vars: {
-                        username: currentUserName
+        window.initFlowiseChatbot = function(userName) {
+            // Determine name if not explicitly passed
+            if (!userName) {
+                const sessionUserEmail = sessionStorage.getItem('redsealab_auth_user');
+                userName = userMap[sessionUserEmail] || 'Guest';
+            }
+
+            // Remove existing chatbot element from DOM if it exists to ensure a fresh instance
+            const existingChatbot = document.querySelector('flowise-chatbot');
+            if (existingChatbot) {
+                existingChatbot.remove();
+            }
+
+            // Clear any stored Flowise session/chat IDs so a brand new conversation starts for this user
+            try {
+                for (let i = localStorage.length - 1; i >= 0; i--) {
+                    const key = localStorage.key(i);
+                    if (key && (key.includes('21f0915e-2afc-4a6f-9572-4b426d306d85') || key.includes('flowise') || key.includes('chatflow'))) {
+                        localStorage.removeItem(key);
                     }
                 }
+                for (let i = sessionStorage.length - 1; i >= 0; i--) {
+                    const key = sessionStorage.key(i);
+                    if (key && (key.includes('21f0915e-2afc-4a6f-9572-4b426d306d85') || key.includes('flowise') || key.includes('chatflow'))) {
+                        sessionStorage.removeItem(key);
+                    }
+                }
+            } catch (e) {
+                console.warn('Could not clear storage keys for Flowise:', e);
             }
-        })
+
+            // Reinitialize Chatbot with the newly logged-in user's name
+            Chatbot.init({
+                chatflowid: "21f0915e-2afc-4a6f-9572-4b426d306d85",
+                apiHost: "https://flowise.redsealab.net",
+                chatflowConfig: {
+                    vars: {
+                        username: userName
+                    },
+                    overrideConfig: {
+                        vars: {
+                            username: userName
+                        }
+                    }
+                }
+            });
+        };
+
+        // Initialize chatbot on page load
+        window.initFlowiseChatbot();
     </script>
 </body>
 </html>

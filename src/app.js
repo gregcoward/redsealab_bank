@@ -222,6 +222,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginError.classList.add('hidden');
                 renderUserSession(matchedUser);
                 loginModal.classList.add('hidden');
+
+                // Reinitialize Flowise Chatbot for newly logged-in user
+                if (typeof window.initFlowiseChatbot === 'function') {
+                    window.initFlowiseChatbot(matchedUser.name);
+                }
             } else {
                 loginError.classList.remove('hidden');
             }
@@ -246,6 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
             currentUser = null;
             renderUserSession(null);
             loginModal.classList.remove('hidden');
+
+            // Reinitialize Flowise Chatbot for Guest
+            if (typeof window.initFlowiseChatbot === 'function') {
+                window.initFlowiseChatbot('Guest');
+            }
         });
     }
 
