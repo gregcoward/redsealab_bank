@@ -624,12 +624,32 @@
     <script src="app.js?v=10"></script>
 
     <!-- Flowise Chatbot Integration -->
-<script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.init({
-        chatflowid: "21f0915e-2afc-4a6f-9572-4b426d306d85",
-        apiHost: "https://flowise.redsealab.net",
-    })
-</script>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+
+        // Retrieve logged-in user from session storage
+        const sessionUserEmail = sessionStorage.getItem('redsealab_auth_user');
+        const userMap = {
+            'jane.doe@redsealabbank.com': 'Jane Doe',
+            'alex.smith@redsealabbank.com': 'Alex Smith',
+            'adminuser@redsealabbank.com': 'adminuser'
+        };
+        const currentUserName = userMap[sessionUserEmail] || 'Guest';
+
+        Chatbot.init({
+            chatflowid: "21f0915e-2afc-4a6f-9572-4b426d306d85",
+            apiHost: "https://flowise.redsealab.net",
+            chatflowConfig: {
+                vars: {
+                    username: currentUserName
+                },
+                overrideConfig: {
+                    vars: {
+                        username: currentUserName
+                    }
+                }
+            }
+        })
+    </script>
 </body>
 </html>
