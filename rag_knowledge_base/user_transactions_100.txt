@@ -1,0 +1,2398 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #001
+================================================================================
+Transaction Reference : TXN-2026RSLB-2001
+Date & Timestamp      : 2026-08-19 23:29:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $1,091.75 USD
+Status                : APPROVED
+Authorization Code    : AUTH-631486
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #002
+================================================================================
+Transaction Reference : TXN-2026RSLB-2002
+Date & Timestamp      : 2026-08-16 02:07:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Whole Foods Market
+Category              : Groceries
+Amount                : $214.83 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-778953
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Organic grocery and household supplies purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #003
+================================================================================
+Transaction Reference : TXN-2026RSLB-2003
+Date & Timestamp      : 2026-08-27 19:14:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Executive Suite
+Category              : Travel & Hospitality
+Amount                : $3,108.02 USD
+Status                : APPROVED
+Authorization Code    : AUTH-297756
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate lodging and executive conference suite reservation.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #004
+================================================================================
+Transaction Reference : TXN-2026RSLB-2004
+Date & Timestamp      : 2026-09-14 20:40:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Executive Suite
+Category              : Travel & Hospitality
+Amount                : $1,797.21 USD
+Status                : APPROVED
+Authorization Code    : AUTH-682378
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate lodging and executive conference suite reservation.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #005
+================================================================================
+Transaction Reference : TXN-2026RSLB-2005
+Date & Timestamp      : 2026-09-05 21:10:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Apple Store Online
+Category              : Electronics
+Amount                : $2,424.84 USD
+Status                : APPROVED
+Authorization Code    : AUTH-254774
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MacBook Pro M3 Max and Studio Display hardware purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #006
+================================================================================
+Transaction Reference : TXN-2026RSLB-2006
+Date & Timestamp      : 2026-10-12 14:12:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Amazon Web Services
+Category              : Cloud Infrastructure
+Amount                : $7,870.57 USD
+Status                : APPROVED
+Authorization Code    : AUTH-569963
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly AWS Cloud Enterprise compute cluster and S3 storage billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #007
+================================================================================
+Transaction Reference : TXN-2026RSLB-2007
+Date & Timestamp      : 2026-10-21 21:08:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $318.72 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-912599
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #008
+================================================================================
+Transaction Reference : TXN-2026RSLB-2008
+Date & Timestamp      : 2026-10-05 07:18:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Equinox Fitness Club
+Category              : Health & Wellness
+Amount                : $320.00 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-995663
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly premium executive club membership dues.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #009
+================================================================================
+Transaction Reference : TXN-2026RSLB-2009
+Date & Timestamp      : 2026-09-17 00:25:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $13,630.71 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-555562
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #010
+================================================================================
+Transaction Reference : TXN-2026RSLB-2010
+Date & Timestamp      : 2026-09-02 16:54:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Equinox Fitness Club
+Category              : Health & Wellness
+Amount                : $320.00 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-366558
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly premium executive club membership dues.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #011
+================================================================================
+Transaction Reference : TXN-2026RSLB-2011
+Date & Timestamp      : 2026-08-19 10:43:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Apple Store Online
+Category              : Electronics
+Amount                : $2,640.18 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-840485
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MacBook Pro M3 Max and Studio Display hardware purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #012
+================================================================================
+Transaction Reference : TXN-2026RSLB-2012
+Date & Timestamp      : 2026-10-29 12:45:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $600.01 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-649995
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #013
+================================================================================
+Transaction Reference : TXN-2026RSLB-2013
+Date & Timestamp      : 2026-10-19 15:41:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Goldman Sachs Wealth Management
+Category              : Investment
+Amount                : $14,113.79 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-219569
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Quarterly portfolio investment transfer and dividend reinvestment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #014
+================================================================================
+Transaction Reference : TXN-2026RSLB-2014
+Date & Timestamp      : 2026-09-30 15:52:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $302.02 USD
+Status                : APPROVED
+Authorization Code    : AUTH-860066
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #015
+================================================================================
+Transaction Reference : TXN-2026RSLB-2015
+Date & Timestamp      : 2026-08-14 21:43:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $641.95 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-599867
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #016
+================================================================================
+Transaction Reference : TXN-2026RSLB-2016
+Date & Timestamp      : 2026-10-09 10:44:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Apple Store Online
+Category              : Electronics
+Amount                : $2,617.26 USD
+Status                : APPROVED
+Authorization Code    : AUTH-891823
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MacBook Pro M3 Max and Studio Display hardware purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #017
+================================================================================
+Transaction Reference : TXN-2026RSLB-2017
+Date & Timestamp      : 2026-08-07 15:59:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Apple Store Online
+Category              : Electronics
+Amount                : $2,815.10 USD
+Status                : APPROVED
+Authorization Code    : AUTH-322010
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MacBook Pro M3 Max and Studio Display hardware purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #018
+================================================================================
+Transaction Reference : TXN-2026RSLB-2018
+Date & Timestamp      : 2026-10-22 11:07:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $11,094.35 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-521550
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #019
+================================================================================
+Transaction Reference : TXN-2026RSLB-2019
+Date & Timestamp      : 2026-08-06 02:27:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Whole Foods Market
+Category              : Groceries
+Amount                : $243.72 USD
+Status                : APPROVED
+Authorization Code    : AUTH-649053
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Organic grocery and household supplies purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #020
+================================================================================
+Transaction Reference : TXN-2026RSLB-2020
+Date & Timestamp      : 2026-08-26 04:37:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $417.13 USD
+Status                : APPROVED
+Authorization Code    : AUTH-968596
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #021
+================================================================================
+Transaction Reference : TXN-2026RSLB-2021
+Date & Timestamp      : 2026-09-22 11:59:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $1,226.09 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-199552
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #022
+================================================================================
+Transaction Reference : TXN-2026RSLB-2022
+Date & Timestamp      : 2026-08-25 16:03:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $1,109.64 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-139580
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+First class international flight tickets for security conference.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #023
+================================================================================
+Transaction Reference : TXN-2026RSLB-2023
+Date & Timestamp      : 2026-08-05 02:18:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $261.20 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-330340
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #024
+================================================================================
+Transaction Reference : TXN-2026RSLB-2024
+Date & Timestamp      : 2026-09-09 05:41:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $12,763.14 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-439780
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #025
+================================================================================
+Transaction Reference : TXN-2026RSLB-2025
+Date & Timestamp      : 2026-10-26 23:02:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $2,785.47 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-993875
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #026
+================================================================================
+Transaction Reference : TXN-2026RSLB-2026
+Date & Timestamp      : 2026-09-16 02:09:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Amazon Web Services
+Category              : Cloud Infrastructure
+Amount                : $6,181.33 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-837636
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly AWS Cloud Enterprise compute cluster and S3 storage billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #027
+================================================================================
+Transaction Reference : TXN-2026RSLB-2027
+Date & Timestamp      : 2026-09-11 01:25:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $689.48 USD
+Status                : APPROVED
+Authorization Code    : AUTH-304877
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #028
+================================================================================
+Transaction Reference : TXN-2026RSLB-2028
+Date & Timestamp      : 2026-08-28 14:38:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $10,317.75 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-882389
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #029
+================================================================================
+Transaction Reference : TXN-2026RSLB-2029
+Date & Timestamp      : 2026-08-18 22:37:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $1,527.50 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-707169
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+First class international flight tickets for security conference.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #030
+================================================================================
+Transaction Reference : TXN-2026RSLB-2030
+Date & Timestamp      : 2026-10-18 16:03:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Whole Foods Market
+Category              : Groceries
+Amount                : $274.80 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-191690
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Organic grocery and household supplies purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #031
+================================================================================
+Transaction Reference : TXN-2026RSLB-2031
+Date & Timestamp      : 2026-08-09 10:58:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $272.98 USD
+Status                : APPROVED
+Authorization Code    : AUTH-603970
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #032
+================================================================================
+Transaction Reference : TXN-2026RSLB-2032
+Date & Timestamp      : 2026-08-15 07:05:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $9,437.86 USD
+Status                : APPROVED
+Authorization Code    : AUTH-247291
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #033
+================================================================================
+Transaction Reference : TXN-2026RSLB-2033
+Date & Timestamp      : 2026-10-11 03:09:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Goldman Sachs Wealth Management
+Category              : Investment
+Amount                : $19,734.03 USD
+Status                : APPROVED
+Authorization Code    : AUTH-850160
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Quarterly portfolio investment transfer and dividend reinvestment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #034
+================================================================================
+Transaction Reference : TXN-2026RSLB-2034
+Date & Timestamp      : 2026-11-02 12:41:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Goldman Sachs Wealth Management
+Category              : Investment
+Amount                : $7,320.08 USD
+Status                : APPROVED
+Authorization Code    : AUTH-974879
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Quarterly portfolio investment transfer and dividend reinvestment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #035
+================================================================================
+Transaction Reference : TXN-2026RSLB-2035
+Date & Timestamp      : 2026-09-06 16:47:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Executive Suite
+Category              : Travel & Hospitality
+Amount                : $932.31 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-335750
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate lodging and executive conference suite reservation.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #036
+================================================================================
+Transaction Reference : TXN-2026RSLB-2036
+Date & Timestamp      : 2026-10-04 12:35:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Apple Store Online
+Category              : Electronics
+Amount                : $4,465.40 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-873199
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+MacBook Pro M3 Max and Studio Display hardware purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #037
+================================================================================
+Transaction Reference : TXN-2026RSLB-2037
+Date & Timestamp      : 2026-10-01 20:32:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Executive Suite
+Category              : Travel & Hospitality
+Amount                : $2,007.17 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-993850
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate lodging and executive conference suite reservation.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #038
+================================================================================
+Transaction Reference : TXN-2026RSLB-2038
+Date & Timestamp      : 2026-10-05 03:16:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $441.15 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-821964
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #039
+================================================================================
+Transaction Reference : TXN-2026RSLB-2039
+Date & Timestamp      : 2026-08-24 10:59:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Whole Foods Market
+Category              : Groceries
+Amount                : $475.15 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-219357
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Organic grocery and household supplies purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #040
+================================================================================
+Transaction Reference : TXN-2026RSLB-2040
+Date & Timestamp      : 2026-08-29 20:56:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $10,341.13 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-421287
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #041
+================================================================================
+Transaction Reference : TXN-2026RSLB-2041
+Date & Timestamp      : 2026-09-10 07:28:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: Goldman Sachs Wealth Management
+Category              : Investment
+Amount                : $6,765.36 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-725818
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Quarterly portfolio investment transfer and dividend reinvestment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #042
+================================================================================
+Transaction Reference : TXN-2026RSLB-2042
+Date & Timestamp      : 2026-10-23 04:09:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $344.18 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-733173
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #043
+================================================================================
+Transaction Reference : TXN-2026RSLB-2043
+Date & Timestamp      : 2026-08-27 19:17:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $8,045.73 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-314519
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #044
+================================================================================
+Transaction Reference : TXN-2026RSLB-2044
+Date & Timestamp      : 2026-10-06 14:30:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Equinox Fitness Club
+Category              : Health & Wellness
+Amount                : $320.00 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-107669
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly premium executive club membership dues.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #045
+================================================================================
+Transaction Reference : TXN-2026RSLB-2045
+Date & Timestamp      : 2026-08-12 00:03:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $428.38 USD
+Status                : APPROVED
+Authorization Code    : AUTH-289135
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #046
+================================================================================
+Transaction Reference : TXN-2026RSLB-2046
+Date & Timestamp      : 2026-08-27 17:16:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $2,461.08 USD
+Status                : APPROVED
+Authorization Code    : AUTH-372437
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+First class international flight tickets for security conference.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #047
+================================================================================
+Transaction Reference : TXN-2026RSLB-2047
+Date & Timestamp      : 2026-09-12 09:46:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Ritz-Carlton Executive Suite
+Category              : Travel & Hospitality
+Amount                : $2,862.96 USD
+Status                : APPROVED
+Authorization Code    : AUTH-155018
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Corporate lodging and executive conference suite reservation.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #048
+================================================================================
+Transaction Reference : TXN-2026RSLB-2048
+Date & Timestamp      : 2026-10-24 22:05:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $4,618.86 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-595328
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #049
+================================================================================
+Transaction Reference : TXN-2026RSLB-2049
+Date & Timestamp      : 2026-09-17 15:49:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $1,341.17 USD
+Status                : APPROVED
+Authorization Code    : AUTH-979358
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #050
+================================================================================
+Transaction Reference : TXN-2026RSLB-2050
+Date & Timestamp      : 2026-09-13 10:16:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $644.65 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-472794
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #051
+================================================================================
+Transaction Reference : TXN-2026RSLB-2051
+Date & Timestamp      : 2026-08-07 05:16:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $308.83 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-659742
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #052
+================================================================================
+Transaction Reference : TXN-2026RSLB-2052
+Date & Timestamp      : 2026-09-20 20:20:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $247.93 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-617235
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #053
+================================================================================
+Transaction Reference : TXN-2026RSLB-2053
+Date & Timestamp      : 2026-09-22 04:26:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: State Farm Insurance
+Category              : Insurance
+Amount                : $191.92 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-321682
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly auto and renter insurance premium payment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #054
+================================================================================
+Transaction Reference : TXN-2026RSLB-2054
+Date & Timestamp      : 2026-08-23 11:15:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Deposit
+Merchant / Beneficiary: Payroll Direct Deposit
+Category              : Income / Payroll
+Amount                : $3,230.84 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-975214
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-weekly salary direct deposit disbursement from employer.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #055
+================================================================================
+Transaction Reference : TXN-2026RSLB-2055
+Date & Timestamp      : 2026-10-01 16:21:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Deposit
+Merchant / Beneficiary: Payroll Direct Deposit
+Category              : Income / Payroll
+Amount                : $3,216.87 USD
+Status                : APPROVED
+Authorization Code    : AUTH-460871
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-weekly salary direct deposit disbursement from employer.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #056
+================================================================================
+Transaction Reference : TXN-2026RSLB-2056
+Date & Timestamp      : 2026-10-28 19:57:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Chipotle Mexican Grill
+Category              : Dining
+Amount                : $24.14 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-882299
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Lunch and team dining order.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #057
+================================================================================
+Transaction Reference : TXN-2026RSLB-2057
+Date & Timestamp      : 2026-08-21 20:19:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Verizon Wireless
+Category              : Telecommunications
+Amount                : $117.58 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-382522
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly mobile phone service and unlimited data plan.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #058
+================================================================================
+Transaction Reference : TXN-2026RSLB-2058
+Date & Timestamp      : 2026-08-12 02:46:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $62.00 USD
+Status                : APPROVED
+Authorization Code    : AUTH-658894
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #059
+================================================================================
+Transaction Reference : TXN-2026RSLB-2059
+Date & Timestamp      : 2026-09-06 08:49:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: State Farm Insurance
+Category              : Insurance
+Amount                : $185.29 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-291210
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly auto and renter insurance premium payment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #060
+================================================================================
+Transaction Reference : TXN-2026RSLB-2060
+Date & Timestamp      : 2026-08-12 11:48:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $321.76 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-318862
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #061
+================================================================================
+Transaction Reference : TXN-2026RSLB-2061
+Date & Timestamp      : 2026-10-07 11:21:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Verizon Wireless
+Category              : Telecommunications
+Amount                : $122.97 USD
+Status                : APPROVED
+Authorization Code    : AUTH-447842
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly mobile phone service and unlimited data plan.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #062
+================================================================================
+Transaction Reference : TXN-2026RSLB-2062
+Date & Timestamp      : 2026-09-22 14:51:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Dining & Coffee
+Amount                : $27.08 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-732237
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Daily coffee and breakfast items purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #063
+================================================================================
+Transaction Reference : TXN-2026RSLB-2063
+Date & Timestamp      : 2026-10-27 11:28:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Deposit
+Merchant / Beneficiary: Payroll Direct Deposit
+Category              : Income / Payroll
+Amount                : $3,001.66 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-572528
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-weekly salary direct deposit disbursement from employer.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #064
+================================================================================
+Transaction Reference : TXN-2026RSLB-2064
+Date & Timestamp      : 2026-11-01 04:18:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: State Farm Insurance
+Category              : Insurance
+Amount                : $163.81 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-654342
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly auto and renter insurance premium payment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #065
+================================================================================
+Transaction Reference : TXN-2026RSLB-2065
+Date & Timestamp      : 2026-08-18 00:09:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $51.75 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-520526
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #066
+================================================================================
+Transaction Reference : TXN-2026RSLB-2066
+Date & Timestamp      : 2026-08-16 05:57:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $305.94 USD
+Status                : APPROVED
+Authorization Code    : AUTH-969098
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #067
+================================================================================
+Transaction Reference : TXN-2026RSLB-2067
+Date & Timestamp      : 2026-09-30 14:26:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $57.55 USD
+Status                : APPROVED
+Authorization Code    : AUTH-503183
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #068
+================================================================================
+Transaction Reference : TXN-2026RSLB-2068
+Date & Timestamp      : 2026-09-20 03:45:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Trader Joe's
+Category              : Groceries
+Amount                : $162.68 USD
+Status                : APPROVED
+Authorization Code    : AUTH-133768
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Weekly grocery food and household essentials purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #069
+================================================================================
+Transaction Reference : TXN-2026RSLB-2069
+Date & Timestamp      : 2026-10-06 08:03:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Chipotle Mexican Grill
+Category              : Dining
+Amount                : $28.84 USD
+Status                : APPROVED
+Authorization Code    : AUTH-332127
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Lunch and team dining order.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #070
+================================================================================
+Transaction Reference : TXN-2026RSLB-2070
+Date & Timestamp      : 2026-08-03 12:04:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Verizon Wireless
+Category              : Telecommunications
+Amount                : $105.04 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-877084
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly mobile phone service and unlimited data plan.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #071
+================================================================================
+Transaction Reference : TXN-2026RSLB-2071
+Date & Timestamp      : 2026-08-22 04:30:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Recurring Debit
+Merchant / Beneficiary: Netflix & Spotify
+Category              : Subscriptions
+Amount                : $21.94 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-177516
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly digital streaming entertainment subscription bundle.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #072
+================================================================================
+Transaction Reference : TXN-2026RSLB-2072
+Date & Timestamp      : 2026-09-24 16:52:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Deposit
+Merchant / Beneficiary: Payroll Direct Deposit
+Category              : Income / Payroll
+Amount                : $3,003.59 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-135593
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Bi-weekly salary direct deposit disbursement from employer.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #073
+================================================================================
+Transaction Reference : TXN-2026RSLB-2073
+Date & Timestamp      : 2026-10-21 20:48:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Verizon Wireless
+Category              : Telecommunications
+Amount                : $104.08 USD
+Status                : APPROVED
+Authorization Code    : AUTH-837197
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly mobile phone service and unlimited data plan.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #074
+================================================================================
+Transaction Reference : TXN-2026RSLB-2074
+Date & Timestamp      : 2026-10-04 04:48:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $35.49 USD
+Status                : APPROVED
+Authorization Code    : AUTH-228761
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #075
+================================================================================
+Transaction Reference : TXN-2026RSLB-2075
+Date & Timestamp      : 2026-10-06 21:56:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $119.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-840466
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #076
+================================================================================
+Transaction Reference : TXN-2026RSLB-2076
+Date & Timestamp      : 2026-08-13 01:51:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Recurring Debit
+Merchant / Beneficiary: Netflix & Spotify
+Category              : Subscriptions
+Amount                : $31.34 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-719032
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly digital streaming entertainment subscription bundle.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #077
+================================================================================
+Transaction Reference : TXN-2026RSLB-2077
+Date & Timestamp      : 2026-10-26 15:52:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Dining & Coffee
+Amount                : $22.00 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-752142
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Daily coffee and breakfast items purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #078
+================================================================================
+Transaction Reference : TXN-2026RSLB-2078
+Date & Timestamp      : 2026-09-06 19:41:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Recurring Debit
+Merchant / Beneficiary: Netflix & Spotify
+Category              : Subscriptions
+Amount                : $20.50 USD
+Status                : APPROVED
+Authorization Code    : AUTH-799611
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly digital streaming entertainment subscription bundle.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #079
+================================================================================
+Transaction Reference : TXN-2026RSLB-2079
+Date & Timestamp      : 2026-09-09 23:32:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Starbucks Coffee
+Category              : Dining & Coffee
+Amount                : $14.18 USD
+Status                : APPROVED
+Authorization Code    : AUTH-515764
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Daily coffee and breakfast items purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #080
+================================================================================
+Transaction Reference : TXN-2026RSLB-2080
+Date & Timestamp      : 2026-09-30 23:09:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Recurring Debit
+Merchant / Beneficiary: Netflix & Spotify
+Category              : Subscriptions
+Amount                : $27.20 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-763801
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly digital streaming entertainment subscription bundle.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #081
+================================================================================
+Transaction Reference : TXN-2026RSLB-2081
+Date & Timestamp      : 2026-09-02 04:56:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $47.22 USD
+Status                : APPROVED
+Authorization Code    : AUTH-414269
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #082
+================================================================================
+Transaction Reference : TXN-2026RSLB-2082
+Date & Timestamp      : 2026-10-12 05:37:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $448.33 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-929268
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #083
+================================================================================
+Transaction Reference : TXN-2026RSLB-2083
+Date & Timestamp      : 2026-09-19 04:24:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: State Farm Insurance
+Category              : Insurance
+Amount                : $202.15 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-527724
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly auto and renter insurance premium payment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #084
+================================================================================
+Transaction Reference : TXN-2026RSLB-2084
+Date & Timestamp      : 2026-11-02 08:01:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $317.77 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-723020
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #085
+================================================================================
+Transaction Reference : TXN-2026RSLB-2085
+Date & Timestamp      : 2026-09-05 20:23:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Trader Joe's
+Category              : Groceries
+Amount                : $166.50 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-231100
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Weekly grocery food and household essentials purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #086
+================================================================================
+Transaction Reference : TXN-2026RSLB-2086
+Date & Timestamp      : 2026-10-30 12:05:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $100.09 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-685935
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #087
+================================================================================
+Transaction Reference : TXN-2026RSLB-2087
+Date & Timestamp      : 2026-11-01 02:30:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $192.98 USD
+Status                : APPROVED
+Authorization Code    : AUTH-204433
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #088
+================================================================================
+Transaction Reference : TXN-2026RSLB-2088
+Date & Timestamp      : 2026-09-13 00:41:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: State Farm Insurance
+Category              : Insurance
+Amount                : $193.08 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-675748
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly auto and renter insurance premium payment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #089
+================================================================================
+Transaction Reference : TXN-2026RSLB-2089
+Date & Timestamp      : 2026-11-03 03:56:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $368.66 USD
+Status                : APPROVED
+Authorization Code    : AUTH-172941
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #090
+================================================================================
+Transaction Reference : TXN-2026RSLB-2090
+Date & Timestamp      : 2026-08-05 08:29:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Recurring Debit
+Merchant / Beneficiary: Netflix & Spotify
+Category              : Subscriptions
+Amount                : $16.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-811859
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly digital streaming entertainment subscription bundle.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #091
+================================================================================
+Transaction Reference : TXN-2026RSLB-2091
+Date & Timestamp      : 2026-10-10 02:47:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Chipotle Mexican Grill
+Category              : Dining
+Amount                : $40.51 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-196225
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Lunch and team dining order.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #092
+================================================================================
+Transaction Reference : TXN-2026RSLB-2092
+Date & Timestamp      : 2026-09-14 22:46:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $35.16 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-123364
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #093
+================================================================================
+Transaction Reference : TXN-2026RSLB-2093
+Date & Timestamp      : 2026-09-28 14:46:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : ACH Direct Debit
+Merchant / Beneficiary: Verizon Wireless
+Category              : Telecommunications
+Amount                : $89.58 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-780708
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Monthly mobile phone service and unlimited data plan.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #094
+================================================================================
+Transaction Reference : TXN-2026RSLB-2094
+Date & Timestamp      : 2026-11-04 02:40:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Shell Oil Station
+Category              : Automotive & Fuel
+Amount                : $66.96 USD
+Status                : APPROVED
+Authorization Code    : AUTH-196936
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Unleaded gasoline fill-up and car wash.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #095
+================================================================================
+Transaction Reference : TXN-2026RSLB-2095
+Date & Timestamp      : 2026-08-08 08:29:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $326.98 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-845051
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #096
+================================================================================
+Transaction Reference : TXN-2026RSLB-2096
+Date & Timestamp      : 2026-08-30 21:02:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Savings **** 7712 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $83.80 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-294106
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #097
+================================================================================
+Transaction Reference : TXN-2026RSLB-2097
+Date & Timestamp      : 2026-10-28 21:52:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $267.64 USD
+Status                : APPROVED
+Authorization Code    : AUTH-796540
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #098
+================================================================================
+Transaction Reference : TXN-2026RSLB-2098
+Date & Timestamp      : 2026-10-12 15:19:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Trader Joe's
+Category              : Groceries
+Amount                : $89.75 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-161806
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Weekly grocery food and household essentials purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #099
+================================================================================
+Transaction Reference : TXN-2026RSLB-2099
+Date & Timestamp      : 2026-10-10 19:50:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $342.70 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-402236
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
+
+
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #100
+================================================================================
+Transaction Reference : TXN-2026RSLB-2100
+Date & Timestamp      : 2026-10-20 05:47:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Trader Joe's
+Category              : Groceries
+Amount                : $219.33 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-519757
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Weekly grocery food and household essentials purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

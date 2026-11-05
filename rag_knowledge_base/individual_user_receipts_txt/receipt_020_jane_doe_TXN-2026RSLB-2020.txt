@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #020
+================================================================================
+Transaction Reference : TXN-2026RSLB-2020
+Date & Timestamp      : 2026-08-26 04:37:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Savings **** 9102 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Nordstrom Department Store
+Category              : Retail & Apparel
+Amount                : $417.13 USD
+Status                : APPROVED
+Authorization Code    : AUTH-968596
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Professional attire and personal accessories purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

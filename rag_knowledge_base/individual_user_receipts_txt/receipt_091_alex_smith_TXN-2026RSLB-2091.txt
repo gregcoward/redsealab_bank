@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #091
+================================================================================
+Transaction Reference : TXN-2026RSLB-2091
+Date & Timestamp      : 2026-10-10 02:47:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Chipotle Mexican Grill
+Category              : Dining
+Amount                : $40.51 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-196225
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Lunch and team dining order.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

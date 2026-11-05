@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #029
+================================================================================
+Transaction Reference : TXN-2026RSLB-2029
+Date & Timestamp      : 2026-08-18 22:37:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Delta Air Lines
+Category              : Travel & Expense
+Amount                : $1,527.50 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-707169
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+First class international flight tickets for security conference.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

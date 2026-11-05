@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #038
+================================================================================
+Transaction Reference : TXN-2026RSLB-2038
+Date & Timestamp      : 2026-10-05 03:16:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Direct Debit
+Merchant / Beneficiary: Red Sea Power & Light
+Category              : Utilities
+Amount                : $441.15 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-821964
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Residential utility power and solar grid connection billing.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

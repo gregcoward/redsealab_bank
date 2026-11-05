@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #075
+================================================================================
+Transaction Reference : TXN-2026RSLB-2075
+Date & Timestamp      : 2026-10-06 21:56:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Target Stores
+Category              : General Retail
+Amount                : $119.26 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-840466
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Home supplies, electronics, and personal essentials.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

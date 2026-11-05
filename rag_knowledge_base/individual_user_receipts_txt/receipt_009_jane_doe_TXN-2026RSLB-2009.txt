@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #009
+================================================================================
+Transaction Reference : TXN-2026RSLB-2009
+Date & Timestamp      : 2026-09-17 00:25:00 UTC
+Account Holder Name   : Jane Doe
+User Email            : jane.doe@redsealabbank.com
+Account Reference     : Checking **** 4829 (Premium Tier)
+Transaction Type      : Wire Transfer
+Merchant / Beneficiary: F5 Networks Security
+Category              : Cybersecurity
+Amount                : $13,630.71 USD
+Status                : SECURITY FLAGGED (F5 Guardrail Scan)
+Authorization Code    : AUTH-555562
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+F5 Distributed Cloud WAF & Guardrails annual subscription installment.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================

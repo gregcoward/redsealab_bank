@@ -1,0 +1,22 @@
+================================================================================
+RED SEA LAB BANK - OFFICIAL TRANSACTION RECEIPT #099
+================================================================================
+Transaction Reference : TXN-2026RSLB-2099
+Date & Timestamp      : 2026-10-10 19:50:00 UTC
+Account Holder Name   : Alex Smith
+User Email            : alex.smith@redsealabbank.com
+Account Reference     : Checking **** 1094 (Standard Tier)
+Transaction Type      : Debit Card Purchase
+Merchant / Beneficiary: Best Buy Electronics
+Category              : Electronics
+Amount                : $342.70 USD
+Status                : COMPLETED
+Authorization Code    : AUTH-402236
+Processing Node       : NGINX-Edge-Primary-Node-01 (Port 8080)
+F5 Guardrails Security: PASSED (PII / Injection / Exfiltration Check OK)
+
+Transaction Summary:
+Wireless headphones and smart home device purchase.
+Processed successfully via Red Sea Lab Bank core ledger. Retain this official receipt
+for financial statement and tax audit records.
+================================================================================
