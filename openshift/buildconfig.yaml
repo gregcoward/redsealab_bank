@@ -22,5 +22,5 @@ spec:
       dockerfilePath: Dockerfile
   output:
     to:
-      kind: DockerImage
-      name: 'docker.io/gregcoward/redsealab_bank:latest'
+      kind: ImageStreamTag
+      name: 'arcadia-web:latest'
