@@ -1,6 +1,6 @@
 # Flowise & Qdrant Integration Guide for Red Sea Lab Bank RAG
 
-This directory contains sample RAG (Retrieval-Augmented Generation) knowledge base files formatted for seamless ingestion into **Flowise AI** and **Qdrant Vector Database**.
+This directory contains official RAG (Retrieval-Augmented Generation) knowledge base assets formatted for seamless ingestion into **Flowise AI** and the **Qdrant Vector Database**.
 
 ---
 
@@ -25,40 +25,85 @@ The Qdrant collection **vector dimension size** must match the **Embedding Model
 
 ---
 
-## 📁 Knowledge Base Files Overview
+## 📁 Complete Knowledge Base Documents Inventory
 
-| File Name | Content Description | Best Flowise Chunk Size |
+### 1. General Banking Policies & Products
+| Document | Format | Description |
 | :--- | :--- | :--- |
-| `01_account_products_and_rates.txt` | Account tiers (Premium & Standard), APY interest rates, checking/savings specs, fee schedules. | 500 characters (overlap 50) |
-| `02_transfers_and_digital_banking.txt` | Internal wire transfers (`/api/v1/transfer`), ACH limits, mobile banking, MFA, security. | 500 characters (overlap 50) |
-| `03_referral_program_and_promotions.txt` | Refer-a-Friend rules, $50 cash rewards, referral links (`/app3/referral`), terms. | 400 characters (overlap 40) |
-| `04_technical_architecture_and_faqs.txt` | Microservices breakdown (`/`, `/files`, `/api`, `/app3`), OpenShift non-root specs, Q&A FAQs. | 500 characters (overlap 50) |
-| `redsea_lab_bank_knowledge_base_full.txt` | **Master Combined Document** containing all 4 sections in a single file. | 600 characters (overlap 100) |
+| `01_account_products_and_rates.txt` | TXT | Checking/savings account tiers, APY interest rates, monthly fees, minimum balances. |
+| `02_transfers_and_digital_banking.txt` | TXT | Wire transfers (`/api/v1/transfer`), ACH limits, mobile app security, MFA requirements. |
+| `03_referral_program_and_promotions.txt` | TXT | Refer-a-Friend promotion terms, $50 cash bonus rules, referral links (`/app3/referral`). |
+| `04_technical_architecture_and_faqs.txt` | TXT | OpenShift non-root deployment architecture, microservices breakdown, technical FAQs. |
+| `redsea_lab_bank_knowledge_base_full.txt` | TXT | **Master Combined Document** aggregating all 4 banking sections above into a single file. |
+
+### 2. Branch Locations Directory (Western United States)
+| Document / Directory | Format | Description | Ingestion Mode |
+| :--- | :--- | :--- | :--- |
+| `individual_branch_pdfs/` | 14 PDFs | **Individual Branch PDFs** (1 separate PDF file per branch location). | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `individual_branch_txt/` | 14 TXTs | **Individual Branch TXTs** (1 separate TXT file per branch location). | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `redsea_bank_western_us_branches.pdf` | PDF | **14-Page Combined Directory PDF** (Seattle WA, Portland OR, SF CA, LA CA, SD CA, Phoenix AZ, Vegas NV, SLC UT, Denver CO, Boise ID, Reno NV, Spokane WA, Anchorage AK, Honolulu HI). | Multi-Chunk (Text Splitter Chunk Size `1000`) |
+| `redsea_bank_western_us_branches.txt` | TXT | **Combined Directory Text File** formatted with explicit `=====` separators. | Multi-Chunk (Custom Separators) |
+
+### 3. Customer Transaction Receipts & Audit Records
+| Document / Directory | Format | Description | Ingestion Mode |
+| :--- | :--- | :--- | :--- |
+| `individual_receipts_pdf/` | 50 PDFs | Individual audit transaction receipts in PDF format. | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `individual_user_receipts_pdf/` | 100 PDFs | Individual user transaction receipts across customer accounts. | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `individual_user_receipts_txt/` | 100 TXTs | Individual user transaction receipts in plain text format. | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `sample_transaction_receipts_50.pdf` | PDF | Combined document containing 50 audit receipts. | Multi-Chunk |
+| `user_transactions_100.pdf` | PDF | Combined document containing 100 customer receipts. | Multi-Chunk |
 
 ---
 
-## 🚀 How to Ingest into Flowise & Qdrant
+## 🚀 How to Ingest Documents into Flowise & Qdrant
 
-### Step 1: Flowise Canvas Setup
-In your Flowise UI, build or edit your Chatflow canvas with the following nodes:
-1. **Document Loader**: Add a **Text File / File Loader** or **Folder Loader** node.
-2. **Text Splitter**: Attach a **Recursive Character Text Splitter** node (Chunk Size: `500`, Chunk Overlap: `50`).
-3. **Embeddings Model**: Attach an **OpenAI Embeddings** node (`text-embedding-3-small` -> 1536 dim) or your chosen model.
-4. **Vector Store**: Attach a **Qdrant Vector Store** node.
-   - **Qdrant Server URL**: `https://your-qdrant-instance:6333` (or local Qdrant container endpoint)
-   - **Collection Name**: `redsea_lab_bank_kb`
-5. **Conversational Retrieval QA Chain**: Connect the Qdrant Vector Store to a **Conversational Retrieval QA Chain** or **Retrieval QA Chain** linked to your Chat Model (e.g. OpenAI `gpt-4o` or local LLM).
+### Ingestion Approach A: 1 Document = 1 Chunk (Recommended for Individual Branch & Receipt Files)
 
-### Step 2: Upload Knowledge Base Text Files
-1. Drag and drop `redsea_lab_bank_knowledge_base_full.txt` (or individual `.txt` files from this folder) into the **File Loader** node in Flowise.
-2. Click the green **Upsert Vector Database** button in Flowise top-right corner.
-3. Flowise will split the text, compute vector embeddings, and populate your Qdrant collection `redsea_lab_bank_kb`.
+When uploading individual branch files (`individual_branch_pdfs/` or `individual_branch_txt/`) or receipt files, you want **each file to stay 100% intact** in a single vector so addresses, phone numbers, hours, and manager info are never fragmented.
 
-### Step 3: Test Chatbot Retrieval
-Ask the chatbot questions in Flowise Chat:
-- *"What is the APY interest rate on Premium Tier savings?"*
-- *"How does the $50 Refer-a-Friend program work?"*
-- *"What is the daily transfer limit for checking accounts?"*
-- *"Which microservice handles money transfers?"*
+1. **Flowise Canvas Configuration**:
+   * Add a **Folder Loader** or **File Loader** node (e.g., set path to `rag_knowledge_base/individual_branch_pdfs/`).
+   * **DO NOT CONNECT A TEXT SPLITTER NODE!** Leave the `Text Splitter` input on the Document Loader **unconnected / empty**.
+   * Connect an **Embeddings** node (e.g. OpenAI `text-embedding-3-small`).
+   * Connect to **Qdrant Vector Store** (`Collection Name`: `redsea_lab_bank_kb`).
+2. **Upsert to Qdrant**:
+   * Click **Upsert Vector Database** in the top-right corner of Flowise.
+   * Flowise will load each file as **1 complete unsplit Document object** and generate exactly 1 vector embedding per branch / receipt.
 
-The chatbot will retrieve exact context chunks from Qdrant and provide grounded, accurate responses!
+---
+
+### Ingestion Approach B: Chunked Multi-Document Ingestion (For Combined Files)
+
+When uploading combined multi-page documents like `redsea_bank_western_us_branches.txt` or `redsea_lab_bank_knowledge_base_full.txt`:
+
+1. **Flowise Canvas Configuration**:
+   * Add a **File Loader** node and select your combined document.
+   * Connect a **Recursive Character Text Splitter** node to the Document Loader's `Text Splitter` input.
+2. **Text Splitter Settings**:
+   * **Chunk Size**: `1000` (or `800`)
+   * **Chunk Overlap**: `100` (or `150`)
+   * **Custom Separators**: Use explicit section dividers if available:
+     ```json
+     ["================================================================================", "--------------------------------------------------------------------------------", "\n\n", "\n", " "]
+     ```
+3. **Upsert to Qdrant**:
+   * Click **Upsert Vector Database** to generate vector embeddings.
+
+---
+
+## 🧪 Testing Chatbot Queries
+
+Once upserted into Qdrant, verify RAG retrieval by asking your Flowise chatbot queries:
+
+### Branch Location Queries
+* *"Where is the Red Sea Lab Bank branch in Seattle, and what are the lobby hours?"*
+* *"Give me the phone number and manager name for the San Francisco flagship branch."*
+* *"Does the Phoenix Biltmore branch have drive-thru banking?"*
+* *"Which branch handles Asia-Pacific trade and Japanese multi-currency services?"*
+
+### Banking Policy & Product Queries
+* *"What is the APY interest rate on Premium Tier savings?"*
+* *"How does the $50 Refer-a-Friend promotion work?"*
+* *"What is the daily transfer limit for digital banking?"*
+
+The chatbot retrieves exact vector matches from Qdrant and delivers grounded, accurate answers!
