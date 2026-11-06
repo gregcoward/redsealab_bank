@@ -1,0 +1,6 @@
+RED SEA LAB BANK - CORPORATE GOVERNANCE & NETWORK SUMMARY
+================================================================================
+Executive Leadership: Chief Executive Officer: Marcus Vance | Chief Technology Officer: Dr. Sarah Jenkins | Chief Risk Officer: Carlos Mendez
+Regional Network: 14 Flagship Branches across Washington, Oregon, California, Arizona, Nevada, Utah, Colorado, Idaho, Alaska, and Hawaii.
+Technology Stack: OpenShift Kubernetes Cluster, MinIO AIStor S3 Storage, Flowise AI Vector Workflows, Qdrant Vector Engine, NGINX Edge Proxies.
+Security & Compliance: FDIC Insured, F5 AI Guardrails PII & Injection Scanning, SOC2 Type II Certified, Non-Root Container Execution.

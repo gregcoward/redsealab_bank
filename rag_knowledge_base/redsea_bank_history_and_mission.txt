@@ -1,0 +1,50 @@
+RED SEA LAB BANK - CORPORATE HISTORY, MISSION & GOVERNANCE DIRECTORY
+Official Knowledge Base Asset for RAG Vector Ingestion | Founded October 14, 1956
+================================================================================
+
+SECTION 1: FOUNDATION & FIRST BRANCH LOCATION (1956)
+--------------------------------------------------------------------------------
+Date Founded: October 14, 1956
+Co-Founders: Captain Jonathan R. Vance & Dr. Eleanor M. Sterling
+Original Name: Red Sea Maritime & Commercial Savings Bank
+First Branch Location: 101 Waterfront Way, Suite 100, Seattle, Washington 98101
+Initial Charter Purpose: Established in post-war Seattle to provide commercial credit, maritime trade settlement, and secure depository vault services to Pacific Northwest commercial fishing fleets, timber merchants, and maritime trading enterprises.
+Historical Context: Founded with an initial capital reserve of $500,000 USD, the inaugural Seattle waterfront office featured a reinforced steel vault and dedicated trade finance desks serving Puget Sound merchant vessels.
+================================================================================
+
+SECTION 2: MISSION STATEMENT & CORPORATE VALUES
+--------------------------------------------------------------------------------
+Mission Statement: To empower individuals, maritime trade enterprises, and emerging technology innovators with secure, resilient, and forward-looking financial solutions built on unyielding trust and cutting-edge digital infrastructure.
+Vision Statement: To be the premier financial institution bridging traditional commercial banking with next-generation cloud-native AI technology and secure digital asset management.
+Core Value 1 - Security & Trust: Zero-trust financial architecture safeguarding client deposits, transaction integrity, and identity protection via F5 AI Guardrails.
+Core Value 2 - Tech Innovation: Pioneering digital banking infrastructure powered by cloud-native microservices, OpenShift container orchestration, and AI RAG knowledge systems.
+Core Value 3 - Client Sovereignty: Delivering personalized, transparent financial services across retail, executive, and enterprise commercial tiers.
+Core Value 4 - Sustainability: Directing capital toward green technology, renewable energy projects, and responsible ocean maritime commerce.
+================================================================================
+
+SECTION 3: TYPE OF CUSTOMERS & SECTORS SERVED
+--------------------------------------------------------------------------------
+Retail Banking Consumers: Providing high-yield savings, checking accounts, instant debit cards, mobile digital banking, and personal wealth planning.
+Commercial & Maritime Trade: Offering trade finance, letters of credit, commercial vessel loans, working capital lines, and high-capacity cash depository services.
+Technology & Venture Capital: Dedicated Silicon Valley, Seattle, and Salt Lake City tech desks offering startup treasury management, VC capital calls, and equipment leasing.
+Private Wealth & Family Offices: Concierge wealth advisory, estate planning, jumbo mortgages, and multi-currency foreign exchange for high-net-worth clients.
+Institutional & Energy Sectors: Financing solar, wind, aerospace, and public infrastructure projects across the Intermountain West and Rocky Mountain regions.
+================================================================================
+
+SECTION 4: KEY HISTORICAL MILESTONES (1956 - PRESENT)
+--------------------------------------------------------------------------------
+1956 - Bank Foundation: Charter granted in Seattle, WA. Inaugural waterfront branch opens on October 14, 1956.
+1974 - California Expansion: Opens San Francisco Financial District flagship at 555 California Street to serve West Coast commercial trade.
+1988 - Corporate Rebranding: Rebranded as Red Sea Lab Bank; launches pioneering electronic wire transfer network for corporate accounts.
+2005 - Asia-Pacific Gateway: Establishes Honolulu Financial Plaza flagship to process international multi-currency trade between North America and Asia.
+2018 - Cloud Infrastructure: Migrates core banking operations to containerized OpenShift microservices and MinIO S3 object storage.
+2026 - AI RAG Integration: Deploys 14 Western US Regional Hubs featuring AI-powered assistant interfaces, vector search, and F5 AI Guardrails security.
+================================================================================
+
+SECTION 5: CORPORATE GOVERNANCE & NETWORK SUMMARY
+--------------------------------------------------------------------------------
+Executive Leadership: Chief Executive Officer: Marcus Vance | Chief Technology Officer: Dr. Sarah Jenkins | Chief Risk Officer: Carlos Mendez
+Regional Network: 14 Flagship Branches across Washington, Oregon, California, Arizona, Nevada, Utah, Colorado, Idaho, Alaska, and Hawaii.
+Technology Stack: OpenShift Kubernetes Cluster, MinIO AIStor S3 Storage, Flowise AI Vector Workflows, Qdrant Vector Engine, NGINX Edge Proxies.
+Security & Compliance: FDIC Insured, F5 AI Guardrails PII & Injection Scanning, SOC2 Type II Certified, Non-Root Container Execution.
+================================================================================

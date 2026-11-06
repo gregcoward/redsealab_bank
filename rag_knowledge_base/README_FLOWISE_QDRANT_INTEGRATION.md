@@ -27,14 +27,18 @@ The Qdrant collection **vector dimension size** must match the **Embedding Model
 
 ## 📁 Complete Knowledge Base Documents Inventory
 
-### 1. General Banking Policies & Products
-| Document | Format | Description |
-| :--- | :--- | :--- |
-| `01_account_products_and_rates.txt` | TXT | Checking/savings account tiers, APY interest rates, monthly fees, minimum balances. |
-| `02_transfers_and_digital_banking.txt` | TXT | Wire transfers (`/api/v1/transfer`), ACH limits, mobile app security, MFA requirements. |
-| `03_referral_program_and_promotions.txt` | TXT | Refer-a-Friend promotion terms, $50 cash bonus rules, referral links (`/app3/referral`). |
-| `04_technical_architecture_and_faqs.txt` | TXT | OpenShift non-root deployment architecture, microservices breakdown, technical FAQs. |
-| `redsea_lab_bank_knowledge_base_full.txt` | TXT | **Master Combined Document** aggregating all 4 banking sections above into a single file. |
+### 1. General Banking Policies, Products & Corporate History
+| Document / Directory | Format | Description | Ingestion Mode |
+| :--- | :--- | :--- | :--- |
+| `01_account_products_and_rates.txt` | TXT | Checking/savings account tiers, APY interest rates, monthly fees, minimum balances. | Multi-Chunk / Unsplit |
+| `02_transfers_and_digital_banking.txt` | TXT | Wire transfers (`/api/v1/transfer`), ACH limits, mobile app security, MFA requirements. | Multi-Chunk / Unsplit |
+| `03_referral_program_and_promotions.txt` | TXT | Refer-a-Friend promotion terms, $50 cash bonus rules, referral links (`/app3/referral`). | Multi-Chunk / Unsplit |
+| `04_technical_architecture_and_faqs.txt` | TXT | OpenShift non-root deployment architecture, microservices breakdown, technical FAQs. | Multi-Chunk / Unsplit |
+| `redsea_bank_history_and_mission.pdf` | PDF | **Bank History & Mission PDF** (Founded Oct 14, 1956, First Branch in Seattle, WA, Mission Statement, Customer Sectors, 1956-2026 Milestones). | Multi-Chunk (Chunk Size `800`–`1000`) |
+| `redsea_bank_history_and_mission.txt` | TXT | **Bank History & Mission TXT** matching document formatted with `=====` section separators. | Multi-Chunk (Custom Separators) |
+| `individual_history_pdfs/` | 5 PDFs | **Individual History PDFs** (1 separate PDF file per section). | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `individual_history_txt/` | 5 TXTs | **Individual History TXTs** (1 separate TXT file per section). | **1 File = 1 Chunk** (Disconnect Text Splitter) |
+| `redsea_lab_bank_knowledge_base_full.txt` | TXT | **Master Combined Document** aggregating banking sections into a single file. | Multi-Chunk (Custom Separators) |
 
 ### 2. Branch Locations Directory (Western United States)
 | Document / Directory | Format | Description | Ingestion Mode |
