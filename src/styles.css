@@ -722,6 +722,17 @@ body {
     color: #ffffff;
 }
 
+.btn-outline-danger {
+    background-color: transparent;
+    color: var(--accent-red);
+    border: 1px solid rgba(248, 113, 113, 0.4);
+}
+
+.btn-outline-danger:hover {
+    background-color: rgba(248, 113, 113, 0.15);
+    border-color: var(--accent-red);
+}
+
 .badge-danger {
     background-color: rgba(248, 113, 113, 0.15);
     color: var(--accent-red);

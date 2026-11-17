@@ -507,13 +507,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const s3ConfigFieldsContainer = document.getElementById('s3-config-fields-container');
 
     function getS3Config() {
-        let endpointUrl = (document.getElementById('s3-endpoint-url')?.value || 'https://aistor-primary-hl.aistor-primary.svc.cluster.local:9000').trim();
+        const saved = sessionStorage.getItem('aistor_s3_config');
+        let isDisabled = false;
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.disabled === true) isDisabled = true;
+            } catch (e) {}
+        }
+
+        let endpointUrl = (document.getElementById('s3-endpoint-url')?.value || '').trim();
         const port = (document.getElementById('s3-port')?.value || '9000').trim();
         let protocol = (document.getElementById('s3-protocol')?.value || 'https').trim();
-        const bucket = (document.getElementById('s3-bucket')?.value || 'redsealab-bank-kb').trim();
+        const bucket = (document.getElementById('s3-bucket')?.value || '').trim();
         const proxyPath = (document.getElementById('s3-proxy-endpoint')?.value || '/s3').trim();
         const accessKey = (document.getElementById('s3-access-key')?.value || '').trim();
         const secretKey = (document.getElementById('s3-secret-key')?.value || '').trim();
+
+        if (isDisabled || !endpointUrl || !bucket || !accessKey) {
+            return {
+                disabled: true,
+                endpointUrl,
+                targetHost: endpointUrl.replace(/^https?:\/\//, '').replace(/\/.*$/, ''),
+                protocol,
+                port,
+                bucket,
+                proxyPath,
+                accessKey,
+                secretKey
+            };
+        }
 
         let rawHost = endpointUrl;
         if (rawHost.startsWith('https://')) {
@@ -532,11 +555,12 @@ document.addEventListener('DOMContentLoaded', () => {
             targetHost = `${targetHost}:${port}`;
         }
 
-        return { endpointUrl, targetHost, protocol, port, bucket, proxyPath, accessKey, secretKey };
+        return { disabled: false, endpointUrl, targetHost, protocol, port, bucket, proxyPath, accessKey, secretKey };
     }
 
     function saveS3ConfigToStorage() {
         const cfg = getS3Config();
+        cfg.disabled = false;
         sessionStorage.setItem('aistor_s3_config', JSON.stringify(cfg));
     }
 
@@ -545,18 +569,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!saved) return;
         try {
             const cfg = JSON.parse(saved);
-            if (document.getElementById('s3-endpoint-url')) {
-                document.getElementById('s3-endpoint-url').value = cfg.endpointUrl || (cfg.targetHost ? `${cfg.protocol || 'https'}://${cfg.targetHost}` : 'https://aistor-primary-hl.aistor-primary.svc.cluster.local:9000');
+            if (cfg.disabled) {
+                if (document.getElementById('s3-endpoint-url')) document.getElementById('s3-endpoint-url').value = '';
+                if (document.getElementById('s3-port')) document.getElementById('s3-port').value = '';
+                if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = '';
+                if (document.getElementById('s3-proxy-endpoint')) document.getElementById('s3-proxy-endpoint').value = '/s3';
+                if (document.getElementById('s3-access-key')) document.getElementById('s3-access-key').value = '';
+                if (document.getElementById('s3-secret-key')) document.getElementById('s3-secret-key').value = '';
+                if (s3StatusBadge) {
+                    s3StatusBadge.className = 'badge badge-danger';
+                    s3StatusBadge.textContent = 'S3 Config Disabled';
+                }
+            } else {
+                if (document.getElementById('s3-endpoint-url')) {
+                    document.getElementById('s3-endpoint-url').value = cfg.endpointUrl || (cfg.targetHost ? `${cfg.protocol || 'https'}://${cfg.targetHost}` : 'https://aistor-primary-hl.aistor-primary.svc.cluster.local:9000');
+                }
+                if (document.getElementById('s3-port')) document.getElementById('s3-port').value = cfg.port || '9000';
+                if (document.getElementById('s3-protocol')) document.getElementById('s3-protocol').value = cfg.protocol || 'https';
+                if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = cfg.bucket || 'redsealab-bank-kb';
+                if (document.getElementById('s3-proxy-endpoint')) document.getElementById('s3-proxy-endpoint').value = cfg.proxyPath || '/s3';
+                if (document.getElementById('s3-access-key')) document.getElementById('s3-access-key').value = cfg.accessKey || '';
+                if (document.getElementById('s3-secret-key')) document.getElementById('s3-secret-key').value = cfg.secretKey || '';
             }
-            if (document.getElementById('s3-port')) document.getElementById('s3-port').value = cfg.port || '9000';
-            if (document.getElementById('s3-protocol')) document.getElementById('s3-protocol').value = cfg.protocol || 'https';
-            if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = cfg.bucket || 'redsealab-bank-kb';
-            if (document.getElementById('s3-proxy-endpoint')) document.getElementById('s3-proxy-endpoint').value = cfg.proxyPath || '/s3';
-            if (document.getElementById('s3-access-key')) document.getElementById('s3-access-key').value = cfg.accessKey || '';
-            if (document.getElementById('s3-secret-key')) document.getElementById('s3-secret-key').value = cfg.secretKey || '';
         } catch (e) {
             console.warn('Error reading saved S3 config:', e);
         }
+    }
+
+    function resetS3Config(showAlert = true) {
+        if (document.getElementById('s3-endpoint-url')) document.getElementById('s3-endpoint-url').value = '';
+        if (document.getElementById('s3-port')) document.getElementById('s3-port').value = '';
+        if (document.getElementById('s3-bucket')) document.getElementById('s3-bucket').value = '';
+        if (document.getElementById('s3-access-key')) document.getElementById('s3-access-key').value = '';
+        if (document.getElementById('s3-secret-key')) document.getElementById('s3-secret-key').value = '';
+
+        const disabledCfg = {
+            disabled: true,
+            endpointUrl: '',
+            targetHost: '',
+            protocol: 'https',
+            port: '',
+            bucket: '',
+            proxyPath: '/s3',
+            accessKey: '',
+            secretKey: ''
+        };
+        sessionStorage.setItem('aistor_s3_config', JSON.stringify(disabledCfg));
+
+        if (s3StatusBadge) {
+            s3StatusBadge.className = 'badge badge-danger';
+            s3StatusBadge.textContent = 'S3 Config Disabled';
+        }
+
+        if (showAlert && s3ConfigAlert) {
+            s3ConfigAlert.className = 'alert error';
+            s3ConfigAlert.textContent = 'MinIO AIStor S3 Cluster Configuration has been cleared and disabled.';
+            s3ConfigAlert.classList.remove('hidden');
+            setTimeout(() => s3ConfigAlert.classList.add('hidden'), 5000);
+        }
+
+        s3ListDocuments();
     }
 
     if (s3ToggleConfigBtn) {
@@ -605,7 +677,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cfg = getS3Config();
         const currentBucketLabel = document.getElementById('current-bucket-label');
-        if (currentBucketLabel) currentBucketLabel.textContent = cfg.bucket;
+        if (currentBucketLabel) currentBucketLabel.textContent = cfg.bucket || 'None';
+
+        if (cfg.disabled || !cfg.endpointUrl || !cfg.bucket || !cfg.accessKey) {
+            if (s3StatusBadge) {
+                s3StatusBadge.className = 'badge badge-danger';
+                s3StatusBadge.textContent = 'S3 Config Disabled';
+            }
+            if (s3DocCount) s3DocCount.textContent = '0';
+            s3DocsBody.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-muted text-center" style="padding: 2rem;">
+                        MinIO AIStor S3 Cluster Configuration is currently disabled or cleared. Please configure S3 endpoint credentials above to enable S3 document management.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
 
         const proxyUrl = `${cfg.proxyPath.replace(/\/$/, '')}/${cfg.bucket}`;
         const s3Path = `/${cfg.bucket}`;
@@ -737,9 +825,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getGuardrailsConfig() {
         const enabled = guardrailsEnabledCheckbox ? guardrailsEnabledCheckbox.checked : true;
-        let rawEndpoint = (document.getElementById('guardrails-endpoint')?.value || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500').trim();
-        const token = (document.getElementById('guardrails-token')?.value || 'MDFhMTYwZWUtNjM4MS03MDM0LWFkNzMtZDMxNmY3NDcyN2Jj/redsealab_bank_api_token_secret_123456789').trim();
-        const project = (document.getElementById('guardrails-project')?.value || '01a160ee-5a3d-7010-9d6c-2bba263f77df').trim();
+        let rawEndpoint = (document.getElementById('guardrails-endpoint')?.value || '').trim();
+        const token = (document.getElementById('guardrails-token')?.value || '').trim();
+        const project = (document.getElementById('guardrails-project')?.value || '').trim();
         const scanDirection = (document.getElementById('guardrails-scan-direction')?.value || 'request').trim();
         const proxyPath = (document.getElementById('guardrails-proxy-endpoint')?.value || '/guardrails').trim();
 
@@ -762,15 +850,105 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!saved) return;
         try {
             const cfg = JSON.parse(saved);
-            if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = cfg.enabled !== false;
-            if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = cfg.rawEndpoint || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500';
-            if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = cfg.token || 'MDFhMTYwZWUtNjM4MS03MDM0LWFkNzMtZDMxNmY3NDcyN2Jj/redsealab_bank_api_token_secret_123456789';
-            if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = cfg.project || '01a160ee-5a3d-7010-9d6c-2bba263f77df';
-            if (document.getElementById('guardrails-scan-direction')) document.getElementById('guardrails-scan-direction').value = cfg.scanDirection || 'request';
-            if (document.getElementById('guardrails-proxy-endpoint')) document.getElementById('guardrails-proxy-endpoint').value = cfg.proxyPath || '/guardrails';
+            if (cfg.enabled === false) {
+                if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = false;
+                if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = '';
+                if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = '';
+                if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = '';
+                if (document.getElementById('guardrails-proxy-endpoint')) document.getElementById('guardrails-proxy-endpoint').value = '/guardrails';
+                if (guardrailsStatusBadge) {
+                    guardrailsStatusBadge.className = 'badge badge-danger';
+                    guardrailsStatusBadge.textContent = 'Guardrails Disabled';
+                }
+            } else {
+                if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = true;
+                if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = cfg.rawEndpoint || 'http://cai-moderator.cai-moderator.svc.cluster.local:5500';
+                if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = cfg.token || 'MDFhMTYwZWUtNjM4MS03MDM0LWFkNzMtZDMxNmY3NDcyN2Jj/redsealab_bank_api_token_secret_123456789';
+                if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = cfg.project || '01a160ee-5a3d-7010-9d6c-2bba263f77df';
+                if (document.getElementById('guardrails-scan-direction')) document.getElementById('guardrails-scan-direction').value = cfg.scanDirection || 'request';
+                if (document.getElementById('guardrails-proxy-endpoint')) document.getElementById('guardrails-proxy-endpoint').value = cfg.proxyPath || '/guardrails';
+                if (guardrailsStatusBadge) {
+                    guardrailsStatusBadge.className = 'badge badge-success';
+                    guardrailsStatusBadge.textContent = 'Guardrails Active';
+                }
+            }
         } catch (e) {
             console.warn('Error reading saved Guardrails config:', e);
         }
+    }
+
+    function resetGuardrailsConfig(showAlert = true) {
+        if (guardrailsEnabledCheckbox) guardrailsEnabledCheckbox.checked = false;
+        if (document.getElementById('guardrails-endpoint')) document.getElementById('guardrails-endpoint').value = '';
+        if (document.getElementById('guardrails-token')) document.getElementById('guardrails-token').value = '';
+        if (document.getElementById('guardrails-project')) document.getElementById('guardrails-project').value = '';
+
+        const disabledCfg = {
+            enabled: false,
+            rawEndpoint: '',
+            targetHost: '',
+            proto: 'http',
+            token: '',
+            project: '',
+            scanDirection: 'request',
+            proxyPath: '/guardrails'
+        };
+        sessionStorage.setItem('f5_guardrails_config', JSON.stringify(disabledCfg));
+
+        if (guardrailsStatusBadge) {
+            guardrailsStatusBadge.className = 'badge badge-danger';
+            guardrailsStatusBadge.textContent = 'Guardrails Disabled';
+        }
+
+        if (showAlert && guardrailsConfigAlert) {
+            guardrailsConfigAlert.className = 'alert error';
+            guardrailsConfigAlert.textContent = 'F5 AI Guardrails security scanning configuration has been cleared and disabled.';
+            guardrailsConfigAlert.classList.remove('hidden');
+            setTimeout(() => guardrailsConfigAlert.classList.add('hidden'), 5000);
+        }
+    }
+
+    function resetAllAdminConfigurations() {
+        if (confirm('Are you sure you want to completely clear out and disable both MinIO AIStor S3 Cluster Configuration and F5 AI Guardrails Out-of-Band Security Scanning?')) {
+            resetS3Config(true);
+            resetGuardrailsConfig(true);
+        }
+    }
+
+    if (guardrailsEnabledCheckbox) {
+        guardrailsEnabledCheckbox.addEventListener('change', () => {
+            const isChecked = guardrailsEnabledCheckbox.checked;
+            if (guardrailsStatusBadge) {
+                guardrailsStatusBadge.className = isChecked ? 'badge badge-success' : 'badge badge-danger';
+                guardrailsStatusBadge.textContent = isChecked ? 'Guardrails Active' : 'Guardrails Disabled';
+            }
+            saveGuardrailsConfigToStorage();
+        });
+    }
+
+    const s3ResetBtn = document.getElementById('s3-reset-config-btn');
+    if (s3ResetBtn) {
+        s3ResetBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to reset and disable MinIO AIStor S3 Cluster Configuration?')) {
+                resetS3Config(true);
+            }
+        });
+    }
+
+    const guardrailsResetBtn = document.getElementById('guardrails-reset-config-btn');
+    if (guardrailsResetBtn) {
+        guardrailsResetBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to reset and disable F5 AI Guardrails Out-of-Band Security Scanning?')) {
+                resetGuardrailsConfig(true);
+            }
+        });
+    }
+
+    const adminResetAllBtn = document.getElementById('admin-reset-all-config-btn');
+    if (adminResetAllBtn) {
+        adminResetAllBtn.addEventListener('click', () => {
+            resetAllAdminConfigurations();
+        });
     }
 
     if (guardrailsConfigForm) {
@@ -1440,6 +1618,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const objectKey = s3ObjectKey.value.trim();
             const contentType = document.getElementById('s3-content-type').value;
             const cfg = getS3Config();
+
+            if (cfg.disabled || !cfg.endpointUrl || !cfg.bucket || !cfg.accessKey) {
+                showS3Alert('Cannot upload: MinIO AIStor S3 Cluster Configuration is currently disabled or missing required settings.', 'error');
+                return;
+            }
 
             if (!file || !objectKey) {
                 showS3Alert('Please select a file and provide an object key.', 'error');
