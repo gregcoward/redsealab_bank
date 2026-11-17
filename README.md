@@ -155,13 +155,16 @@ sequenceDiagram
 ```
 
 #### Narrative Walkthrough
-1. **User Action**: An administrator selects a document file (e.g., PDF, Word `.docx`, PowerPoint `.pptx`, Markdown, or text file) and submits the form.
-2. **Step 1 - In-Browser Text Extraction**: The application reads the file's raw `ArrayBuffer` locally in JavaScript. Depending on the format, specialized parsers (PDF.js, Mammoth.js, JSZip OpenXML parser) extract plain text from the document.
-3. **Step 2 - F5 AI Guardrails Out-of-Band Security Inspection**:
+- **User Action**: An administrator selects a document file (e.g., PDF, Word `.docx`, PowerPoint `.pptx`, Markdown, or text file) and submits the form.
+
+![doc_upload](images/docupload.png)
+
+- **Step 1 - In-Browser Text Extraction**: The application reads the file's raw `ArrayBuffer` locally in JavaScript. Depending on the format, specialized parsers (PDF.js, Mammoth.js, JSZip OpenXML parser) extract plain text from the document.
+- **Step 2 - F5 AI Guardrails Out-of-Band Security Inspection**:
    - The client constructs a JSON payload containing up to 50,000 characters of extracted text, project ID, and scan direction (`request`).
    - The request is posted to `/guardrails/backend/v1/scans` with Bearer token authentication.
    - If Guardrails flags or blocks the content (e.g., detecting sensitive PII, credit card numbers, NRIC numbers, or prompt injection payloads), the process halts immediately. The user receives a detailed alert: `⛔ UPLOAD BLOCKED by F5 AI Guardrails!`, and no binary data touches the S3 storage bucket.
-4. **Step 3 - AWS SigV4 Signed Upload**:
+- **Step 3 - AWS SigV4 Signed Upload**:
    - If Guardrails returns `cleared` (0 violations), the browser calculates AWS SigV4 signatures (`AWS4-HMAC-SHA256`) using WebCrypto.
    - An HTTP `PUT` request containing the binary file and SigV4 authorization headers is dispatched to `/s3/redsealab-bank-kb/<object-key>`.
    - MinIO AIStor validates the signature, stores the object, and returns HTTP 200/201. The document table automatically refreshes to reflect the newly uploaded file.
