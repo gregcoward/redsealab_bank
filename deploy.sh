@@ -112,7 +112,10 @@ if [ "${METHOD}" == "external" ] || [ "${METHOD}" == "docker" ]; then
     oc apply -n "${NAMESPACE}" -f openshift/service.yaml
     oc apply -n "${NAMESPACE}" -f openshift/route.yaml
 
-    echo -e "${BLUE}4. Updating Deployment container image to ${REGISTRY}...${NC}"
+    echo -e "${BLUE}4. Updating arcadia-web-html ConfigMap from src/index.html...${NC}"
+    oc create configmap arcadia-web-html --from-file=index.html=src/index.html -n "${NAMESPACE}" --dry-run=client -o yaml | oc apply -f -
+
+    echo -e "${BLUE}5. Updating Deployment container image to ${REGISTRY}...${NC}"
     oc set image deployment/arcadia-web arcadia-web="${REGISTRY}" -n "${NAMESPACE}"
 
 elif [ "${METHOD}" == "openshift-build" ]; then
@@ -132,10 +135,11 @@ elif [ "${METHOD}" == "openshift-build" ]; then
         echo -e "${BLUE}Pushing container image to Docker Hub...${NC}"
         docker push "${REGISTRY}" || podman push "${REGISTRY}"
 
-        echo -e "${BLUE}Applying OpenShift Manifests...${NC}"
+        echo -e "${BLUE}Applying OpenShift Manifests & Updating ConfigMap...${NC}"
         oc apply -n "${NAMESPACE}" -f openshift/deployment.yaml
         oc apply -n "${NAMESPACE}" -f openshift/service.yaml
         oc apply -n "${NAMESPACE}" -f openshift/route.yaml
+        oc create configmap arcadia-web-html --from-file=index.html=src/index.html -n "${NAMESPACE}" --dry-run=client -o yaml | oc apply -f -
 
         oc set image deployment/arcadia-web arcadia-web="${REGISTRY}" -n "${NAMESPACE}"
     else
@@ -143,6 +147,7 @@ elif [ "${METHOD}" == "openshift-build" ]; then
         oc apply -n "${NAMESPACE}" -f openshift/deployment.yaml
         oc apply -n "${NAMESPACE}" -f openshift/service.yaml
         oc apply -n "${NAMESPACE}" -f openshift/route.yaml
+        oc create configmap arcadia-web-html --from-file=index.html=src/index.html -n "${NAMESPACE}" --dry-run=client -o yaml | oc apply -f -
 
         IMAGE_STREAM_URL=$(oc get is arcadia-web -n "${NAMESPACE}" -o jsonpath='{.status.dockerImageRepository}' 2>/dev/null || echo "")
         if [ -n "${IMAGE_STREAM_URL}" ]; then
@@ -151,6 +156,9 @@ elif [ "${METHOD}" == "openshift-build" ]; then
         fi
     fi
 fi
+
+echo -e "\n${BLUE}Restarting pods to load latest image and ConfigMap...${NC}"
+oc rollout restart deployment/arcadia-web -n "${NAMESPACE}" || true
 
 echo -e "\n${GREEN}=== Deployment Triggered Successfully in Namespace '${NAMESPACE}'! ===${NC}"
 echo -e "Waiting for rollout to complete..."
